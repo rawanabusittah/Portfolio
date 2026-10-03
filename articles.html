@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>try{var l=localStorage.getItem("lang")||((navigator.language||"").startsWith("ar")?"ar":"en");document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr"}catch(e){}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Articles by Rawan Abu Sitteh on technology, AI, reading, health, and academic and professional life."
+    />
+    <title data-title-ar="مقالات | Rawan Abu Sitteh - Portfolio">Articles | Rawan Abu Sitteh - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css?v=20260806" />
+    <link rel="stylesheet" href="css/extras.css?v=3" />
+    <link rel="stylesheet" href="css/polish.css?v=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@400&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="images/programming.png" alt="Logo Icon" class="logo-icon" />
+          <span class="logo-text">Rawan</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="projects/websites.html" class="nav-link" data-i18n="nav.proj"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="articles.html" class="nav-link active" data-i18n="nav.art"
+              >Articles</a
+            >
+          </li>
+          <li>
+            <a href="books/index.html" class="nav-link" data-i18n="nav.book">Books</a>
+          </li>
+          <li>
+            <a href="presentations.html" class="nav-link" data-i18n="nav.pres"
+              >Presentations</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            type="button"
+            aria-label="Switch language"
+          >
+            العربية
+          </button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <svg
+              class="moon-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+            <svg
+              class="sun-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-content">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" data-i18n="art.t">
+          My Articles
+        </h2>
+        <p
+          class="section-subtitle"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-i18n="art.s"
+        >
+          A collection of articles across various topics and fields
+        </p>
+        <div class="articles-grid" id="articlesGrid">
+          <a class="article-card" href="articles/digital-life-balance.html">
+            <div class="article-media">
+              <img
+                src="images/articles/article-1.jpg"
+                alt="توازن الحياة الرقمية"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="article-category">Life & Technology</span>
+              <div class="article-overlay">
+                <h3 class="article-title">توازن الحياة الرقمية: كيف تستفيد من التكنولوجيا دون أن تضيّع وقتك؟</h3>
+                <p class="article-title-en">Digital Life Balance: How to Use Technology Without Losing Your Time</p>
+              </div>
+            </div>
+          </a>
+          <a
+            class="article-card"
+            href="articles/how-reading-shapes-a-person.html"
+          >
+            <div class="article-media">
+              <img
+                src="images/articles/article-2.jpg"
+                alt="كيف تصنع القراءة إنسانًا؟"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="article-category">Self-Development</span>
+              <div class="article-overlay">
+                <h3 class="article-title">كيف تصنع القراءة إنسانًا؟</h3>
+                <p class="article-title-en">How Does Reading Shape a Person?</p>
+              </div>
+            </div>
+          </a>
+          <a
+            class="article-card"
+            href="articles/will-ai-replace-human-jobs.html"
+          >
+            <div class="article-media">
+              <img
+                src="images/articles/article-3.png"
+                alt="هل سيلغي الذكاء الاصطناعي عمل البشر؟"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="article-category">AI & Technology</span>
+              <div class="article-overlay">
+                <h3 class="article-title">
+                  هل سيلغي الذكاء الاصطناعي عمل البشر؟
+                </h3>
+                <p class="article-title-en">
+                  Will Artificial Intelligence Replace Human Jobs?
+                </p>
+              </div>
+            </div>
+          </a>
+          <a class="article-card" href="articles/fast-food-dependence.html">
+            <div class="article-media">
+              <img
+                src="images/articles/article-4.jpg"
+                alt="الاعتماد على الوجبات السريعة: راحة مؤقتة… أم ضررٌ مستمر؟"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="article-category">Health &amp; Society</span>
+              <div class="article-overlay">
+                <h3 class="article-title">الاعتماد على الوجبات السريعة: راحة مؤقتة أم ضرر مستمر؟</h3>
+                <p class="article-title-en">Fast-Food Dependence: Temporary Convenience or Lasting Harm?</p>
+              </div>
+            </div>
+          </a>
+          <a class="article-card" href="articles/study-and-work-pros-cons.html">
+            <div class="article-media">
+              <img
+                src="images/articles/article-5.png"
+                alt=" مزايا وعيوب الجمع بين الدراسة الجامعية والوظيفة"
+                onerror="this.style.display = 'none'"
+              />
+              <span class="article-category">Academic &amp; Professional</span>
+              <div class="article-overlay">
+                <h3 class="article-title">مزايا وعيوب الجمع بين الدراسة الجامعية والوظيفة</h3>
+                <p class="article-title-en">The Pros and Cons of Combining College Study and Work</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2026 Rawan Abu Sitteh. All rights reserved.</p>
+          <p>Crafted with <span class="heart">♥</span> by Rawan</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js?v=20260806"></script>
+    <script src="js/i18n.js?v=1"></script>
+  </body>
+</html>
+
