@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <script>try{var l=localStorage.getItem("lang")||((navigator.language||"").startsWith("ar")?"ar":"en");document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr"}catch(e){}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="بانيبال: مشروع تخرج في هندسة الحواسيب والأتمتة، جامعة دمشق: مكتبة إلكترونية لذوي الهمم بالذكاء الصنعي والإبصار الحاسوبي." />
+    <title data-title-ar="بانيبال | مشروع التخرج | Rawan Abu Sitteh">Banipal | Graduation Project | Rawan Abu Sitteh</title>
+    <link rel="stylesheet" href="../css/styles.css?v=20260806" />
+    <link rel="stylesheet" href="../css/extras.css?v=3" />
+    <link rel="stylesheet" href="../css/polish.css?v=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="preloader" id="preloader"><div class="loader"></div></div>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <img src="../images/programming.png" alt="Logo Icon" class="logo-icon" />
+          <span class="logo-text">Rawan</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="websites.html" class="nav-link active" data-i18n="nav.proj"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="../articles.html" class="nav-link" data-i18n="nav.art"
+              >Articles</a
+            >
+          </li>
+          <li>
+            <a href="../books/index.html" class="nav-link" data-i18n="nav.book">Books</a>
+          </li>
+          <li>
+            <a             href="../presentations.html" class="nav-link" data-i18n="nav.pres"
+              >Presentations</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            type="button"
+            aria-label="Switch language"
+          >
+            العربية
+          </button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <svg
+              class="moon-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+            <svg
+              class="sun-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="article-page">
+      <p class="breadcrumb"><a href="websites.html"><span class="ar-only">المشاريع</span><span class="en-only">Projects</span></a> › <span class="ar-only">مشروع التخرج</span><span class="en-only">Graduation project</span></p>
+      <h1><span class="ar-only" lang="ar" dir="rtl">بانيبال: مكتبة إلكترونية لذوي الهمم باستخدام الذكاء الصنعي والإبصار الحاسوبي</span><span class="en-only">Banipal: An Accessible E-Library Using AI and Computer Vision</span></h1>
+      <p class="article-meta"><span class="ar-only">مشروع تخرج · جامعة دمشق · 2022–2023</span><span class="en-only">Graduation project · Damascus University · 2022–2023</span></p>
+      <img class="article-hero" src="images/banipal.jpg" alt="Banipal home page / الواجهة الرئيسية لمكتبة بانيبال" />
+      <div class="page-links">
+        <a class="btn btn-primary" href="https://github.com/rawanabusittah" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/rawan-abu-sittah" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="ar-only" lang="ar" dir="rtl"><h2>المشكلة والهدف</h2>
+      <p>القراءة حق للجميع، لكن المكتبات الإلكترونية التقليدية لا تراعي في الغالب احتياجات ذوي الهمم. هدفنا بناء مكتبة تضم نحو ألف كتاب في أقسام متنوعة (الروايات وقواعد اللغة العربية والبرمجة وغيرها)، مع صفحات للمؤلفين الأكثر قراءة تنظّم أعمال كل مؤلف في جداول، بحيث يستطيع المستخدم التفاعل معها دون الحاجة إلى اليدين.</p>
+      <h2>دوري في المشروع</h2>
+      <p>المشروع عمل جماعي لثلاث طالبات. كان دوري في قسم الذكاء الاصطناعي: ميزة تلخيص الكتب باستخدام نموذج DistilBART، إضافةً إلى جزء من وحدة الإبصار الحاسوبي المسؤولة عن التحكم بحركات الرأس والعين. أما بقية المكونات، ومنها الواجهات وقاعدة البيانات والمساعد الصوتي، فهي ثمرة عمل الفريق.</p>
+      <h2>الميزات الرئيسية</h2>
+      <ul>
+        <li><strong>التحكم بالموقع بحركات الرأس والعين</strong> بتقنيات الإبصار الحاسوبي.</li>
+        <li><strong>مساعد صوتي</strong> يحوّل الكلام إلى نص وينفذ الأوامر للوصول إلى الكتب وسماعها.</li>
+        <li><strong>تلخيص الكتب</strong> بنموذج BART لمساعدة القارئ على اختيار ما يناسبه.</li>
+        <li><strong>خوارزمية الكتب الأكثر بحثًا</strong> تحسب تكرار البحث وتعرض الأكثر طلبًا.</li>
+      </ul>
+      <h2>البنية التقنية</h2>
+      <ul>
+        <li><strong>الواجهة الأمامية:</strong> HTML وCSS وJavaScript وإطار Bootstrap.</li>
+        <li><strong>الواجهة الخلفية:</strong> PHP وقاعدة بيانات MySQL.</li>
+        <li><strong>وحدة التحكم بالوجه:</strong> Python مع OpenCV وDlib وNumPy وPyAutoGUI.</li>
+        <li><strong>التلخيص:</strong> نموذج DistilBART (<span dir="ltr">sshleifer/distilbart-cnn-12-6</span>) المدرَّب على CNN/DailyMail.</li>
+        <li><strong>المنهجية والنمذجة:</strong> النمذجة الأولية ومخططات UML (حالات الاستخدام).</li>
+      </ul>
+      <h2>كيف يعمل التحكم بالوجه</h2>
+      <p>تُلتقط إطارات الفيديو من الكاميرا، ويُحدَّد موقع الوجه وتُستخرج معالم العينين والفم والأنف بمكتبة Dlib، ثم تُحسب نسبة أبعاد العين ونسبة فتحة الفم. عند تجاوز العتبات المحددة يُنفَّذ الأمر المقابل: نقرة يمنى أو يسرى أو تمرير، بينما تحرّك حركة الرأس المؤشر عبر PyAutoGUI.</p>
+      <h2>الاختبار والنتائج</h2>
+      <p>اختُبرت الميزات مع زائر من ذوي الهمم تنقّل بين صفحات الموقع بحركات الرأس دون استخدام يديه، وقرأ مستعينًا بصوته فقط عبر المجيب الآلي. وقيّمنا الملخصات المولَّدة بمقياس BLEU وسجلت قيمة 0.9.</p>
+      <p class="article-meta">ملاحظة منهجية: BLEU مقياس تطابق لفظي، وقيمته هذه مرتفعة بالنسبة إلى التلخيص التجريدي، ويلزم لتفسيرها ذكر حجم العينة وطبيعة الملخصات المرجعية، ويُفضَّل دعمها بمقاييس مثل ROUGE وبتقييم بشري.</p>
+      <h2>الآفاق المستقبلية</h2>
+      <ul>
+        <li>توسعة المكتبة من ألف كتاب إلى مليون كتاب، وزيادة الكتب الصوتية.</li>
+        <li>توسيع المساعد الصوتي ليتحكم بكل الموقع.</li>
+        <li>تطوير التلخيص ليشمل الكتب العربية.</li>
+        <li>إضافة نظام اقتراح كتب بحسب اهتمامات المستخدم، ومساحة للقراء لتبادل الآراء.</li>
+      </ul></div>
+      <div class="en-only"><h2>Problem and goal</h2>
+      <p>Reading should be possible for everyone, but most e-libraries do not consider people with disabilities. The goal was a library of about 1,000 books in several categories (novels, Arabic grammar, programming and more), with pages for the most-read authors listing each author's works in tables, usable without the hands.</p>
+      <h2>My role</h2>
+      <p>This was a team project of three students. My part was the AI side: the book-summarization feature built on the DistilBART model, together with part of the computer-vision module that handles head and eye control. The remaining components, including the interfaces, database and voice assistant, were the work of the team.</p>
+      <h2>Key features</h2>
+      <ul>
+        <li><strong>Head and eye control</strong> of the site using computer vision.</li>
+        <li><strong>Voice assistant</strong> that converts speech to text and runs commands to find and listen to books.</li>
+        <li><strong>AI book summaries</strong> generated with a BART model to help readers choose.</li>
+        <li><strong>Most-searched books algorithm</strong> that counts search frequency and shows the most requested books.</li>
+      </ul>
+      <h2>Technical stack</h2>
+      <ul>
+        <li><strong>Front end:</strong> HTML, CSS, JavaScript and Bootstrap.</li>
+        <li><strong>Back end:</strong> PHP and a MySQL database.</li>
+        <li><strong>Face control module:</strong> Python with OpenCV, Dlib, NumPy and PyAutoGUI.</li>
+        <li><strong>Summarization:</strong> DistilBART (<span dir="ltr">sshleifer/distilbart-cnn-12-6</span>) trained on CNN/DailyMail.</li>
+        <li><strong>Method and modeling:</strong> prototype-based development and UML use-case diagrams.</li>
+      </ul>
+      <h2>How face control works</h2>
+      <p>Video frames are captured from the camera, the face is located and eye, mouth and nose landmarks are extracted with Dlib, then the eye aspect ratio and mouth-opening ratio are computed. When these cross set thresholds, the matching command runs: left click, right click or scroll, while head movement moves the cursor through PyAutoGUI.</p>
+      <h2>Testing and results</h2>
+      <p>The features were tested with a visitor with a disability who navigated the site by head movement without using their hands, and read using only their voice through the voice assistant. Generated summaries were evaluated with BLEU and scored 0.9.</p>
+      <p class="article-meta">Methodological note: BLEU measures lexical overlap, and a value this high is unusual for abstractive summarization. Interpreting it requires the sample size and the nature of the reference summaries, and it is better supported by metrics such as ROUGE and by human evaluation.</p>
+      <h2>Future work</h2>
+      <ul>
+        <li>Grow the library from 1,000 to 1,000,000 books and add more audiobooks.</li>
+        <li>Extend the voice assistant to control the whole site.</li>
+        <li>Extend summarization to Arabic books.</li>
+        <li>Add personalized book recommendations and a space for readers to exchange opinions.</li>
+      </ul></div>
+      <p class="article-meta"><span class="ar-only" lang="ar" dir="rtl">المصدر: مشروع تخرج «بانيبال»، قسم هندسة الحواسيب والأتمتة، كلية الهندسة الميكانيكية والكهربائية، جامعة دمشق، 2022–2023. إعداد: روان عمر أبو ستة، رهف محمود حماة، هند محمد سمير القداح. بإشراف م. مهدي عليوي.</span><span class="en-only">Source: Banipal graduation project, Department of Computer and Automation Engineering, Faculty of Mechanical and Electrical Engineering, Damascus University, 2022–2023. By Rawan Omar Abu Sitteh, Rahaf Mahmoud Hamat and Hind Mohammad Samir Al-Qaddah. Supervised by Eng. Mahdi Aliwi.</span></p>
+      <p><a class="btn btn-secondary" href="websites.html"><span class="ar-only">← كل المشاريع</span><span class="en-only">← All projects</span></a></p>
+    </main>
+    <footer class="footer"><div class="container"><div class="footer-content">
+      <p>&copy; 2026 Rawan Abu Sitteh. All rights reserved.</p>
+    </div></div></footer>
+    <script src="../js/script.js?v=20260806"></script>
+    <script src="../js/i18n.js?v=1"></script>
+  </body>
+</html>
+

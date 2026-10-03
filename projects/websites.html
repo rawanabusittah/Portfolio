@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>try{var l=localStorage.getItem("lang")||((navigator.language||"").startsWith("ar")?"ar":"en");document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr"}catch(e){}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Web Development Projects - Rawan Abu Sitteh's Portfolio"
+    />
+    <title data-title-ar="مواقع ويب | Rawan Abu Sitteh - Portfolio">Web Projects | Rawan Abu Sitteh - Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css?v=20260806" />
+    <link rel="stylesheet" href="../css/extras.css?v=3" />
+    <link rel="stylesheet" href="../css/polish.css?v=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+Pro:wght@400&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="preloader" id="preloader">
+      <div class="loader"></div>
+    </div>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <img
+            src="../images/programming.png"
+            alt="Logo Icon"
+            class="logo-icon"
+          />
+          <span class="logo-text">Rawan</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="websites.html" class="nav-link active" data-i18n="nav.proj"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="../articles.html" class="nav-link" data-i18n="nav.art"
+              >Articles</a
+            >
+          </li>
+          <li>
+            <a href="../books/index.html" class="nav-link" data-i18n="nav.book"
+              >Books</a
+            >
+          </li>
+          <li>
+            <a
+              href="../presentations.html"
+              class="nav-link"
+              data-i18n="nav.pres"
+              >Presentations</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            class="lang-toggle"
+            id="langToggle"
+            type="button"
+            aria-label="Switch language"
+          >
+            العربية
+          </button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <svg
+              class="moon-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+            </svg>
+            <svg
+              class="sun-icon"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="page-content">
+      <div class="container">
+        <div class="subnav">
+          <a href="websites.html" class="active" data-i18n="sub.web">Web</a
+          ><a href="../data-analysis/index.html" class="" data-i18n="sub.data"
+            >Data</a
+          >
+        </div>
+        <h2 class="section-title" data-aos="fade-up" data-i18n="web.t">
+          My Web Projects
+        </h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-i18n="web.s">
+          A collection of web applications and websites I have designed and
+          developed, combining clean design with modern technologies.
+        </p>
+
+        <div class="portfolio-grid">
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="images/banipal.jpg" alt="Banipal home page" loading="lazy" />
+              <div class="project-overlay">
+                <p data-i18n="ov.grad">Graduation project · Damascus University</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-i18n="t.bn">Banipal: Accessible E-Library (Graduation Project)</h3>
+              <p class="project-description">
+                <strong data-i18n="pj.goal">Goal:</strong>
+                <span data-i18n="wb.bn.goal">make reading possible without using the hands.</span>
+                <strong data-i18n="pj.role">My role (team of three):</strong>
+                <span data-i18n="wb.bn.role">the AI side, book summarization with DistilBART (BART), and part of the computer-vision module for head and eye control. The system as a whole is an e-library of about 1,000 books with a voice assistant and a PHP/MySQL back end, built by our team.</span>
+              </p>
+              <div class="project-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">OpenCV</span>
+                <span class="tag">Dlib</span>
+                <span class="tag">NLP / BART</span>
+              </div>
+              <a href="banipal.html" class="project-link" data-i18n="pj.link">Project details →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="project-image">
+              <img src="images/2.jpg" alt="Digital Library" loading="lazy" />
+              <div class="project-overlay">
+                <p data-i18n="ov.lib">Online library platform</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-i18n="t.dl">Digital Library</h3>
+              <p class="project-description">
+                <strong data-i18n="pj.goal">Goal:</strong>
+                <span data-i18n="wb.dl.goal">provide a clear online space for discovering digital books.</span>
+                <strong data-i18n="pj.built">What I built:</strong>
+                <span data-i18n="wb.dl.built">a standalone library platform for organized book browsing and management, separate from the Banipal graduation project.</span>
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+              </div>
+              <a href="digital-library.html" class="project-link" data-i18n="pj.link">Project details →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="images/5.jpg" alt="Hasibati" loading="lazy" />
+              <div class="project-overlay">
+                <p data-i18n="ov.resp">Responsive website design</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-i18n="t.has">Hasibati</h3>
+              <p class="project-description">
+                <strong data-i18n="pj.goal">Goal:</strong>
+                <span data-i18n="wb.has.goal">one Arabic-language toolkit for everyday calculations.</span>
+                <strong data-i18n="pj.built">What I built:</strong>
+                <span data-i18n="wb.has.built">a scientific calculator, a Syrian currency converter, a number-system converter (binary, decimal, octal, hexadecimal) and geometry calculators, plus About, Contact and Services pages, in a responsive layout with dark mode.</span>
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a href="hasibati.html" class="project-link" data-i18n="pj.link">Project details →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="images/3.jpg" alt="CV Builder" loading="lazy" />
+              <div class="project-overlay">
+                <p data-i18n="ov.resp">Responsive website design</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-i18n="t.cv">CV Builder Website</h3>
+              <p class="project-description">
+                <strong data-i18n="pj.goal">Goal:</strong>
+                <span data-i18n="wb.cv.goal">make writing and formatting a professional resume quick.</span>
+                <strong data-i18n="pj.built">What I built:</strong>
+                <span data-i18n="wb.cv.built">a web app where users enter their details, customize a template and generate a finished CV in a few clicks.</span>
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a href="cv-master.html" class="project-link" data-i18n="pj.link">Project details →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
+              <img src="images/4.jpg" alt="plan your day" loading="lazy" />
+              <div class="project-overlay">
+                <p data-i18n="ov.resp">Responsive website design</p>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 data-i18n="t.plan">Plan Your Day</h3>
+              <p class="project-description">
+                <strong data-i18n="pj.goal">Goal:</strong>
+                <span data-i18n="wb.plan.goal">help people organize their time and reach their goals.</span>
+                <strong data-i18n="pj.built">What I built:</strong>
+                <span data-i18n="wb.plan.built">a platform with 20 ready-to-use plans across different fields, with customizable templates and simple tools.</span>
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <a href="plan-your-day.html" class="project-link" data-i18n="pj.link">Project details →</a>
+            </div>
+          </article>
+
+          <!-- Hidden for now (restore if wanted): Simple Calculator project, https://rawanabusittah.github.io/calculator/ -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2026 Rawan Abu Sitteh. All rights reserved.</p>
+          <p>Crafted with <span class="heart">♥</span> by Rawan</p>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/script.js?v=20260806"></script>
+    <script src="../js/i18n.js?v=1"></script>
+  </body>
+</html>
+
