@@ -1,0 +1,388 @@
+/* ============================================
+   projects/websites.html: organised projects page
+   Loads after main.css. Uses only existing design tokens.
+   ============================================ */
+.wp-page {
+  padding-top: 2.5rem;
+  background:
+    radial-gradient(circle at 90% 0, rgba(4, 165, 87, 0.08), transparent 26rem),
+    linear-gradient(180deg, var(--white) 0%, var(--blue-50) 100%);
+}
+body.dark-mode .wp-page {
+  background: linear-gradient(180deg, #0d2117 0%, #10291d 100%);
+}
+.wp-wrap {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+/* ---- heading ---- */
+.wp-head {
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+  text-align: center;
+}
+.wp-head .section-title {
+  margin-bottom: 0.5rem;
+}
+.wp-head .section-subtitle {
+  margin: 0 auto;
+  max-width: 62ch;
+}
+
+/* ---- filter bar ---- */
+.wp-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto 2rem;
+}
+.wp-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 1.05rem;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--primary-dark);
+  font: 600 0.88rem var(--font-heading);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.wp-filter .n {
+  min-width: 1.35rem;
+  padding: 0 0.35rem;
+  border-radius: 99px;
+  background: rgba(4, 165, 87, 0.14);
+  font-size: 0.74rem;
+  line-height: 1.35rem;
+  text-align: center;
+}
+.wp-filter:hover,
+.wp-filter[aria-pressed="true"] {
+  background: var(--primary);
+  color: #fff;
+}
+.wp-filter:hover .n,
+.wp-filter[aria-pressed="true"] .n {
+  background: rgba(255, 255, 255, 0.25);
+}
+body.dark-mode .wp-filter {
+  border-color: var(--primary-lighter);
+  color: var(--primary-lighter);
+}
+body.dark-mode .wp-filter:hover,
+body.dark-mode .wp-filter[aria-pressed="true"] {
+  background: var(--primary-lighter);
+  color: #12241a;
+}
+
+/* ---- grid ---- */
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+.wp-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--blue-200);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: 0 8px 22px rgba(20, 62, 47, 0.06);
+  transition:
+    translate 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.wp-card[hidden] {
+  display: none !important;
+}
+.wp-card:hover,
+.wp-card:focus-within {
+  translate: 0 -4px;
+  border-color: var(--primary);
+  box-shadow:
+    0 0 0 1px rgba(4, 165, 87, 0.25),
+    0 14px 34px rgba(4, 165, 87, 0.2);
+}
+body.dark-mode .wp-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(61, 212, 141, 0.2);
+  box-shadow: none;
+}
+body.dark-mode .wp-card:hover,
+body.dark-mode .wp-card:focus-within {
+  border-color: var(--primary-lighter);
+  box-shadow: 0 12px 30px rgba(61, 212, 141, 0.18);
+}
+
+/* image */
+.wp-media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--gray-200);
+}
+.wp-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s ease;
+}
+.wp-card:hover .wp-media img {
+  transform: scale(1.05);
+}
+.wp-badge {
+  position: absolute;
+  inset-block-end: 0.7rem;
+  inset-inline-start: 0.7rem;
+  max-width: calc(100% - 1.4rem);
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(2, 102, 58, 0.9);
+  color: #fff;
+  font: 600 0.76rem var(--font-heading);
+}
+
+/* body */
+.wp-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+}
+.wp-type {
+  align-self: flex-start;
+  color: var(--primary-dark);
+  font: 700 0.72rem var(--font-heading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+body.dark-mode .wp-type {
+  color: var(--accent-light);
+}
+.wp-card h2 {
+  margin: 0;
+  color: var(--gray-900);
+  font: 700 1.3rem/1.35 var(--font-heading);
+  letter-spacing: 0;
+  text-align: start;
+}
+body.dark-mode .wp-card h2 {
+  color: var(--white);
+}
+.wp-info {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+}
+.wp-info > div {
+  padding-inline-start: 0.8rem;
+  border-inline-start: 3px solid var(--blue-200);
+}
+.wp-info > div:first-child {
+  border-inline-start-color: var(--accent);
+}
+.wp-info dt {
+  margin: 0 0 0.1rem;
+  color: var(--primary-dark);
+  font: 700 0.78rem var(--font-heading);
+}
+.wp-info dd {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  text-align: start;
+}
+body.dark-mode .wp-info dt {
+  color: var(--primary-lighter);
+}
+body.dark-mode .wp-info dd {
+  color: #c9d6ce;
+}
+body.dark-mode .wp-info > div {
+  border-inline-start-color: rgba(61, 212, 141, 0.25);
+}
+.wp-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px dashed var(--blue-200);
+}
+body.dark-mode .wp-foot {
+  border-top-color: rgba(61, 212, 141, 0.25);
+}
+.wp-foot .project-tags {
+  margin: 0;
+  gap: 0.35rem;
+}
+.wp-foot .tag {
+  padding: 3px 10px;
+}
+.wp-link {
+  color: var(--primary-dark);
+  font: 700 0.88rem var(--font-heading);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+.wp-link:hover,
+.wp-link:focus-visible {
+  border-bottom-color: currentColor;
+}
+body.dark-mode .wp-link {
+  color: var(--accent-light);
+}
+
+/* ---- featured card: full width, image beside text ---- */
+.wp-card--feature {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  border-top: 4px solid var(--primary);
+}
+.wp-card--feature .wp-media {
+  flex: 0 0 46%;
+  aspect-ratio: auto;
+  min-height: 100%;
+}
+.wp-card--feature .wp-body {
+  padding: 1.6rem 1.75rem;
+}
+.wp-card--feature h2 {
+  font-size: 1.6rem;
+}
+.wp-flag {
+  position: absolute;
+  inset-block-start: 0.7rem;
+  inset-inline-start: 0.7rem;
+  z-index: 1;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  background: var(--white);
+  border: 1px solid var(--blue-200);
+  color: var(--primary-dark);
+  font: 700 0.72rem var(--font-heading);
+  box-shadow: var(--shadow);
+}
+
+/* ---- empty state & footer note ---- */
+.wp-empty {
+  margin: 2rem auto 0;
+  text-align: center;
+  opacity: 0.8;
+}
+.wp-more {
+  margin-top: 2.25rem;
+  text-align: center;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 860px) {
+  .wp-grid {
+    grid-template-columns: 1fr;
+  }
+  .wp-card--feature {
+    flex-direction: column;
+  }
+  .wp-card--feature .wp-media {
+    flex: none;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+  .wp-card--feature .wp-body {
+    padding: 1.25rem 1.35rem 1.35rem;
+  }
+  .wp-card--feature h2 {
+    font-size: 1.35rem;
+  }
+}
+/* Arabic: keep Tajawal on the new components */
+[dir="rtl"]
+  :is(
+    .wp-card h2,
+    .wp-type,
+    .wp-info dt,
+    .wp-link,
+    .wp-badge,
+    .wp-flag,
+    .wp-filter
+  ) {
+  font-family: "Tajawal", var(--font-body);
+}
+@media (prefers-reduced-motion: reduce) {
+  .wp-card,
+  .wp-media img {
+    transition: none;
+  }
+  .wp-card:hover,
+  .wp-card:focus-within {
+    translate: none;
+  }
+  .wp-card:hover .wp-media img {
+    transform: none;
+  }
+}
+
+/* ============================================
+   Polish (2026-10-17): projects index
+   ============================================ */
+.wp-page {
+  padding-top: 2rem;
+}
+.wp-head .section-title::after {
+  margin-inline: auto;
+}
+.wp-card {
+  border-radius: var(--radius-xl);
+}
+.wp-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(2, 102, 58, 0.3));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.wp-card:hover .wp-media::after,
+.wp-card:focus-within .wp-media::after {
+  opacity: 1;
+}
+.wp-card--feature {
+  background:
+    radial-gradient(
+      30rem 16rem at 100% 0,
+      rgba(4, 165, 87, 0.1),
+      transparent 70%
+    ),
+    var(--white);
+  box-shadow: 0 18px 46px rgba(20, 62, 47, 0.1);
+}
+body.dark-mode .wp-card--feature {
+  background:
+    radial-gradient(
+      30rem 16rem at 100% 0,
+      rgba(61, 212, 141, 0.1),
+      transparent 70%
+    ),
+    rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+}
+.wp-filter {
+  box-shadow: 0 4px 12px rgba(4, 165, 87, 0.08);
+}
