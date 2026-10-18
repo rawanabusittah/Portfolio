@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Inventory value by category">
+<rect width="640" height="400" rx="14" fill="#063b2a"/>
+<text x="32" y="48" fill="#b7f5ce" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="2">INVENTORY VALUE</text>
+<text x="32" y="86" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700">$1.37M</text>
+<text x="608" y="86" text-anchor="end" fill="#b7f5ce" font-family="Arial,Helvetica,sans-serif" font-size="14">150 lines · 5 categories</text>
+<text x="32" y="133" fill="#e6fff0" font-family="Arial,Helvetica,sans-serif" font-size="14">Frames</text>
+<rect x="190" y="112" width="340.0" height="30" rx="6" fill="#a5edbd"/>
+<text x="540.0" y="133" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="14">$644K</text>
+<text x="32" y="179" fill="#e6fff0" font-family="Arial,Helvetica,sans-serif" font-size="14">Tyres</text>
+<rect x="190" y="158" width="174.9" height="30" rx="6" fill="#a5edbd"/>
+<text x="374.9" y="179" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="14">$331K</text>
+<text x="32" y="225" fill="#e6fff0" font-family="Arial,Helvetica,sans-serif" font-size="14">Gear Components</text>
+<rect x="190" y="204" width="119.0" height="30" rx="6" fill="#a5edbd"/>
+<text x="319.0" y="225" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="14">$225K</text>
+<text x="32" y="271" fill="#e6fff0" font-family="Arial,Helvetica,sans-serif" font-size="14">Saddles</text>
+<rect x="190" y="250" width="60.5" height="30" rx="6" fill="#a5edbd"/>
+<text x="260.5" y="271" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="14">$115K</text>
+<text x="32" y="317" fill="#e6fff0" font-family="Arial,Helvetica,sans-serif" font-size="14">Brake System</text>
+<rect x="190" y="296" width="30.2" height="30" rx="6" fill="#a5edbd"/>
+<text x="230.2" y="317" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="14">$57K</text>
+</svg>

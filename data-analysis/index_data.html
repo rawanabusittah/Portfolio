@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Data Analysis Projects - Rawan Abu Sittah's Portfolio"
+    />
+    <title data-title-ar="تحليل البيانات | Rawan Abu Sittah - Portfolio">
+      Data Analysis | Rawan Abu Sittah - Portfolio
+    </title>
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/data-analysis/index_data.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:title"
+      content="Data Analysis | Rawan Abu Sittah - Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Data Analysis Projects - Rawan Abu Sittah's Portfolio"
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/data-analysis/index_data.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/data-analysis/images/data.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/data-analysis/images/data.jpg"
+    />
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link rel="stylesheet" href="../css/main.css?v=20261017-10" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div id="site-header"></div>
+
+    <main id="main">
+      <section class="page-content data-page">
+        <div class="container">
+          <header class="data-heading" data-aos="fade-up">
+            <h1 class="section-title" data-i18n="data.t">
+              Data Analysis Projects
+            </h1>
+            <p class="section-subtitle" data-i18n="data.s">
+              Explore dashboards, findings, and practical data stories.
+            </p>
+          </header>
+          <div class="data-overview" data-aos="fade-up" data-aos-delay="100">
+            <div class="data-overview-item">
+              <strong>03</strong>
+              <span data-i18n="data.stat.projects">Featured projects</span>
+            </div>
+            <div class="data-overview-item">
+              <strong>Excel + Python</strong>
+              <span data-i18n="data.stat.tools">Analysis workflow</span>
+            </div>
+            <div class="data-overview-item">
+              <strong data-i18n="data.stat.insights">Insights</strong>
+              <span data-i18n="data.stat.output"
+                >Clear, practical findings</span
+              >
+            </div>
+          </div>
+          <div class="data-projects-heading">
+            <h3 data-i18n="data.selected">Selected analyses</h3>
+            <span data-i18n="data.selectedHint"
+              >Explore a project to see the full story</span
+            >
+          </div>
+          <div class="data-project-grid">
+            <article class="data-feature" data-aos="fade-up">
+              <div class="data-feature-copy">
+                <span class="data-eyebrow" data-i18n="dp.label"
+                  >Featured analysis</span
+                >
+                <h3 data-i18n="dp.t">2026 Reading Habits Analysis</h3>
+                <p data-i18n="dp.d">
+                  Analysis of 83 books I read: genres, ratings, length and
+                  format, with charts and key findings.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Excel</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag" data-i18n="dp.tag">Data Visualization</span>
+                </div>
+                <a
+                  href="reading-analysis.html"
+                  class="btn btn-primary data-cta"
+                  data-i18n="view"
+                  >View Project →</a
+                >
+              </div>
+              <figure class="data-feature-visual">
+                <img
+                  src="images/data.jpg"
+                  alt="Data visualizations and charts on a laptop and report"
+                  data-i18n-alt="dp.imageAlt"
+                />
+                <figcaption data-i18n="dp.caption">
+                  Turning raw observations into a clear visual story.
+                </figcaption>
+              </figure>
+            </article>
+            <article class="data-feature" data-aos="fade-up">
+              <div class="data-feature-copy">
+                <span class="data-eyebrow" data-i18n="dp.aw.label"
+                  >Inventory analysis</span
+                >
+                <h3 data-i18n="dp.aw.t">
+                  Inventory Risk Analysis: Adventure Works
+                </h3>
+                <p data-i18n="dp.aw.d">
+                  A practical analysis of inventory value, reorder risks,
+                  discontinued stock, and data-quality issues in a sample
+                  bicycle-parts workbook.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">pandas</span>
+                  <span class="tag">Excel</span>
+                  <span class="tag" data-i18n="dp.tag">Data Visualization</span>
+                </div>
+                <a
+                  href="adventure-works.html"
+                  class="btn btn-primary data-cta"
+                  data-i18n="view"
+                  >View Project →</a
+                >
+              </div>
+              <figure class="data-feature-visual">
+                <img
+                  src="images/go_back.jpg"
+                  alt="Inventory analysis project preview"
+                  data-i18n-alt="dp.aw.imageAlt"
+                />
+                <figcaption data-i18n="dp.aw.caption">
+                  Turning inventory data into risks and recommended actions.
+                </figcaption>
+              </figure>
+            </article>
+            <article class="data-feature" data-aos="fade-up">
+              <div class="data-feature-copy">
+                <span class="data-eyebrow" data-i18n="dp.sales.label"
+                  >Sales analysis</span
+                >
+                <h3 data-i18n="dp.sales.t">Sales Analysis Project</h3>
+                <p data-i18n="dp.sales.d">
+                  An Excel-based sales analysis project that turns transaction
+                  data into clear trends, comparisons, and practical insights.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Excel</span>
+                  <span class="tag">Data Analysis</span>
+                  <span class="tag" data-i18n="dp.tag">Data Visualization</span>
+                </div>
+                <a
+                  href="sales-analysis.html"
+                  class="btn btn-primary data-cta"
+                  data-i18n="view"
+                  >View Project →</a
+                >
+              </div>
+              <figure class="data-feature-visual">
+                <img
+                  src="images/sales.jpg"
+                  alt="Sales analysis charts and data visualization"
+                  data-i18n-alt="dp.sales.imageAlt"
+                />
+                <figcaption data-i18n="dp.sales.caption">
+                  Exploring sales data to support better decisions.
+                </figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="../js/include.js" data-root="../"></script>
+  </body>
+</html>
