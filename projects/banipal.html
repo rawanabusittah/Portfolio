@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="بانيبال: مشروع تخرج في هندسة الحواسيب والأتمتة، جامعة دمشق: مكتبة إلكترونية لذوي الهمم بالذكاء الصنعي والإبصار الحاسوبي."
+    />
+    <title data-title-ar="بانيبال | مشروع التخرج | Rawan Abu Sittah">
+      Banipal | Graduation Project | Rawan Abu Sittah
+    </title>
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/projects/banipal.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/projects/images/banipal.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:title"
+      content="Banipal | Graduation Project | Rawan Abu Sittah"
+    />
+    <meta
+      property="og:description"
+      content="بانيبال: مشروع تخرج في هندسة الحواسيب والأتمتة، جامعة دمشق: مكتبة إلكترونية لذوي الهمم بالذكاء الصنعي والإبصار الحاسوبي."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/projects/banipal.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/projects/images/banipal.jpg"
+    />
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link rel="stylesheet" href="../css/main.css?v=20261015-2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div id="site-header"></div>
+
+    <main class="article-page bn-page" id="main">
+      <p class="breadcrumb">
+        <a href="websites.html"
+          ><span class="ar-only">المشاريع</span
+          ><span class="en-only">Web Applications</span></a
+        >
+        › <span class="ar-only">مشروع التخرج</span
+        ><span class="en-only">Graduation project</span>
+      </p>
+      <h1>
+        <span class="ar-only" lang="ar" dir="rtl"
+          >بانيبال: مكتبة إلكترونية لذوي الهمم باستخدام الذكاء الصنعي والإبصار
+          الحاسوبي</span
+        ><span class="en-only"
+          >Banipal: An Accessible E-Library Using AI and Computer Vision</span
+        >
+      </h1>
+      <p class="article-meta">
+        <span class="ar-only">مشروع تخرج · جامعة دمشق · 2022–2023</span
+        ><span class="en-only"
+          >Graduation project · Damascus University · 2022–2023</span
+        >
+      </p>
+      <figure class="bn-shot bn-reveal">
+        <button class="bn-shot-btn" type="button" aria-haspopup="dialog">
+          <span class="bn-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img
+            class="article-hero"
+            src="images/banipal.png"
+            alt="Banipal home page"
+            data-i18n-alt="pj.alt.bn"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <span class="bn-zoom" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.5" y2="16.5" />
+              <line x1="11" y1="8" x2="11" y2="14" />
+              <line x1="8" y1="11" x2="14" y2="11" />
+            </svg>
+          </span>
+        </button>
+        <figcaption>
+          <span class="ar-only"
+            >الصفحة الرئيسية لمكتبة بانيبال، اضغط للتكبير</span
+          ><span class="en-only">Banipal home page, click to enlarge</span>
+        </figcaption>
+      </figure>
+
+      <!-- Ownership note: replaces the GitHub / LinkedIn buttons -->
+      <div class="bn-note bn-reveal" role="note">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+        </svg>
+        <p>
+          <span class="ar-only"
+            ><strong>ملاحظة:</strong> هذا المشروع ملك لجامعة دمشق، لذلك لا يمكن
+            مشاركة الشيفرة المصدرية أو نشرها.</span
+          ><span class="en-only"
+            ><strong>Note:</strong> this project is the property of Damascus
+            University, so its source code cannot be shared or published.</span
+          >
+        </p>
+      </div>
+
+      <ul class="bn-facts bn-reveal">
+        <li>
+          <b
+            ><span class="ar-only">3 طالبات</span
+            ><span class="en-only">3 students</span></b
+          >
+          <span class="ar-only">عمل جماعي</span
+          ><span class="en-only">Team project</span>
+        </li>
+        <li>
+          <b
+            ><span class="ar-only">~1000 كتاب</span
+            ><span class="en-only">~1,000 books</span></b
+          >
+          <span class="ar-only">في أقسام متنوعة</span
+          ><span class="en-only">Across several categories</span>
+        </li>
+        <li>
+          <b
+            ><span class="ar-only">بدون يدين</span
+            ><span class="en-only">Hands-free</span></b
+          >
+          <span class="ar-only">رأس، عينان، صوت</span
+          ><span class="en-only">Head, eyes, voice</span>
+        </li>
+        <li>
+          <b
+            ><span class="ar-only">الذكاء الصنعي</span
+            ><span class="en-only">AI</span></b
+          >
+          <span class="ar-only">دوري: تلخيص الكتب</span
+          ><span class="en-only">My part: book summaries</span>
+        </li>
+      </ul>
+
+      <h2 class="bn-h">
+        <span class="ar-only">المشكلة والهدف</span
+        ><span class="en-only">Problem and goal</span>
+      </h2>
+      <p class="bn-lead">
+        <span class="ar-only"
+          >القراءة حق للجميع، لكن المكتبات الإلكترونية التقليدية لا تراعي في
+          الغالب احتياجات ذوي الهمم. هدفنا بناء مكتبة تضم نحو ألف كتاب في أقسام
+          متنوعة (الروايات وقواعد اللغة العربية والبرمجة وغيرها)، مع صفحات
+          للمؤلفين الأكثر قراءة تنظّم أعمال كل مؤلف في جداول، بحيث يستطيع
+          المستخدم التفاعل معها دون الحاجة إلى اليدين.</span
+        ><span class="en-only"
+          >Reading should be possible for everyone, but most e-libraries do not
+          consider people with disabilities. The goal was a library of about
+          1,000 books in several categories (novels, Arabic grammar, programming
+          and more), with pages for the most-read authors listing each author's
+          works in tables, usable without the hands.</span
+        >
+      </p>
+
+      <h2 class="bn-h">
+        <span class="ar-only">دوري في المشروع</span
+        ><span class="en-only">My role</span>
+      </h2>
+      <p class="bn-lead">
+        <span class="ar-only"
+          >المشروع عمل جماعي لثلاث طالبات. كان دوري في قسم الذكاء الاصطناعي:
+          ميزة تلخيص الكتب باستخدام نموذج DistilBART، إضافةً إلى اختبار وحدة
+          التحكم بحركات الرأس والعين. أما بقية المكونات، ومنها الواجهات وقاعدة
+          البيانات والمساعد الصوتي ووحدة الإبصار الحاسوبي نفسها، فهي ثمرة عمل
+          الفريق.</span
+        ><span class="en-only"
+          >This was a team project of three students. My part was the AI side:
+          the book-summarization feature built on the DistilBART model, together
+          with testing the head-and-eye control module. The remaining
+          components, including the interfaces, database, voice assistant and
+          the computer-vision module itself, were the work of the team.</span
+        >
+      </p>
+
+      <h2 class="bn-h">
+        <span class="ar-only">الميزات الرئيسية</span
+        ><span class="en-only">Key features</span>
+      </h2>
+      <div class="bn-features">
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </span>
+          <h3>
+            <span class="ar-only">التحكم بحركات الرأس والعين</span
+            ><span class="en-only">Head and eye control</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >تصفّح الموقع والتنقل بين صفحاته بتقنيات الإبصار الحاسوبي، دون
+              استخدام اليدين.</span
+            ><span class="en-only"
+              >Browse and navigate the site with computer vision, without using
+              the hands.</span
+            >
+          </p>
+          <span class="bn-tag">OpenCV · Dlib</span>
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="9" y="2" width="6" height="12" rx="3" />
+              <path d="M5 11a7 7 0 0 0 14 0" />
+              <line x1="12" y1="18" x2="12" y2="22" />
+            </svg>
+          </span>
+          <h3>
+            <span class="ar-only">مساعد صوتي</span
+            ><span class="en-only">Voice assistant</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >يحوّل الكلام إلى نص وينفذ الأوامر للوصول إلى الكتب وسماعها.</span
+            ><span class="en-only"
+              >Converts speech to text and runs commands to find and listen to
+              books.</span
+            >
+          </p>
+          <span class="bn-tag"
+            ><span class="ar-only">كلام ← نص ← أمر</span
+            ><span class="en-only">Speech → text → command</span></span
+          >
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="8" y1="13" x2="16" y2="13" />
+              <line x1="8" y1="17" x2="13" y2="17" />
+            </svg>
+          </span>
+          <h3>
+            <span class="ar-only">تلخيص الكتب بالذكاء الصنعي</span
+            ><span class="en-only">AI book summaries</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >ملخصات مولَّدة بنموذج BART تساعد القارئ على اختيار ما
+              يناسبه.</span
+            ><span class="en-only"
+              >Summaries generated with a BART model to help readers
+              choose.</span
+            >
+          </p>
+          <span class="bn-tag">DistilBART</span>
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+          </span>
+          <h3>
+            <span class="ar-only">خوارزمية الكتب الأكثر بحثًا</span
+            ><span class="en-only">Most-searched books</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >تحسب تكرار البحث عن كل كتاب وتعرض الأكثر طلبًا.</span
+            ><span class="en-only"
+              >Counts search frequency and shows the most requested books.</span
+            >
+          </p>
+          <span class="bn-tag">PHP · MySQL</span>
+        </article>
+      </div>
+
+      <h2 class="bn-h">
+        <span class="ar-only">البنية التقنية</span
+        ><span class="en-only">Technical stack</span>
+      </h2>
+      <ul class="bn-stack">
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" /></svg></span
+            ><b
+              ><span class="ar-only">الواجهة الأمامية</span
+              ><span class="en-only">Front end</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">HTML</span><span style="--c: 1">CSS</span
+            ><span style="--c: 2">JavaScript</span
+            ><span style="--c: 3">Bootstrap</span>
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5" />
+                <path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3" /></svg></span
+            ><b
+              ><span class="ar-only">الواجهة الخلفية</span
+              ><span class="en-only">Back end</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">PHP</span><span style="--c: 1">MySQL</span>
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"
+                />
+                <circle cx="12" cy="10" r="1" />
+                <path d="M9 15c1.5 1.3 4.5 1.3 6 0" /></svg></span
+            ><b
+              ><span class="ar-only">التحكم بالوجه</span
+              ><span class="en-only">Face control</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">Python</span><span style="--c: 1">OpenCV</span
+            ><span style="--c: 2">Dlib</span><span style="--c: 3">NumPy</span
+            ><span style="--c: 4">PyAutoGUI</span>
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" /></svg></span
+            ><b
+              ><span class="ar-only">التلخيص</span
+              ><span class="en-only">Summarization</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">DistilBART</span
+            ><span style="--c: 1">CNN/DailyMail</span
+            ><span style="--c: 2" dir="ltr">sshleifer/distilbart-cnn-12-6</span>
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" /></svg></span
+            ><b
+              ><span class="ar-only">المنهجية والنمذجة</span
+              ><span class="en-only">Method and modeling</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0"
+              ><span class="ar-only">النمذجة الأولية</span
+              ><span class="en-only">Prototyping</span></span
+            ><span style="--c: 1"
+              ><span class="ar-only">مخططات UML (حالات الاستخدام)</span
+              ><span class="en-only">UML use-case diagrams</span></span
+            >
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="bn-h">
+        <span class="ar-only">كيف يعمل التحكم بالوجه</span
+        ><span class="en-only">How face control works</span>
+      </h2>
+      <div class="bn-flow bn-reveal">
+        <svg
+          class="bn-ring"
+          viewBox="0 0 320 320"
+          role="img"
+          aria-label="Circular flow of the face-control loop in five steps"
+        >
+          <circle class="ring-line" cx="160" cy="160" r="110"></circle>
+          <!-- clockwise arrowheads between the nodes -->
+          <g class="ring-arrow">
+            <path
+              transform="translate(224.7 71) rotate(126)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(264.6 193.8) rotate(198)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(160 270) rotate(270)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(55.4 193.8) rotate(342)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(95.3 71) rotate(54)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+          </g>
+          <g class="ring-n" data-i="0">
+            <circle class="ring-node" cx="160" cy="50" r="24"></circle>
+            <text x="160" y="50">1</text>
+          </g>
+          <g class="ring-n" data-i="1">
+            <circle class="ring-node" cx="264.6" cy="126" r="24"></circle>
+            <text x="264.6" y="126">2</text>
+          </g>
+          <g class="ring-n" data-i="2">
+            <circle class="ring-node" cx="224.7" cy="249" r="24"></circle>
+            <text x="224.7" y="249">3</text>
+          </g>
+          <g class="ring-n" data-i="3">
+            <circle class="ring-node" cx="95.3" cy="249" r="24"></circle>
+            <text x="95.3" y="249">4</text>
+          </g>
+          <g class="ring-n" data-i="4">
+            <circle class="ring-node" cx="55.4" cy="126" r="24"></circle>
+            <text x="55.4" y="126">5</text>
+          </g>
+          <text class="ring-center" x="160" y="160">∞</text>
+        </svg>
+        <div>
+          <ol class="bn-steps">
+            <li>
+              <span class="ar-only"
+                ><b>التقاط الإطار:</b> تُلتقط إطارات الفيديو من الكاميرا.</span
+              ><span class="en-only"
+                ><b>Capture:</b> video frames are read from the camera.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>كشف الوجه:</b> يُحدَّد موقع الوجه وتُستخرج معالم العينين
+                والفم والأنف بمكتبة Dlib.</span
+              ><span class="en-only"
+                ><b>Detect:</b> the face is located and eye, mouth and nose
+                landmarks are extracted with Dlib.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>الحساب:</b> تُحسب نسبة أبعاد العين ونسبة فتحة الفم.</span
+              ><span class="en-only"
+                ><b>Measure:</b> the eye aspect ratio and mouth-opening ratio
+                are computed.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>المقارنة:</b> تُقارن القيم بالعتبات المحددة.</span
+              ><span class="en-only"
+                ><b>Compare:</b> the values are checked against set
+                thresholds.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>التنفيذ:</b> يُنفَّذ الأمر المقابل ثم تعود الحلقة إلى الإطار
+                التالي.</span
+              ><span class="en-only"
+                ><b>Act:</b> the matching command runs, then the loop returns to
+                the next frame.</span
+              >
+            </li>
+          </ol>
+          <div class="bn-outputs">
+            <p class="bn-out">
+              <small
+                ><span class="ar-only">حركة الرأس</span
+                ><span class="en-only">Head movement</span></small
+              >
+              <span class="ar-only">تحرّك المؤشر عبر PyAutoGUI.</span
+              ><span class="en-only">Moves the cursor through PyAutoGUI.</span>
+            </p>
+            <p class="bn-out">
+              <small
+                ><span class="ar-only">العينان والفم</span
+                ><span class="en-only">Eyes and mouth</span></small
+              >
+              <span class="ar-only"
+                >نقرة يمنى أو يسرى أو تمرير عند تجاوز العتبات.</span
+              ><span class="en-only"
+                >Left click, right click or scroll when thresholds are
+                crossed.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="bn-h">
+        <span class="ar-only">الاختبار والنتائج</span
+        ><span class="en-only">Testing and results</span>
+      </h2>
+      <h3 class="bn-sub">
+        <span class="ar-only">تقييم الملخصات</span
+        ><span class="en-only">Summary evaluation</span>
+      </h3>
+      <div class="bn-kpis">
+        <div class="bn-kpi bn-reveal">
+          <b data-count="1000">1000</b
+          ><span class="ar-only">كتاب في عينة التقييم، في مختلف المجالات</span
+          ><span class="en-only"
+            >books in the evaluation sample, across many fields</span
+          >
+        </div>
+        <div class="bn-kpi bn-reveal">
+          <b dir="ltr">100–800</b><span class="ar-only">عدد صفحات الكتب</span
+          ><span class="en-only">pages per book</span>
+        </div>
+        <div class="bn-kpi bn-reveal">
+          <b data-count="500">500</b
+          ><span class="ar-only">ملخص مولَّد خضع للمقارنة</span
+          ><span class="en-only">generated summaries compared</span>
+        </div>
+      </div>
+      <div class="bn-compare bn-reveal" role="group">
+        <div class="bn-side">
+          <b>500</b><span class="ar-only">ملخص مولَّد بالذكاء الصنعي</span
+          ><span class="en-only">AI-generated summaries</span>
+        </div>
+        <div class="bn-eq" aria-hidden="true">≈</div>
+        <div class="bn-side">
+          <b
+            ><span class="ar-only">بشرية</span
+            ><span class="en-only">Human</span></b
+          ><span class="ar-only">ملخصات كتبها بشر</span
+          ><span class="en-only">summaries written by people</span>
+        </div>
+        <p class="bn-verdict">
+          <span class="ar-only"
+            >كانت النتائج شبه متقاربة بين الملخصات المولَّدة والملخصات
+            البشرية.</span
+          ><span class="en-only"
+            >Results were close between the generated and the human
+            summaries.</span
+          >
+        </p>
+      </div>
+      <h3 class="bn-sub" style="margin-top: 1.5rem">
+        <span class="ar-only">اختبار سهولة الاستخدام</span
+        ><span class="en-only">Usability test</span>
+      </h3>
+      <ul class="bn-results-list">
+        <li>
+          <span class="ar-only"
+            >اختُبرت الميزات مع زائر من ذوي الهمم تنقّل بين صفحات الموقع بحركات
+            الرأس دون استخدام يديه.</span
+          ><span class="en-only"
+            >A visitor with a disability navigated the site by head movement
+            without using their hands.</span
+          >
+        </li>
+        <li>
+          <span class="ar-only"
+            >قرأ الزائر مستعينًا بصوته فقط عبر المجيب الآلي (المساعد
+            الصوتي).</span
+          ><span class="en-only"
+            >The same visitor read using only their voice through the voice
+            assistant.</span
+          >
+        </li>
+      </ul>
+
+      <h2 class="bn-h">
+        <span class="ar-only">الآفاق المستقبلية</span
+        ><span class="en-only">Future work</span>
+      </h2>
+      <ul class="bn-future bn-reveal">
+        <li>
+          <span class="ar-only"
+            >توسعة المكتبة من ألف كتاب إلى مليون كتاب، وزيادة الكتب
+            الصوتية.</span
+          ><span class="en-only"
+            >Grow the library from 1,000 to 1,000,000 books and add more
+            audiobooks.</span
+          >
+        </li>
+        <li>
+          <span class="ar-only">توسيع المساعد الصوتي ليتحكم بكل الموقع.</span
+          ><span class="en-only"
+            >Extend the voice assistant to control the whole site.</span
+          >
+        </li>
+        <li>
+          <span class="ar-only">تطوير التلخيص ليشمل الكتب العربية.</span
+          ><span class="en-only">Extend summarization to Arabic books.</span>
+        </li>
+        <li>
+          <span class="ar-only"
+            >إضافة نظام اقتراح كتب بحسب اهتمامات المستخدم، ومساحة للقراء لتبادل
+            الآراء.</span
+          ><span class="en-only"
+            >Add personalized book recommendations and a space for readers to
+            exchange opinions.</span
+          >
+        </li>
+      </ul>
+
+      <p class="article-meta" style="margin-top: 2.5rem">
+        <span class="ar-only" lang="ar" dir="rtl"
+          >المصدر: مشروع تخرج «بانيبال»، قسم هندسة الحواسيب والأتمتة، كلية
+          الهندسة الميكانيكية والكهربائية، جامعة دمشق، 2022–2023. إعداد: روان
+          عمر أبو ستة، رهف محمود حماة، هند محمد سمير القداح. بإشراف م. مهدي
+          عليوي.</span
+        ><span class="en-only"
+          >Source: Banipal graduation project, Department of Computer and
+          Automation Engineering, Faculty of Mechanical and Electrical
+          Engineering, Damascus University, 2022–2023. By Rawan Omar Abu Sittah,
+          Rahaf Mahmoud Hamat and Hind Mohammad Samir Al-Qaddah. Supervised by
+          Eng. Mahdi Aliwi.</span
+        >
+      </p>
+      <p>
+        <a class="btn btn-secondary" href="websites.html"
+          ><span class="ar-only">← كل المشاريع</span
+          ><span class="en-only">← All projects</span></a
+        >
+      </p>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="../js/include.js" data-root="../"></script>
+  </body>
+</html>
