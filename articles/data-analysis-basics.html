@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <title>
+      تحليل البيانات للمبتدئين: أنواعه وجمع البيانات وتنظيفها | روان أبو ستة
+    </title>
+    <meta
+      name="description"
+      content="دليل مبسّط لتحليل البيانات: الأنواع الأربعة (وصفي وتشخيصي وتنبؤي وتوجيهي)، وخطوات جمع البيانات وتنظيفها، مع جدول مقارنة وأدوات Excel وPython ومراجع علمية."
+    />
+    <meta name="author" content="روان أبو ستة" />
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/articles/data-analysis-basics.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:title"
+      content="تحليل البيانات للمبتدئين: أنواعه وجمع البيانات وتنظيفها"
+    />
+    <meta
+      property="og:description"
+      content="الأنواع الأربعة لتحليل البيانات وخطوات جمعها وتنظيفها وأدواتها، بشرح مبسّط ومراجع علمية."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/articles/data-analysis-basics.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/images/articles/data-analysis-basics-og.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="شخصان يعملان على حاسوبين محمولين وأمامهما أوراق تحمل رسومًا بيانية ومخططات إحصائية"
+    />
+    <meta property="article:published_time" content="2026-10-14" />
+    <meta property="article:modified_time" content="2026-10-16" />
+    <meta
+      property="article:author"
+      content="https://rawanabusittah.github.io/"
+    />
+    <meta property="article:section" content="تحليل البيانات" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="تحليل البيانات للمبتدئين: أنواعه وجمع البيانات وتنظيفها"
+    />
+    <meta
+      name="twitter:description"
+      content="الأنواع الأربعة لتحليل البيانات وخطوات جمعها وتنظيفها وأدواتها."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/images/articles/data-analysis-basics-og.jpg"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "تحليل البيانات للمبتدئين: أنواعه وجمع البيانات وتنظيفها",
+            "alternativeHeadline": "Data Analysis Basics: Types, Data Collection and Data Cleaning",
+            "description": "دليل مبسّط لتحليل البيانات: الأنواع الأربعة، وخطوات جمع البيانات وتنظيفها، وأشهر الأدوات.",
+            "inLanguage": "ar",
+            "articleSection": "تحليل البيانات",
+            "keywords": "تحليل البيانات, أنواع تحليل البيانات, تحليل وصفي, تحليل تشخيصي, تحليل تنبؤي, تحليل توجيهي, جمع البيانات, تنظيف البيانات, Excel, Python, Pandas",
+            "timeRequired": "PT6M",
+            "image": "https://rawanabusittah.github.io/images/articles/data-analysis-basics-og.jpg",
+            "mainEntityOfPage": "https://rawanabusittah.github.io/articles/data-analysis-basics.html",
+            "datePublished": "2026-10-14",
+            "dateModified": "2026-10-16",
+            "author": {
+              "@type": "Person",
+              "name": "روان عمر أبو ستة",
+              "alternateName": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "citation": [
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Different Types of Data Analysis; Data Analysis Methods and Techniques in Research Projects",
+                "author": { "@type": "Person", "name": "Hamed Taherdoost" },
+                "datePublished": "2020",
+                "isPartOf": {
+                  "@type": "Periodical",
+                  "name": "International Journal of Academic Research in Management (IJARM)"
+                }
+              },
+              {
+                "@type": "Book",
+                "name": "A Portable Introduction to Data Analysis",
+                "author": { "@type": "Person", "name": "Michael Bulmer" },
+                "datePublished": "2024",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "The University of Queensland"
+                },
+                "sameAs": "https://doi.org/10.14264/12dc235"
+              },
+              {
+                "@type": "CreativeWork",
+                "name": "Introduction to Data Analysis Handbook",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Migrant & Seasonal Head Start Technical Assistance Center, Academy for Educational Development"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "الرئيسية",
+                "item": "https://rawanabusittah.github.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "المقالات",
+                "item": "https://rawanabusittah.github.io/writing.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "تحليل البيانات للمبتدئين",
+                "item": "https://rawanabusittah.github.io/articles/data-analysis-basics.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link
+      rel="preload"
+      as="image"
+      href="../images/articles/data-analysis-basics.webp"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="../css/main.css?v=20261017-9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      p,
+      ul,
+      ol,
+      li,
+      blockquote {
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div class="preloader" id="preloader"><div class="loader"></div></div>
+    <div id="site-header"></div>
+    <main id="main" class="article-page" data-article="data-analysis-basics">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a href="../index.html">الرئيسية</a> /
+        <a href="../writing.html#articles">المقالات</a> /
+        <span>تحليل البيانات</span>
+      </nav>
+      <article>
+        <header>
+          <h1>تحليل البيانات للمبتدئين: أنواعه وجمع البيانات وتنظيفها</h1>
+          <p class="article-meta">
+            تحليل البيانات · بقلم روان أبو ستة ·
+            <time datetime="2026-10-14">نُشر في 14 أكتوبر 2026</time> ·
+            <time datetime="2026-10-16">حُدّث في 16 أكتوبر 2026</time> · 6 دقائق
+            قراءة
+          </p>
+          <img
+            class="article-hero"
+            src="../images/articles/data-analysis-basics.webp"
+            alt="شخصان يعملان على حاسوبين محمولين وأمامهما أوراق تحمل رسومًا بيانية ومخططات إحصائية"
+            width="1600"
+            height="1066"
+            fetchpriority="high"
+            decoding="async"
+            onerror="this.remove()"
+          />
+        </header>
+
+        <p class="article-lead">
+          تبدأ القرارات الجيدة من بيانات سليمة وطريقة صحيحة في قراءتها. يشرح هذا
+          المقال ما هو تحليل البيانات، وأنواعه الأربعة، وكيف تُجمع البيانات
+          وتُنظَّف قبل تحليلها، مع أبرز الأدوات في كل مرحلة.
+        </p>
+
+        <aside class="key-points" aria-labelledby="kp-title">
+          <h2 id="kp-title">الخلاصة في أربع نقاط</h2>
+          <ul>
+            <li>
+              تحليل البيانات يحوّل البيانات الخام إلى معلومات تدعم القرار<sup
+                ><a class="citation" href="#ref-1">[1]</a></sup
+              >.
+            </li>
+            <li>
+              الأنواع الأربعة تجيب عن أسئلة مختلفة: ماذا حدث؟ لماذا؟ ماذا سيحدث؟
+              ماذا نفعل؟
+            </li>
+            <li>
+              حدّد الغرض قبل جمع البيانات؛ فمعرفة كيف ستُستخدم المعلومات تحسّن
+              طريقة جمعها<sup><a class="citation" href="#ref-3">[3]</a></sup
+              >.
+            </li>
+            <li>
+              تنظيف البيانات (القيم الفارغة، والتكرار، وتوحيد الصيغ) شرط للحصول
+              على نتائج دقيقة.
+            </li>
+          </ul>
+        </aside>
+
+        <nav class="toc" aria-labelledby="toc-title">
+          <h2 id="toc-title">محتويات المقال</h2>
+          <ol>
+            <li><a href="#what-is">ما هو تحليل البيانات؟</a></li>
+            <li><a href="#types">أنواع تحليل البيانات</a></li>
+            <li><a href="#collection">جمع البيانات</a></li>
+            <li><a href="#cleaning">تنظيف البيانات</a></li>
+            <li><a href="#workflow">المسار الكامل في خمس خطوات</a></li>
+            <li><a href="#faq">أسئلة شائعة</a></li>
+            <li><a href="#conclusion">الخلاصة</a></li>
+            <li><a href="#references">المراجع</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="what-is">ما هو تحليل البيانات؟</h2>
+        <p>
+          تحليل البيانات هو عملية جمع البيانات وتنظيفها وتحويلها لاكتشاف معلومات
+          مفيدة وتحديد الأنماط ودعم اتخاذ القرارات. أي أن الهدف منه تحويل
+          البيانات الخام إلى رؤى تنقل المؤسسات إلى مستوى أفضل، وبالتالي تحقيق
+          نتائج (مالية، سياسية...) أفضل. وتُظهر الأدبيات البحثية أن تجهيز
+          البيانات يسبق اختيار طريقة التحليل نفسها<sup
+            ><a class="citation" href="#ref-1">[1]</a></sup
+          >.
+        </p>
+
+        <h2 id="types">أنواع تحليل البيانات</h2>
+        <p>
+          يُجيب كل نوع عن سؤال مختلف، وتتدرج الأنواع الأربعة من وصف ما حدث إلى
+          اقتراح ما ينبغي فعله. يلخّصها الجدول التالي، ثم نشرح كل نوع.
+        </p>
+        <div class="rp-table-wrap">
+          <table class="rp-table types-table">
+            <caption class="visually-hidden">
+              مقارنة بين أنواع تحليل البيانات الأربعة
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">النوع</th>
+                <th scope="col">السؤال الذي يجيب عنه</th>
+                <th scope="col">مثال</th>
+                <th scope="col">تقنيات شائعة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">وصفي</th>
+                <td>ماذا حدث؟</td>
+                <td>إجمالي مبيعات كل شهر</td>
+                <td>الجداول المحورية، المتوسطات، الرسوم البيانية</td>
+              </tr>
+              <tr>
+                <th scope="row">تشخيصي</th>
+                <td>لماذا حدث؟</td>
+                <td>سبب انخفاض المبيعات في شهر معين</td>
+                <td>الاحتمالات، الانحدار، السلاسل الزمنية</td>
+              </tr>
+              <tr>
+                <th scope="row">تنبؤي</th>
+                <td>ماذا سيحدث؟</td>
+                <td>توقّع مبيعات الربع القادم</td>
+                <td>الانحدار، أشجار القرار، الشبكات العصبية</td>
+              </tr>
+              <tr>
+                <th scope="row">توجيهي</th>
+                <td>ما الذي يجب فعله؟</td>
+                <td>اختيار الحملة الأنسب لرفع المبيعات</td>
+                <td>تجمع نتائج الأنواع الثلاثة السابقة</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note-line">
+          ملاحظة: هذا التصنيف الرباعي شائع في الاستخدام العملي. أما الأدبيات
+          البحثية فتقسّم طرائق التحليل بصور أخرى؛ إذ يعرض تاهردوست ستة تصنيفات
+          رئيسية، ويفصّل التحليل الوصفي والتفسيري والاستدلالي، ثم التحليل
+          النوعي<sup><a class="citation" href="#ref-1">[1]</a></sup
+          >.
+        </p>
+
+        <h3>1. التحليلات الوصفية: ماذا حدث؟</h3>
+        <p>
+          تجيب عن السؤال «ماذا حدث؟». وهذا النوع لا يهتم بسبب الحدوث ولا بعلاقات
+          السبب والنتيجة. ويشمل نوعين من العمليات:
+        </p>
+        <ul>
+          <li>جمع البيانات وعرضها بطريقة موجزة.</li>
+          <li>استخراج البيانات واستكشافها للبحث عن الأنماط.</li>
+        </ul>
+
+        <h3>2. التحليلات التشخيصية: لماذا حدث ذلك؟</h3>
+        <p>
+          تجيب عن السؤال «لماذا حدث ذلك؟». يحدد هذا النوع الظواهر الشاذة في
+          البيانات ويعالجها، ويمكن استخدام عدة تقنيات لذلك، منها:
+        </p>
+        <ul>
+          <li>نظرية الاحتمالات.</li>
+          <li>تحليل الانحدار.</li>
+          <li>تحليل السلاسل الزمنية.</li>
+        </ul>
+
+        <h3>3. التحليلات التنبؤية: ما الذي يُحتمل حدوثه في المستقبل؟</h3>
+        <p>
+          من خلال الأنماط والاتجاهات السابقة، يضع المحللون نماذج تنبؤية تقدّر
+          وقوع حدث أو نتيجة في المستقبل. ومن أبرز التقنيات:
+        </p>
+        <ul>
+          <li>
+            <strong>تحليل الانحدار:</strong> تقدير العلاقات بين مجموعة من
+            المتغيرات لتحديد كيفية تأثير أحد المدخلات على الآخر.
+          </li>
+          <li>
+            <strong>أشجار القرار:</strong> نماذج تصنيف تحدد الخيارات الممكنة
+            ونتائجها في بنية تشبه «الشجرة».
+          </li>
+          <li>
+            <strong>الشبكات العصبية:</strong> تنمذج العلاقات المعقدة وغير الخطية
+            في البيانات.
+          </li>
+        </ul>
+
+        <h3>4. التحليلات التوجيهية: ما هو أفضل مسار للعمل؟</h3>
+        <p>تحلل ما حدث، ولماذا حدث، وما قد يحدث، لتحديد الخطوة التالية.</p>
+        <p>
+          وللتعمق في الأسس الإحصائية خلف هذه الأنواع، كالإحصاء الوصفي والاستدلال
+          الإحصائي، يمكن الرجوع إلى كتاب بولمر<sup
+            ><a class="citation" href="#ref-2">[2]</a></sup
+          >.
+        </p>
+
+        <h2 id="collection">ما المقصود بعملية «جمع البيانات»؟</h2>
+        <p>
+          جمع البيانات عملية منهجية للحصول على المعلومات وتسجيلها من مختلف
+          المصادر لأغراض البحث والتحليل واتخاذ القرارات.
+        </p>
+
+        <h3>مصادر جمع البيانات</h3>
+        <ul>
+          <li>الأفراد.</li>
+          <li>الوثائق وأنظمة الأعمال.</li>
+          <li>المواقع الإلكترونية.</li>
+          <li>أجهزة الاستشعار.</li>
+          <li>التجارب.</li>
+        </ul>
+        <p class="note-line">
+          <strong>ملاحظة:</strong> وجود عدد كبير من البيانات ليس دليلًا على
+          جودتها. فهناك ملايين السجلات قليلة الفائدة إذا لم تكن محددة بوضوح أو
+          موثوقة المصدر.
+        </p>
+
+        <h3>خطوات جمع البيانات</h3>
+        <ol>
+          <li>
+            <strong>تحديد الهدف:</strong> ما الغرض من البيانات؟ هل هو تحليل
+            المبيعات؟ أم معرفة أسباب فشل منهجية ما؟ ويؤكد دليل Head Start
+            التدريبي أن من يعرف كيف ستُستخدم المعلومات يجمعها بصورة أفضل<sup
+              ><a class="citation" href="#ref-3">[3]</a></sup
+            >.
+          </li>
+          <li><strong>تحديد التصميم:</strong> كيف ستُجمع العينات؟</li>
+          <li>
+            <strong>بناء الأداة واختبارها:</strong> التأكد من نجاح الأداة
+            المختارة وقدرتها على تحقيق الهدف.
+          </li>
+          <li>
+            <strong>جمع البيانات ومراقبتها:</strong> بعد اعتماد الأداة تبدأ
+            عملية الجمع من مصادر ومراجع موثوقة.
+          </li>
+          <li>
+            <strong>التحقق من صحة البيانات وتخزينها وتوثيقها:</strong> والنتيجة
+            مجموعة بيانات قابلة للتتبع والتحليل.
+          </li>
+        </ol>
+
+        <h3>التحديات الشائعة في جمع البيانات</h3>
+        <ul>
+          <li>
+            <strong>الهدف غير واضح:</strong> تجمع الفرق بيانات لا تدعم أي قرار.
+          </li>
+          <li>
+            <strong>انحياز العينة:</strong> تستبعد العينة فئات مهمة من المجتمع.
+          </li>
+          <li>
+            <strong>السجلات المفقودة أو المكررة:</strong> تؤدي إلى نتائج غير
+            دقيقة وإحصاءات غير موثوقة.
+          </li>
+          <li>
+            <strong>انتهاكات الخصوصية:</strong> جمع البيانات بشكل غير قانوني أو
+            دون الحصول على تراخيص.
+          </li>
+        </ul>
+
+        <h3>من الأدوات المفيدة في جمع البيانات</h3>
+        <ul>
+          <li>
+            <strong>QuestionPro:</strong> مكتبة قوالب جاهزة للاستبيانات
+            والاستطلاعات.
+          </li>
+          <li>
+            <strong>نماذج جوجل (Google Forms):</strong> بسيطة وسهلة، ومناسبة
+            للاستبيانات الأساسية.
+          </li>
+          <li>
+            <strong>SurveyMonkey:</strong> منصة سحابية لإنشاء الاستطلاعات
+            والاختبارات عبر الإنترنت بسهولة.
+          </li>
+        </ul>
+
+        <h2 id="cleaning">ما المقصود بعملية «تنظيف البيانات»؟</h2>
+        <p>
+          تنظيف البيانات هو تحديد الأخطاء والتناقضات والقيم المفقودة في مجموعة
+          البيانات المجمّعة وتصحيحها، فالبيانات النظيفة شرط جوهري للحصول على
+          نتائج دقيقة<sup><a class="citation" href="#ref-1">[1]</a></sup
+          >. وتشمل العملية عادةً:
+        </p>
+        <ul class="checklist">
+          <li>معالجة القيم الفارغة.</li>
+          <li>إزالة البيانات المكررة.</li>
+          <li>توحيد الفئات.</li>
+          <li>إصلاح مشكلات التنسيق.</li>
+        </ul>
+
+        <h3>التحديات الشائعة في تنظيف البيانات</h3>
+        <ul>
+          <li>
+            <strong>القيم المفقودة:</strong> يصعب تحديد سبب ترك بعض الحقول
+            فارغة، فيصعب القرار بين حذف الصفوف أو تعبئتها بقيم تقديرية دون تشويه
+            النتائج.
+          </li>
+          <li>
+            <strong>عدم اتساق الصيغ والأنماط:</strong> إدخال المعلومة نفسها بطرق
+            مختلفة (مثل «ذكر» و«Male»)، فتظهر ككيانات منفصلة في الرسوم.
+          </li>
+          <li>
+            <strong>تخزين أنواع البيانات بشكل خاطئ:</strong> حفظ الأرقام أو
+            العملات أو التواريخ نصوصًا، مما يمنع إجراء العمليات الحسابية عليها.
+          </li>
+        </ul>
+
+        <h3>من الأدوات المفيدة في تنظيف البيانات</h3>
+        <ul>
+          <li>
+            <strong>Microsoft Excel:</strong> أدوات لتصفية البيانات وإزالة
+            التكرارات وتنسيق الخلايا. وإن أردت البدء به فراجع كتابي
+            <a href="../books/excel.html">شرح الإكسل</a>.
+          </li>
+          <li>
+            <strong>OpenRefine:</strong> أداة مفتوحة المصدر لتوحيد البيانات
+            الضخمة والمبعثرة وتنظيفها.
+          </li>
+          <li>
+            <strong>لغة بايثون (Python):</strong> تتيح مكتبات مثل Pandas وNumPy
+            معالجة القيم المفقودة وإزالة التكرارات وتوحيد المقاييس.
+          </li>
+        </ul>
+
+        <h2 id="workflow">المسار الكامل في خمس خطوات</h2>
+        <ol class="flow-steps">
+          <li><strong>سؤال واضح</strong><span>ماذا أريد أن أعرف؟</span></li>
+          <li><strong>جمع منهجي</strong><span>من مصادر موثوقة</span></li>
+          <li><strong>تنظيف</strong><span>قيم فارغة، تكرار، صيغ</span></li>
+          <li><strong>تحليل</strong><span>الوصفي أولًا ثم ما يلزم</span></li>
+          <li><strong>قرار</strong><span>خلاصة قابلة للتنفيذ</span></li>
+        </ol>
+        <p>
+          طبّقتُ هذا المسار في مشاريعي: في
+          <a href="../data-analysis/reading-analysis.html"
+            >تحليل عادات القراءة</a
+          >
+          (83 كتابًا)، وفي
+          <a href="../data-analysis/adventure-works.html">تحليل مخاطر المخزون</a
+          >، وفي
+          <a href="../data-analysis/sales-analysis.html">مشروع تحليل المبيعات</a
+          >.
+        </p>
+
+        <h2 id="faq">أسئلة شائعة</h2>
+        <div class="faq">
+          <details>
+            <summary>من أين أبدأ في تعلّم تحليل البيانات؟</summary>
+            <p>
+              ابدأ بالتحليل الوصفي على ملف صغير في Excel: نظّف البيانات، ثم أنشئ
+              جدولًا محوريًا ورسمًا بيانيًا واحدًا. بعدها انتقل إلى Python
+              ومكتبة Pandas.
+            </p>
+          </details>
+          <details>
+            <summary>ما الفرق بين التحليل الوصفي والتشخيصي؟</summary>
+            <p>
+              الوصفي يصف ما حدث (مثل انخفاض المبيعات)، والتشخيصي يبحث عن السبب
+              (لماذا انخفضت؟).
+            </p>
+          </details>
+          <details>
+            <summary>لماذا نُنظّف البيانات قبل تحليلها؟</summary>
+            <p>
+              لأن الأخطاء والتكرار والصيغ المتضاربة تُشوّه النتائج وتُعطي
+              استنتاجات غير موثوقة.
+            </p>
+          </details>
+        </div>
+
+        <h2 id="conclusion">الخلاصة</h2>
+        <p>
+          يبدأ تحليل البيانات بسؤال واضح، ثم جمع منهجي من مصادر موثوقة، ثم تنظيف
+          يضمن الدقة، وبعدها يختار المحلل النوع المناسب: وصفي أو تشخيصي أو تنبؤي
+          أو توجيهي.
+        </p>
+      </article>
+
+      <section class="evidence" id="references">
+        <h2>
+          <span class="ar-only">المراجع</span
+          ><span class="en-only">References</span>
+        </h2>
+        <p class="evidence-summary">
+          <span class="ar-only" lang="ar" dir="rtl"
+            >المراجع التالية هي التي استندتُ إليها في هذا المقال. أما التصنيف
+            الرباعي للتحليل وقوائم الأدوات فهي من الاستخدام العملي الشائع ولا
+            تُنسب إلى مرجع بعينه.</span
+          ><span class="en-only"
+            >These are the sources this article draws on. The four-type
+            classification and the tool lists reflect common practice and are
+            not attributed to a single source.</span
+          >
+        </p>
+        <ol class="refs" dir="ltr" lang="en">
+          <li id="ref-1">
+            Taherdoost, H. (2020). Different types of data analysis; data
+            analysis methods and techniques in research projects.
+            <i
+              >International Journal of Academic Research in Management (IJARM),
+              9</i
+            >(1), 1–9. Helvetic Editions LTD, Switzerland.
+          </li>
+          <li id="ref-2">
+            Bulmer, M. (2024). <i>A Portable Introduction to Data Analysis</i>.
+            The University of Queensland.
+            <a
+              href="https://doi.org/10.14264/12dc235"
+              target="_blank"
+              rel="noopener"
+              >DOI</a
+            >
+          </li>
+          <li id="ref-3">
+            Migrant &amp; Seasonal Head Start Technical Assistance Center,
+            Academy for Educational Development.
+            <i>Introduction to Data Analysis Handbook</i>.
+          </li>
+        </ol>
+      </section>
+
+      <section class="related">
+        <h2>مقالات ذات صلة</h2>
+        <div class="related-grid">
+          <a class="related-card" href="ai-agents.html"
+            ><span>الذكاء الاصطناعي والتقنية</span
+            ><strong
+              >وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي</strong
+            ></a
+          ><a class="related-card" href="will-ai-replace-human-jobs.html"
+            ><span>الذكاء الاصطناعي والتقنية</span
+            ><strong>هل يلغي الذكاء الاصطناعي الوظائف؟ نعمة أم نقمة؟</strong></a
+          >
+        </div>
+        <p>
+          <a class="btn btn-secondary" href="../writing.html#articles"
+            >كل المقالات</a
+          >
+        </p>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script
+      src="../js/include.js"
+      data-root="../"
+      data-scripts="js/article-i18n.js?v=7"
+    ></script>
+  </body>
+</html>

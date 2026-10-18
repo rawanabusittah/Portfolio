@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <title>
+      وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي | روان أبو ستة
+    </title>
+    <meta
+      name="description"
+      content="ما وكلاء الذكاء الاصطناعي؟ تعرّف إلى مكوّناتهم وآلية عملهم وتحديات الخصوصية والموثوقية، ومن يستطيع استخدامها أو بناءها."
+    />
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/articles/ai-agents.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta
+      property="og:title"
+      content="وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي"
+    />
+    <meta
+      property="og:description"
+      content="ما وكلاء الذكاء الاصطناعي؟ تعرّف إلى مكوّناتهم وآلية عملهم وتحديات الخصوصية والموثوقية، ومن يستطيع استخدامها أو بناءها."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/articles/ai-agents.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/images/articles/article-3.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="author" content="روان أبو ستة" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:image:alt"
+      content="روبوت ودود على واجهة شفافة بعنوان AI Agents تعرض خطوات التخطيط والاستدلال والتنفيذ فوق حاسوب محمول"
+    />
+    <meta property="article:published_time" content="2026-10-15" />
+    <meta property="article:modified_time" content="2026-10-16" />
+    <meta
+      property="article:author"
+      content="https://rawanabusittah.github.io/"
+    />
+    <meta property="article:section" content="الذكاء الاصطناعي والتقنية" />
+    <meta
+      name="twitter:title"
+      content="وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي"
+    />
+    <meta
+      name="twitter:description"
+      content="ما وكلاء الذكاء الاصطناعي؟ مكوّناتهم وآلية عملهم وتحديات الخصوصية والموثوقية."
+    />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/images/articles/article-3.png"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي",
+            "description": "ما وكلاء الذكاء الاصطناعي؟ تعرّف إلى مكوّناتهم وآلية عملهم وتحديات الخصوصية والموثوقية، ومن يستطيع استخدامها أو بناءها.",
+            "inLanguage": "ar",
+            "articleSection": "الذكاء الاصطناعي والتقنية",
+            "keywords": "وكلاء الذكاء الاصطناعي, AI Agents, النماذج اللغوية الكبيرة, التخطيط, الأدوات, الذاكرة, الخصوصية, أمن البيانات",
+            "timeRequired": "PT7M",
+            "image": "https://rawanabusittah.github.io/images/articles/article-3.png",
+            "mainEntityOfPage": "https://rawanabusittah.github.io/articles/ai-agents.html",
+            "datePublished": "2026-10-15",
+            "dateModified": "2026-10-16",
+            "publisher": {
+              "@type": "Person",
+              "name": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "روان عمر أبو ستة",
+              "alternateName": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "citation": [
+              {
+                "@type": "ScholarlyArticle",
+                "name": "AI Agents: Evolution, Architecture, and Real-World Applications",
+                "author": { "@type": "Person", "name": "Naveen Krishnan" },
+                "datePublished": "2025-03",
+                "identifier": "arXiv:2503.12687v1",
+                "url": "https://arxiv.org/abs/2503.12687"
+              },
+              {
+                "@type": "Book",
+                "name": "Artificial Intelligence Agents and Agentic Workflows: The New Frontier of Automation: A Practical Guide to Understanding What They Are, How They Work, and When to Use Them",
+                "author": [
+                  { "@type": "Person", "name": "Mariana Sánchez Caparrós" },
+                  { "@type": "Person", "name": "Juan Gustavo Corvalán" },
+                  { "@type": "Person", "name": "Enzo Maria Le Fevre Cervini" }
+                ],
+                "datePublished": "2025-04",
+                "publisher": { "@type": "Organization", "name": "La Ley" },
+                "isbn": "978-987-03-4946-4"
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "الرئيسية",
+                "item": "https://rawanabusittah.github.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "المقالات",
+                "item": "https://rawanabusittah.github.io/writing.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي",
+                "item": "https://rawanabusittah.github.io/articles/ai-agents.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link rel="stylesheet" href="../css/main.css?v=20261017-9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div class="preloader" id="preloader"><div class="loader"></div></div>
+    <div id="site-header"></div>
+    <main id="main" class="article-page agent-page" data-article="ai-agents">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a href="../index.html">الرئيسية</a> /
+        <a href="../writing.html#articles">المقالات</a> /
+        <span>الذكاء الاصطناعي والتقنية</span>
+      </nav>
+      <article>
+        <header>
+          <h1>وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي</h1>
+          <p class="article-meta">
+            الذكاء الاصطناعي والتقنية · بقلم روان أبو ستة ·
+            <time datetime="2026-10-15">نُشر في 15 أكتوبر 2026</time> · 7 دقائق
+            للقراءة
+          </p>
+          <img
+            class="article-hero"
+            src="../images/articles/article-3.png"
+            alt="روبوت ودود على واجهة شفافة بعنوان AI Agents تعرض خطوات التخطيط والاستدلال والتنفيذ فوق حاسوب محمول"
+            width="1677"
+            height="938"
+            fetchpriority="high"
+            decoding="async"
+            onerror="this.remove()"
+          />
+        </header>
+
+        <p class="article-lead">
+          هل فكرت يومًا أن تجلس مع آلة وتتحدث إليها لساعات دون أن تشعر بالملل؟
+          هل تمنيت أن يتولى نظامٌ ما مهامك المتكررة بسرعة وجودة، أو يبحث لك عن
+          وظيفة ويتابع طلباتك، أو يحوّل محاضراتك إلى ملخصات قابلة للدراسة؟ لم
+          تعد هذه السيناريوهات خيالًا محضًا؛ فهي من الاستخدامات التي تعد بها
+          وكلاء الذكاء الاصطناعي (AI Agents).
+        </p>
+
+        <aside class="key-points" aria-labelledby="kp-title">
+          <h2 id="kp-title">الفكرة باختصار</h2>
+          <ul>
+            <li>الوكيل يعمل لتحقيق هدف، ويجزّئه إلى مهام قابلة للتنفيذ.</li>
+            <li>
+              قد يتصل بأدوات رقمية ويتفاعل مع البيئة بدل الاكتفاء بإجابة واحدة.
+            </li>
+            <li>
+              تتفاوت قدراته بحسب التخطيط والأدوات والذاكرة وآليات المراجعة
+              المتاحة.
+            </li>
+            <li>
+              تظل مراجعة الإنسان مهمة عند التعامل مع معلومات أو إجراءات حساسة.
+            </li>
+          </ul>
+        </aside>
+
+        <nav class="toc" aria-labelledby="toc-title">
+          <h2 id="toc-title">محتويات المقال</h2>
+          <ol>
+            <li><a href="#agent-definition">ما وكلاء الذكاء الاصطناعي؟</a></li>
+            <li><a href="#agent-components">ممّ يتكوّن الوكيل؟</a></li>
+            <li><a href="#agent-workflow">كيف ينفذ مهمة؟</a></li>
+            <li><a href="#agent-challenges">التحديات والمخاطر</a></li>
+            <li><a href="#agent-users">هل تحتاج إلى خلفية تقنية؟</a></li>
+            <li><a href="#agent-conclusion">الخلاصة</a></li>
+            <li><a href="#agent-references">المراجع</a></li>
+          </ol>
+        </nav>
+
+        <section class="agent-section" id="agent-definition">
+          <span class="agent-kicker">01 / المفهوم</span>
+          <h2>ما وكلاء الذكاء الاصطناعي؟</h2>
+          <p>
+            وكلاء الذكاء الاصطناعي أنظمة برمجية تستقبل هدفًا، وتختار خطوات تساعد
+            على تحقيقه، وقد تنفذ بعض هذه الخطوات عبر أدوات متصلة بها. وهي تختلف
+            عن الأداة التقليدية التي تنفذ أمرًا مباشرًا واحدًا؛ إذ يمكن للوكيل
+            أن يخطط، ويتفاعل مع مواقع أو تطبيقات أو قواعد بيانات، ثم يراجع
+            النتيجة ويعدّل خطوته التالية<sup
+              ><a class="citation" href="#agent-ref-1">[1]</a></sup
+            >.
+          </p>
+          <p>
+            يمكن تخيّل الوكيل كمساعد رقمي يتجاوز الإجابة عن سؤال إلى تنسيق عمل
+            متكامل، مثل تنظيم البريد، أو إعداد تقرير دوري، أو متابعة خطوات عملية
+            توظيف، مع بقاء الصلاحيات والمراجعة البشرية جزءًا من التصميم<sup
+              ><a class="citation" href="#agent-ref-2">[2]</a></sup
+            >.
+          </p>
+          <figure class="agent-loop" aria-labelledby="agent-loop-title">
+            <figcaption id="agent-loop-title">
+              <strong>حلقة عمل الوكيل</strong>
+              <span>هدف واضح، ثم تنفيذ ومراجعة متكرران</span>
+            </figcaption>
+            <ol class="agent-loop-steps">
+              <li><b>هدف</b><span>ما النتيجة المطلوبة؟</span></li>
+              <li><b>خطة</b><span>ما الخطوات المناسبة؟</span></li>
+              <li><b>تنفيذ</b><span>أي أداة تنجز الخطوة؟</span></li>
+              <li><b>مراجعة</b><span>هل تحققت النتيجة؟</span></li>
+            </ol>
+          </figure>
+        </section>
+
+        <section class="agent-section" id="agent-components">
+          <span class="agent-kicker">02 / البنية</span>
+          <h2>ممّ يتكوّن الوكيل؟</h2>
+          <p>
+            لا يعمل الوكيل عادةً بمكوّن واحد؛ بل يجمع بين نموذج للفهم، وآلية
+            لتحديد الخطوات، واتصال بالأدوات، وسياق يساعده على متابعة المهمة.
+            وتختلف التفاصيل باختلاف التطبيق.
+          </p>
+          <div class="agent-components">
+            <article class="agent-component">
+              <span class="agent-component-index">A</span>
+              <h3>النموذج اللغوي</h3>
+              <p>يفهم التعليمات ويصوغ الخطط والمحتوى بلغة طبيعية.</p>
+            </article>
+            <article class="agent-component">
+              <span class="agent-component-index">B</span>
+              <h3>التخطيط والقرار</h3>
+              <p>
+                يحوّل الهدف العام إلى خطوات أصغر، صريحة أو مصاغة باللغة
+                الطبيعية.
+              </p>
+            </article>
+            <article class="agent-component">
+              <span class="agent-component-index">C</span>
+              <h3>الأدوات الخارجية</h3>
+              <p>
+                تمنحه وسيلة للتفاعل مع المتصفح والبريد والتقويم والأنظمة وقواعد
+                البيانات.
+              </p>
+            </article>
+            <article class="agent-component">
+              <span class="agent-component-index">D</span>
+              <h3>الذاكرة والسياق</h3>
+              <p>
+                يحفظ سياق المهمة الحالية، وقد يسترجع تفضيلات أو معلومات سابقة
+                عند الحاجة.
+              </p>
+            </article>
+            <article class="agent-component agent-component-wide">
+              <span class="agent-component-index">E</span>
+              <h3>التقييم والتصحيح</h3>
+              <p>
+                يفحص النتيجة، ويعيد المحاولة أو يطلب توضيحًا إذا لم تتحقق
+                النتيجة المطلوبة.
+              </p>
+            </article>
+          </div>
+          <p class="agent-note">
+            الذاكرة طويلة الأمد ليست موجودة في كل وكيل؛ وقد تعتمد على ملفات أو
+            سجلات منفصلة، لذلك ينبغي معرفة ما يُحفظ وكيف يُستخدم.
+          </p>
+        </section>
+
+        <section class="agent-section" id="agent-workflow">
+          <span class="agent-kicker">03 / التطبيق</span>
+          <h2>كيف ينفذ الوكيل مهمة؟</h2>
+          <p>
+            إذا كان الهدف البحث عن وظيفة مناسبة، فقد يمر الوكيل بخطوات مثل جمع
+            معلومات المهارات، والبحث في المنصات، وتصفية النتائج، وتجهيز طلبات
+            مخصصة، ثم متابعة الردود. هذه الخطوات مثال توضيحي؛ وما يستطيع الوكيل
+            فعله فعليًا يعتمد على أدواته والصلاحيات التي مُنحت له<sup
+              ><a class="citation" href="#agent-ref-2">[2]</a></sup
+            >.
+          </p>
+          <ol class="agent-sequence">
+            <li>
+              <b>افهم الهدف</b
+              ><span>اجمع المهارات والمعايير التي يحددها المستخدم.</span>
+            </li>
+            <li>
+              <b>ابحث</b><span>استعلم من المصادر أو المنصات المتاحة.</span>
+            </li>
+            <li>
+              <b>صفِّ النتائج</b><span>قارن النتائج بالمعايير المطلوبة.</span>
+            </li>
+            <li>
+              <b>جهّز الإجراء</b><span>أنشئ مسودة طلب مخصصة للمراجعة.</span>
+            </li>
+            <li>
+              <b>تابع بأمان</b
+              ><span>لا ترسل أو تعتمد إجراءً حساسًا دون موافقة واضحة.</span>
+            </li>
+          </ol>
+        </section>
+
+        <section class="agent-section" id="agent-challenges">
+          <span class="agent-kicker">04 / المسؤولية</span>
+          <h2>ما التحديات في استخدام الوكلاء؟</h2>
+          <div class="agent-challenges">
+            <article class="agent-challenge">
+              <h3>الدقة والموثوقية</h3>
+              <p>
+                قد تنتج النماذج معلومات غير دقيقة تبدو مقنعة؛ لذا تستلزم المهام
+                الحساسة تحققًا بشريًا.
+              </p>
+            </article>
+            <article class="agent-challenge">
+              <h3>الخصوصية وأمن البيانات</h3>
+              <p>
+                يحتاج الوكيل أحيانًا إلى البريد أو الملفات؛ حدّد ما يمكنه الوصول
+                إليه، واحمِ البيانات من التسريب.
+              </p>
+            </article>
+            <article class="agent-challenge">
+              <h3>التحيز والأثر الأخلاقي</h3>
+              <p>
+                قد تعكس التوصيات تحيزات بيانات التدريب، خصوصًا في قرارات مثل
+                التوظيف.
+              </p>
+            </article>
+            <article class="agent-challenge">
+              <h3>الاعتمادية والتكلفة</h3>
+              <p>
+                يتطلب الربط المستمر بالأنظمة بنية مستقرة، وقد يرفع التكاليف أو
+                يشجع على اعتماد مفرط.
+              </p>
+            </article>
+            <article class="agent-challenge agent-challenge-wide">
+              <h3>قابلية التفسير</h3>
+              <p>
+                قد يصعب فهم سبب اختيار النموذج لقرار معين؛ وهذا تحدٍّ مهم في
+                التطبيقات الحساسة كالطب والمالية.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="agent-section" id="agent-users">
+          <span class="agent-kicker">05 / لمن؟</span>
+          <h2>هل تحتاج إلى خلفية تقنية؟</h2>
+          <p>
+            ليس بالضرورة؛ لكن ارتفاع الوعي التقني يوسّع ما يمكن تخصيصه والتحكم
+            فيه.
+          </p>
+          <div class="agent-audiences">
+            <article class="agent-audience">
+              <span>الاستخدام اليومي</span>
+              <h3>للمستخدم غير التقني</h3>
+              <ul>
+                <li>استخدام وكلاء جاهزين بواجهة بسيطة.</li>
+                <li>صياغة الهدف والتعليمات بلغة واضحة.</li>
+                <li>معرفة حدود الوكيل ومراجعة ما ينفذه.</li>
+              </ul>
+            </article>
+            <article class="agent-audience agent-audience-technical">
+              <span>التخصيص والبناء</span>
+              <h3>للمستخدم التقني أو شبه التقني</h3>
+              <ul>
+                <li>ربط الوكيل بأدوات وخدمات إضافية.</li>
+                <li>تصميم مهام مركبة باستخدام منصات No-Code أو البرمجة.</li>
+                <li>ضبط الصلاحيات ومراقبة الأداء وتحديثه.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="agent-section" id="agent-conclusion">
+          <span class="agent-kicker">06 / الخلاصة</span>
+          <h2>نحو تعاون جديد بين الإنسان والوكيل</h2>
+          <p>
+            تمثل الوكلاء انتقالًا من أدوات تنفذ أمرًا واحدًا إلى أنظمة تستطيع
+            فهم هدف، وتخطيط خطوات، والتفاعل مع أدوات رقمية. التحدي ليس في وجودها
+            وحده، بل في تصميمها وتنظيم استخدامها وتحديد علاقتها بالإنسان.
+          </p>
+          <p>
+            يمكن للوكيل أن يوفّر الوقت ويخفف المهام الروتينية، بشرط استخدامه
+            بوعي، وتحديد صلاحياته، ومراجعة مخرجاته. أما تركه يعمل دون رقابة فقد
+            يعرّض الخصوصية والموثوقية للخطر. السؤال الأهم إذن: كيف نجعل هذا
+            التعاون مثمرًا وآمنًا ومسؤولًا؟
+          </p>
+        </section>
+      </article>
+      <section class="evidence" id="agent-references">
+        <h2>
+          <span class="ar-only">المراجع</span
+          ><span class="en-only">References</span>
+        </h2>
+        <p class="evidence-summary">
+          <span class="ar-only" lang="ar" dir="rtl"
+            >تتناول هذه المصادر بنية وكلاء الذكاء الاصطناعي، وتدفقات العمل
+            الوكيلة، وتطبيقاتها العملية.</span
+          ><span class="en-only"
+            >These sources cover AI-agent architecture, agentic workflows, and
+            practical applications.</span
+          >
+        </p>
+        <ol class="refs" dir="ltr" lang="en">
+          <li id="agent-ref-1">
+            Krishnan, N. (2025, March).
+            <i
+              >AI agents: Evolution, architecture, and real-world
+              applications</i
+            >
+            (Version 1). arXiv:2503.12687.
+            <a
+              href="https://arxiv.org/abs/2503.12687"
+              target="_blank"
+              rel="noopener noreferrer"
+              >arXiv</a
+            >.
+          </li>
+          <li id="agent-ref-2">
+            Sánchez Caparrós, M., Corvalán, J. G., &amp; Le Fevre Cervini, E. M.
+            (2025, April).
+            <i
+              >Artificial intelligence agents and agentic workflows: The new
+              frontier of automation: A practical guide to understanding what
+              they are, how they work, and when to use them</i
+            >. La Ley. ISBN 978-987-03-4946-4.
+          </li>
+        </ol>
+      </section>
+      <section class="related">
+        <h2>مقالات ذات صلة</h2>
+        <div class="related-grid">
+          <a class="related-card" href="will-ai-replace-human-jobs.html"
+            ><span>الذكاء الاصطناعي والتقنية</span
+            ><strong>هل يلغي الذكاء الاصطناعي الوظائف؟ نعمة أم نقمة؟</strong></a
+          ><a class="related-card" href="data-analysis-basics.html"
+            ><span>تحليل البيانات</span
+            ><strong
+              >تحليل البيانات للمبتدئين: الأنواع وجمع البيانات وتنظيفها</strong
+            ></a
+          >
+        </div>
+        <p>
+          <a class="btn btn-secondary" href="../writing.html#articles"
+            >كل المقالات</a
+          >
+        </p>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script
+      src="../js/include.js"
+      data-root="../"
+      data-scripts="js/article-i18n.js?v=7"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <title>
+      لماذا تفشل المواقع الجميلة بدون تجربة المستخدم..؟ | روان أبو ستة
+    </title>
+    <meta
+      name="description"
+      content="ما هي تجربة المستخدم UX وكيف تؤثر في سهولة الاستخدام ومعدلات التحويل وإمكانية الوصول؟ شرح مبسّط بمثال متجر إلكتروني، مع جدول مقارنة وخطوات عملية ومراجع."
+    />
+    <meta name="author" content="روان أبو ستة" />
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/articles/ux-web-design.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:title"
+      content="لماذا تفشل المواقع الجميلة بدون تجربة المستخدم..؟"
+    />
+    <meta
+      property="og:description"
+      content="UX وسهولة الاستخدام ومعدلات التحويل وإمكانية الوصول، بشرح مبسّط ومثال متجر إلكتروني ومراجع."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/articles/ux-web-design.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/images/articles/ux-web-design.webp"
+    />
+    <meta property="article:published_time" content="2026-10-15" />
+    <meta property="article:modified_time" content="2026-10-16" />
+    <meta
+      property="article:author"
+      content="https://rawanabusittah.github.io/"
+    />
+    <meta property="article:section" content="تصميم وتجربة المستخدم" />
+    <meta property="og:image:width" content="1563" />
+    <meta property="og:image:height" content="1006" />
+    <meta
+      property="og:image:alt"
+      content="يد تلمس شاشة هاتف تعرض واجهة تطبيق عليها كلمتا UX وUI ومخطط بياني"
+    />
+    <meta
+      name="twitter:description"
+      content="ما هي تجربة المستخدم UX وكيف تؤثر في سهولة الاستخدام ومعدلات التحويل وإمكانية الوصول؟"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="لماذا تفشل المواقع الجميلة بدون تجربة المستخدم..؟"
+    />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/images/articles/ux-web-design.webp"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "لماذا تفشل المواقع الجميلة بدون تجربة المستخدم..؟",
+            "alternativeHeadline": "Why Beautiful Websites Fail Without UX",
+            "description": "ما هي تجربة المستخدم UX وكيف تؤثر في سهولة الاستخدام ومعدلات التحويل وإمكانية الوصول؟",
+            "inLanguage": "ar",
+            "articleSection": "تصميم وتجربة المستخدم",
+            "keywords": "تجربة المستخدم, UX, UI, قابلية الاستخدام, معدل التحويل, معدل الارتداد, إمكانية الوصول, WCAG, تصميم مواقع الويب",
+            "timeRequired": "PT5M",
+            "image": "https://rawanabusittah.github.io/images/articles/ux-web-design.webp",
+            "mainEntityOfPage": "https://rawanabusittah.github.io/articles/ux-web-design.html",
+            "datePublished": "2026-10-15",
+            "dateModified": "2026-10-16",
+            "author": {
+              "@type": "Person",
+              "name": "روان عمر أبو ستة",
+              "alternateName": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "publisher": {
+              "@type": "Person",
+              "name": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "citation": [
+              {
+                "@type": "Book",
+                "name": "The Elements of User Experience: User-Centered Design for the Web and Beyond (2nd ed.)",
+                "author": { "@type": "Person", "name": "Jesse James Garrett" },
+                "datePublished": "2011",
+                "publisher": { "@type": "Organization", "name": "New Riders" }
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Usability and User Experience: Design and Evaluation",
+                "author": [
+                  { "@type": "Person", "name": "James R. Lewis" },
+                  { "@type": "Person", "name": "Jeff Sauro" }
+                ],
+                "datePublished": "2021",
+                "isPartOf": {
+                  "@type": "Book",
+                  "name": "Handbook of Human Factors and Ergonomics"
+                },
+                "pagination": "972-1015",
+                "sameAs": "https://doi.org/10.1002/9781119636113.ch38"
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "الرئيسية",
+                "item": "https://rawanabusittah.github.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "المقالات",
+                "item": "https://rawanabusittah.github.io/writing.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "تجربة المستخدم UX",
+                "item": "https://rawanabusittah.github.io/articles/ux-web-design.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link
+      rel="preload"
+      as="image"
+      href="../images/articles/ux-web-design.webp"
+      type="image/webp"
+    />
+    <link rel="stylesheet" href="../css/main.css?v=20261017-9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div class="preloader" id="preloader"><div class="loader"></div></div>
+    <div id="site-header"></div>
+    <main id="main" class="article-page" data-article="ux-web-design">
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a href="../index.html">الرئيسية</a> /
+        <a href="../writing.html#articles">المقالات</a> /
+        <span>تصميم وتجربة المستخدم</span>
+      </nav>
+      <article>
+        <header>
+          <h1>لماذا تفشل المواقع الجميلة بدون تجربة المستخدم..؟</h1>
+          <p class="article-meta">
+            تصميم وتجربة المستخدم · بقلم روان أبو ستة ·
+            <time datetime="2026-10-15">نُشر في 15 أكتوبر 2026</time> · 10 دقائق
+            قراءة
+          </p>
+          <img
+            class="article-hero"
+            src="../images/articles/ux-web-design.webp"
+            alt="يد تلمس شاشة هاتف تعرض واجهة تطبيق عليها كلمتا UX وUI ومخطط بياني"
+            width="1563"
+            height="1006"
+            fetchpriority="high"
+            decoding="async"
+            onerror="this.remove()"
+          />
+        </header>
+
+        <p class="article-lead">
+          يقال إن المنتج الناجح هو الذي يستطيع المستخدم فهم آلية استخدامه في أقل
+          من دقيقة. يشرح هذا المقال ما هي تجربة المستخدم، ولماذا هي محور تصميم
+          المواقع، وكيف تؤثر في سهولة الاستخدام والتحويل وإمكانية الوصول.
+        </p>
+
+        <aside class="key-points" aria-labelledby="kp-title">
+          <h2 id="kp-title">الخلاصة في أربع نقاط</h2>
+          <ul>
+            <li>
+              تجربة المستخدم أوسع من الشكل الجمالي: تشمل التصفح والمحتوى والسلوك
+              والتقنية معًا<sup><a class="citation" href="#ref-1">[1]</a></sup
+              >.
+            </li>
+            <li>
+              قابلية الاستخدام تعني سهولة التعلم وسرعة إنجاز المهام وقلة
+              الأخطاء<sup><a class="citation" href="#ref-2">[2]</a></sup
+              >.
+            </li>
+            <li>
+              تفصيل صغير في مسار الشراء أو التسجيل قد يصنع الفرق بين عملية
+              مكتملة وأخرى مهجورة.
+            </li>
+            <li>
+              إمكانية الوصول جزء من UX لا إضافة عليها، وتوسّع قاعدة المستخدمين.
+            </li>
+          </ul>
+        </aside>
+
+        <nav class="toc" aria-labelledby="toc-title">
+          <h2 id="toc-title">محتويات المقال</h2>
+          <ol>
+            <li><a href="#example">مثال: متجر أحذية</a></li>
+            <li><a href="#what-is">ما هي تجربة المستخدم؟</a></li>
+            <li><a href="#why">لماذا هي محور أساسي؟</a></li>
+            <li><a href="#usability">السهولة وكفاءة الأداء</a></li>
+            <li><a href="#conversion">معدلات التحويل</a></li>
+            <li><a href="#accessibility">الشمولية وإمكانية الوصول</a></li>
+            <li><a href="#workflow">مسار عملي في خمس خطوات</a></li>
+            <li><a href="#faq">أسئلة شائعة</a></li>
+            <li><a href="#conclusion">الخلاصة</a></li>
+            <li><a href="#references">المراجع</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="example">تجربة تسوق بسيطة تُظهر تجربة المستخدم قيد التنفيذ</h2>
+        <p>
+          تخيّل مستخدمًا يدخل إلى متجر إلكتروني لشراء حذاء رياضي، فيجد زر البحث
+          واضحًا في أعلى الصفحة، والتصنيفات مرتّبة بعناية، والصور عالية الدقة،
+          مع معلومات مختصرة ومباشرة عن كل منتج. يختار الحذاء المناسب، يحدد اللون
+          والمقاس بسهولة، ثم ينتقل إلى صفحة الدفع ليجد خطوات واضحة، وطرق دفع
+          متعددة، مع توضيح لرسوم الشحن وموعد الاستلام وسياسة الاسترجاع. ينجز
+          عملية الشراء دون تردد أو إرباك، ويخرج بشعور بالرضا والثقة. ما حدث هنا
+          هو تطبيق عملي لمفهوم تجربة المستخدم (UX) في تصميم موقع الويب.
+        </p>
+        <figure>
+          <img
+            class="article-hero"
+            src="../images/articles/ux-shopping-journey.webp"
+            alt="رحلة شراء حذاء رياضي عبر الهاتف في ست خطوات: البحث، التصنيفات، اختيار اللون والمقاس، الشحن والاسترجاع، الدفع، ثم تأكيد الطلب"
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+            onerror="this.remove()"
+          />
+          <figcaption class="article-meta" style="text-align: center">
+            رحلة شراء واضحة: من البحث إلى تأكيد الطلب دون إرباك.
+          </figcaption>
+        </figure>
+
+        <h2 id="what-is">ما هي تجربة المستخدم في مواقع الويب؟</h2>
+        <p>
+          تجربة المستخدم (User Experience – UX) هي مجموع الانطباعات والتفاعلات
+          التي يمر بها المستخدم أثناء استخدام موقع الويب، بدءًا من لحظة الدخول
+          وحتى مغادرته. لا تتعلق UX بالشكل الجمالي للموقع فقط، بل تشمل سهولة
+          التصفح، وضوح المعلومات، منطقية الترتيب، سرعة الوصول إلى الهدف، وشعور
+          المستخدم بالراحة والثقة أثناء التفاعل. أي أن UX هي مزيج من التصميم،
+          والسلوك، والمحتوى، والتقنية، يتكامل ليخدم احتياجات المستخدم ويحترم
+          وقته وجهده. وهذا هو منطق التصميم المتمحور حول المستخدم الذي يعرضه
+          غاريت للويب وما بعده<sup
+            ><a class="citation" href="#ref-1">[1]</a></sup
+          >.
+        </p>
+
+        <h2 id="why">
+          لماذا تعتبر تجربة المستخدم محورًا أساسيًا في تصميم المواقع؟
+        </h2>
+        <p>
+          أهمية تبني مبادئ تجربة المستخدم في تصميم مواقع الويب تنبع من كونها
+          نقطة الالتقاء بين أهداف المستخدم وأهداف صاحب الموقع. فالمستخدم يريد
+          إنجاز مهمة معينة بأقل وقت وجهد، وصاحب الموقع يريد تحقيق هدف واضح مثل
+          زيادة المبيعات، أو جذب القرّاء، أو تسجيل المشتركين. تصميم تجربة
+          استخدام مدروسة يجعل الوصول إلى هذه الأهداف أكثر سلاسة، ويحوّل الموقع
+          من مجرد واجهة معلوماتية إلى أداة فعّالة تحقق نتائج ملموسة.
+        </p>
+        <p>
+          من الناحية العملية، موقع يقدّم تجربة استخدام جيدة يقلل من احتمالية
+          مغادرة المستخدم في ثوانيه الأولى، ويزيد من فرص بقائه واستكشافه لبقية
+          الصفحات. هذه السلوكيات تنعكس على مؤشرات الأداء مثل معدّل الارتداد
+          (Bounce Rate)، ومتوسط زمن الجلسة، وعدد الصفحات التي يزورها المستخدم،
+          وهي مؤشرات تقيس جودة الموقع وسهولة استخدامه. يلخّص الجدول التالي أربعة
+          جوانب رئيسية وما يقابلها من أسئلة ومؤشرات.
+        </p>
+        <div class="rp-table-wrap">
+          <table class="rp-table types-table">
+            <caption class="visually-hidden">
+              جوانب تجربة المستخدم وأسئلتها ومؤشرات متابعتها
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">الجانب</th>
+                <th scope="col">السؤال الذي يجيب عنه</th>
+                <th scope="col">مثال من المتجر</th>
+                <th scope="col">مؤشر المتابعة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">قابلية الاستخدام</th>
+                <td>هل ينجز المستخدم مهمته بسهولة؟</td>
+                <td>زر بحث واضح وتصنيفات مألوفة</td>
+                <td>زمن إنجاز المهمة، ونسبة الأخطاء</td>
+              </tr>
+              <tr>
+                <th scope="row">التفاعل والبقاء</th>
+                <td>هل يبقى المستخدم ويستكشف؟</td>
+                <td>صور واضحة ومعلومات مختصرة</td>
+                <td>معدل الارتداد، ومتوسط زمن الجلسة، وعدد الصفحات</td>
+              </tr>
+              <tr>
+                <th scope="row">التحويل</th>
+                <td>هل يُكمل الهدف المطلوب؟</td>
+                <td>دفع بخطوات واضحة وسياسة استرجاع معلنة</td>
+                <td>معدل التحويل، والسلال المهجورة</td>
+              </tr>
+              <tr>
+                <th scope="row">إمكانية الوصول</th>
+                <td>هل يستطيع الجميع الاستخدام؟</td>
+                <td>تباين كافٍ ووصف للصور ودعم لوحة المفاتيح</td>
+                <td>الالتزام بإرشادات WCAG</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="usability">
+          تأثير تجربة المستخدم على سهولة الاستخدام وكفاءة الأداء
+        </h2>
+        <p>
+          أحد أهم أبعاد UX هو قابلية الاستخدام (Usability)، أي مدى سهولة تعلم
+          استخدام الموقع، وسرعة تنفيذ المهام، وقلّة الأخطاء التي يقع فيها
+          المستخدم<sup><a class="citation" href="#ref-2">[2]</a></sup
+          >. عندما تكون عناصر الواجهة واضحة، والأزرار مميّزة، ومسارات التنقل
+          منطقية، فإن المستخدم يستطيع إنجاز ما يريد دون الحاجة لشرح أو دليل. في
+          مثال متجر الأحذية السابق، وضوح زر البحث، ووجود تصنيفات مفهومة مثل
+          «أحذية رياضية» و«أحذية للجري»، واستخدام تسميات مألوفة، كلها عناصر تقلل
+          العبء المعرفي على المستخدم، وتجعل تجربته أقرب إلى التلقائية.
+        </p>
+        <p>
+          من منظور علم التفاعل بين الإنسان والحاسوب (HCI)، كل خطوة غير ضرورية،
+          وكل رسالة غامضة، وكل عنصر غير متسق يضيف عبئًا ذهنيًا على المستخدم،
+          ويزيد احتمال الانسحاب أو الخطأ. لذلك، أحد أهداف UX الأساسية هو إزالة
+          التعقيد غير المبرر، وتقليل عدد الخطوات للوصول إلى الهدف، وتقديم تغذية
+          راجعة واضحة في كل مرحلة من مراحل التفاعل.
+        </p>
+        <figure>
+          <img
+            class="article-hero"
+            src="../images/articles/Bad_Good.png"
+            alt="رسم توضيحي يقارن بين تجربة مستخدم سيئة تتسم بواجهة معقدة ومربكة ومستخدم يشعر بالإحباط، وتجربة مستخدم جيدة تتميز بواجهة بسيطة ومنظمة ومستخدم يشعر بالراحة والرضا."
+            width="1536"
+            height="1024"
+            loading="lazy"
+            decoding="async"
+            onerror="this.remove()"
+          />
+          <figcaption class="article-meta" style="text-align: center">
+            تجربة مستخدم سيئة مقابل تجربة جيدة.
+          </figcaption>
+        </figure>
+
+        <h2 id="conversion">دور تجربة المستخدم في زيادة معدلات التحويل</h2>
+        <p>
+          تجربة المستخدم ليست فقط مسألة راحة للمستخدم، بل لها أثر مباشر على
+          المؤشرات التجارية، مثل معدلات التحويل (Conversion Rates). في المواقع
+          التجارية، قد يكون الفرق بين عملية شراء مكتملة وسلّة مهجورة هو تفاصيل
+          صغيرة في UX: نموذج دفع طويل ومعقد، زر تأكيد غير واضح، أو غياب توضيح
+          لسياسة الاسترجاع. عندما يتم تصميم صفحات الدفع ونماذج التسجيل بعناية،
+          مع حقول منظمة، وتسميات واضحة، ورسائل تنبيه مفهومة، يزيد احتمال إتمام
+          العملية بنجاح.
+        </p>
+        <p>
+          هذا يعني أن الاستثمار في UX يمكن أن يُترجم مباشرة إلى زيادة في
+          الإيرادات أو عدد المشتركين أو العملاء المحتملين. وقد يرفع تحسين تجربة
+          المستخدم في مسار حرج واحد، مثل مسار الشراء، التحويلات دون أي تغيير في
+          عدد الزوار.
+        </p>
+        <p class="note-line">
+          <strong>ملاحظة:</strong> نسبة التحسن تختلف من موقع إلى آخر، ولا يصح
+          نقل رقم بعينه من موقع إلى غيره؛ لذلك يُقاس الأثر على موقعك قبل التغيير
+          وبعده.
+        </p>
+
+        <h2 id="accessibility">
+          أهمية الشمولية وإمكانية الوصول ضمن تجربة المستخدم
+        </h2>
+        <p>
+          جزء أساسي من تبني مبادئ UX هو الالتزام بإمكانية الوصول
+          (Accessibility)، أي ضمان أن الموقع يمكن استخدامه من قبل أوسع شريحة
+          ممكنة من المستخدمين، بما في ذلك الأشخاص ذوو الإعاقات البصرية أو
+          السمعية أو الحركية أو الإدراكية. الالتزام بإرشادات مثل WCAG يضمن
+          مثلًا:
+        </p>
+        <ul class="checklist">
+          <li>وجود تباين لوني كافٍ بين النص والخلفية.</li>
+          <li>وصف نصي للصور.</li>
+          <li>قابلية استخدام الموقع عبر لوحة المفاتيح فقط.</li>
+          <li>دعم قارئات الشاشة.</li>
+        </ul>
+        <p>
+          هذه الممارسات لا تعكس فقط احترامًا للبعد الإنساني والأخلاقي، بل توسّع
+          أيضًا قاعدة المستخدمين المحتملين للموقع، وتزيد من فرص استخدامه في
+          بيئات مختلفة وأجهزة متنوعة. كما أن عديدًا من التشريعات في العالم بدأت
+          تجعل من الوصول الرقمي مطلبًا قانونيًا، ما يضيف بُعدًا تنظيميًا لتبني
+          مبادئ UX في هذا الجانب.
+        </p>
+        <p class="note-line">
+          <strong>ملاحظة:</strong> أثناء بناء واحد من مشاريعي الخاصة، لاحظت أن
+          المستخدمين نادرًا ما يواجهون صعوبة في الميزات نفسها. بدلاً من ذلك؛
+          كانوا يضيعون بين الصفحات لأن مسار التنقل لم يكن واضحًا. بعد تبسيط
+          الهيكل وتقليل عدد الخطوات، أصبح إنجاز المهام أسهل بكثير.
+        </p>
+
+        <h2 id="workflow">مسار عملي لتحسين التجربة في خمس خطوات</h2>
+        <ol class="flow-steps ux-workflow">
+          <li>
+            <strong>هدف واضح</strong
+            ><span>ماذا يريد المستخدم؟ وماذا نريد؟</span>
+          </li>
+          <li>
+            <strong>مسار مبسّط</strong><span>أقل عدد ممكن من الخطوات</span>
+          </li>
+          <li>
+            <strong>تغذية راجعة</strong><span>رسالة مفهومة بعد كل نقرة</span>
+          </li>
+          <li>
+            <strong>وصول للجميع</strong
+            ><span>تباين، ووصف للصور، ولوحة مفاتيح</span>
+          </li>
+          <li>
+            <strong>اختبار وقياس</strong
+            ><span>مع مستخدم حقيقي، قبل التغيير وبعده</span>
+          </li>
+        </ol>
+        <p>
+          يُبنى هذا المسار على فكرة أن التصميم يُقيَّم بالتجربة الفعلية مع
+          المستخدمين لا بالانطباع وحده<sup
+            ><a class="citation" href="#ref-2">[2]</a></sup
+          >.
+        </p>
+
+        <h2 id="faq">أسئلة شائعة</h2>
+        <div class="faq">
+          <details>
+            <summary>ما الفرق بين UX وUI؟</summary>
+            <p>
+              UI هي الواجهة المرئية التي يراها المستخدم (الألوان والأزرار
+              والتخطيط)، أما UX فهي التجربة كاملة من الدخول إلى المغادرة،
+              والواجهة جزء منها.
+            </p>
+          </details>
+          <details>
+            <summary>من أين أبدأ بتحسين تجربة المستخدم في موقعي؟</summary>
+            <p>
+              اختر مسارًا حرجًا واحدًا (الشراء أو التسجيل أو التواصل)، وجرّبه مع
+              شخص حقيقي لم يشارك في تصميمه، ثم حسّن ما يعوقه وقِس النتيجة.
+            </p>
+          </details>
+          <details>
+            <summary>هل إمكانية الوصول تخص فئة صغيرة فقط؟</summary>
+            <p>
+              لا؛ فهي توسّع قاعدة المستخدمين وتفيد في ظروف مختلفة وأجهزة متنوعة،
+              كما بدأت تشريعات كثيرة تعدّها مطلبًا قانونيًا.
+            </p>
+          </details>
+        </div>
+
+        <h2 id="conclusion">الخلاصة</h2>
+        <p>
+          تجربة المستخدم ليست طبقة تجميلية تُضاف في آخر المشروع، بل قرارات صغيرة
+          تُتخذ مع كل زر وعنوان ونموذج وخطوة. ومعيار النجاح بسيط: هل أنجز الزائر
+          ما جاء من أجله بأقل جهد وبثقة؟ فإن كان الجواب نعم، تحقق هدف صاحب
+          الموقع في الغالب، سواء كان بيعًا أو قراءة أو تسجيلًا.
+        </p>
+        <p>قبل إطلاق أي صفحة، اسأل نفسك:</p>
+        <ul class="checklist">
+          <li>هل يفهم الزائر ما يفعله في الصفحة خلال ثوانٍ؟</li>
+          <li>هل خطوات المسار الأهم في أقل عدد ممكن؟</li>
+          <li>
+            هل الرسائل والتسميات واضحة، وهل يعرف المستخدم ما حدث بعد كل نقرة؟
+          </li>
+          <li>هل يمكن استخدام الصفحة بلوحة المفاتيح وبتباين لوني كافٍ؟</li>
+          <li>هل جرّبتها مع شخص حقيقي لم يشارك في تصميمها؟</li>
+        </ul>
+        <p>
+          ابدأ بمسار واحد حرج في موقعك، وحسّنه، وراقب أثره قبل الانتقال إلى
+          غيره؛ فالتحسين المتدرّج المقيس أنفع من إعادة تصميم شاملة بلا قياس.
+        </p>
+      </article>
+
+      <section class="evidence" id="references">
+        <h2>
+          <span class="ar-only">المراجع</span
+          ><span class="en-only">References</span>
+        </h2>
+        <p class="evidence-summary">
+          <span class="ar-only" lang="ar" dir="rtl"
+            >المراجع التالية هي التي استندتُ إليها في تعريف تجربة المستخدم
+            وقابلية الاستخدام وتقييم التصميم. أما نسب تحسّن التحويل وإرشادات
+            WCAG وقائمة الأسئلة والمسار العملي فهي من الممارسة الشائعة ولا تُنسب
+            إلى مرجع بعينه.</span
+          ><span class="en-only"
+            >These are the sources behind the definitions of user experience,
+            usability, and design evaluation. Conversion-lift claims, WCAG
+            guidance, the checklist, and the five-step path reflect common
+            practice and are not attributed to a single source.</span
+          >
+        </p>
+        <ol class="refs" dir="ltr" lang="en">
+          <li id="ref-1">
+            Garrett, J. J. (2011).
+            <i
+              >The Elements of User Experience: User-Centered Design for the Web
+              and Beyond</i
+            >
+            (2nd ed.). New Riders (Peachpit, Pearson Education).
+          </li>
+          <li id="ref-2">
+            Lewis, J. R., &amp; Sauro, J. (2021). Usability and user experience:
+            Design and evaluation. In
+            <i>Handbook of Human Factors and Ergonomics</i> (pp. 972–1015).
+            <a
+              href="https://doi.org/10.1002/9781119636113.ch38"
+              target="_blank"
+              rel="noopener"
+              >DOI</a
+            >
+          </li>
+        </ol>
+      </section>
+
+      <section class="related">
+        <h2>مقالات ذات صلة</h2>
+        <div class="related-grid">
+          <a class="related-card" href="data-analysis-basics.html"
+            ><span>تحليل البيانات</span
+            ><strong
+              >تحليل البيانات للمبتدئين: الأنواع وجمع البيانات وتنظيفها</strong
+            ></a
+          ><a class="related-card" href="will-ai-replace-human-jobs.html"
+            ><span>الذكاء الاصطناعي والتقنية</span
+            ><strong>هل يلغي الذكاء الاصطناعي الوظائف؟ نعمة أم نقمة؟</strong></a
+          >
+        </div>
+        <p>
+          <a class="btn btn-secondary" href="../writing.html#articles"
+            >كل المقالات</a
+          >
+        </p>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script
+      src="../js/include.js"
+      data-root="../"
+      data-scripts="js/article-i18n.js?v=7"
+    ></script>
+  </body>
+</html>

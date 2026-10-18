@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <title>تقنيات الذكاء الاصطناعي للأشخاص ذوي الهمم | روان أبو ستة</title>
+    <meta
+      name="description"
+      content="كيف تدعم تقنيات الذكاء الاصطناعي وصول الأشخاص ذوي الهمم إلى المعلومات والأجهزة والتعليم والتنقل، وما المخاطر التي ينبغي مراعاتها؟"
+    />
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/articles/ai-for-people-with-disabilities.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta
+      property="og:title"
+      content="تقنيات الذكاء الاصطناعي للأشخاص ذوي الهمم"
+    />
+    <meta
+      property="og:description"
+      content="كيف تدعم تقنيات الذكاء الاصطناعي وصول الأشخاص ذوي الهمم إلى المعلومات والأجهزة والتعليم والتنقل، وما المخاطر التي ينبغي مراعاتها؟"
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/articles/ai-for-people-with-disabilities.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/images/articles/ai_hand.jpg"
+    />
+    <meta
+      property="og:image:alt"
+      content="يد آلية ويد بشرية متقابلتان، في إشارة إلى التعاون بين الإنسان والذكاء الاصطناعي"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="author" content="روان أبو ستة" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta property="article:published_time" content="2026-10-15" />
+    <meta property="article:modified_time" content="2026-10-16" />
+    <meta
+      property="article:author"
+      content="https://rawanabusittah.github.io/"
+    />
+    <meta
+      property="article:section"
+      content="الذكاء الاصطناعي وإمكانية الوصول"
+    />
+    <meta
+      name="twitter:description"
+      content="كيف تدعم تقنيات الذكاء الاصطناعي وصول الأشخاص ذوي الهمم إلى المعلومات والأجهزة والتعليم والتنقل؟"
+    />
+    <meta
+      name="twitter:title"
+      content="تقنيات الذكاء الاصطناعي للأشخاص ذوي الهمم"
+    />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/images/articles/ai_hand.jpg"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Article",
+            "headline": "تقنيات الذكاء الاصطناعي للأشخاص ذوي الهمم",
+            "description": "كيف تدعم تقنيات الذكاء الاصطناعي وصول الأشخاص ذوي الهمم إلى المعلومات والأجهزة والتعليم والتنقل، وما المخاطر التي ينبغي مراعاتها؟",
+            "inLanguage": "ar",
+            "articleSection": "الذكاء الاصطناعي وإمكانية الوصول",
+            "keywords": "الذكاء الاصطناعي, إمكانية الوصول, الأشخاص ذوو الهمم, الرؤية الحاسوبية, OCR, تحويل الكلام إلى نص, التقنيات المساعدة",
+            "timeRequired": "PT8M",
+            "image": "https://rawanabusittah.github.io/images/articles/ai_hand.jpg",
+            "mainEntityOfPage": "https://rawanabusittah.github.io/articles/ai-for-people-with-disabilities.html",
+            "datePublished": "2026-10-15",
+            "dateModified": "2026-10-16",
+            "publisher": {
+              "@type": "Person",
+              "name": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "روان عمر أبو ستة",
+              "alternateName": "Rawan Abu Sittah",
+              "url": "https://rawanabusittah.github.io/"
+            },
+            "citation": [
+              {
+                "@type": "CreativeWork",
+                "name": "Image Recognition by Deep Learning",
+                "author": [
+                  { "@type": "Person", "name": "Karishma Mohiuddin" },
+                  { "@type": "Person", "name": "Amit Kishor Das" },
+                  { "@type": "Person", "name": "Habiba Bint Obaid" }
+                ],
+                "datePublished": "2017-08-21",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "BRAC University, Department of Computer Science & Engineering"
+                }
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "name": "Speech to text conversion and summarization for effective understanding and documentation",
+                "author": [
+                  { "@type": "Person", "name": "Vinnarasu A" },
+                  { "@type": "Person", "name": "Deepa V Jose" }
+                ],
+                "datePublished": "2019",
+                "isPartOf": {
+                  "@type": "Periodical",
+                  "name": "International Journal of Electrical and Computer Engineering"
+                },
+                "volumeNumber": "9",
+                "issueNumber": "5",
+                "pagination": "3642-3648",
+                "identifier": "https://doi.org/10.11591/ijece.v9i5.pp3642-3648"
+              },
+              {
+                "@type": "ScholarlyArticle",
+                "name": "A survey on Advancements in Voice Control Systems Enhancing Human-Computer Interaction through Speech Recognition and AI",
+                "author": [
+                  { "@type": "Person", "name": "Amir Elazazy" },
+                  { "@type": "Person", "name": "Raafat Abd-elfatah El-kammar" },
+                  { "@type": "Person", "name": "Ahmed Mohamed Fawzy" },
+                  { "@type": "Person", "name": "Hala Mohamed Abd Elkader" }
+                ],
+                "datePublished": "2025-01",
+                "isPartOf": {
+                  "@type": "Periodical",
+                  "name": "Engineering Research Journal (Shoubra)"
+                },
+                "identifier": "https://doi.org/10.21608/erjsh.2025.334371.1373"
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "الرئيسية",
+                "item": "https://rawanabusittah.github.io/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "المقالات",
+                "item": "https://rawanabusittah.github.io/writing.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "تقنيات الذكاء الاصطناعي للأشخاص ذوي الهمم",
+                "item": "https://rawanabusittah.github.io/articles/ai-for-people-with-disabilities.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link rel="stylesheet" href="../css/main.css?v=20261017-9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div class="preloader" id="preloader"><div class="loader"></div></div>
+    <div id="site-header"></div>
+    <main
+      id="main"
+      class="article-page access-page"
+      data-article="ai-for-people-with-disabilities"
+    >
+      <nav class="breadcrumb" aria-label="مسار التنقل">
+        <a href="../index.html">الرئيسية</a> /
+        <a href="../writing.html#articles">المقالات</a> /
+        <span>الذكاء الاصطناعي وإمكانية الوصول</span>
+      </nav>
+      <article>
+        <header>
+          <h1>تقنيات الذكاء الاصطناعي للأشخاص ذوي الهمم</h1>
+          <p class="article-meta">
+            الذكاء الاصطناعي وإمكانية الوصول · بقلم روان أبو ستة ·
+            <time datetime="2026-10-15">نُشر في 15 أكتوبر 2026</time> · 8 دقائق
+            للقراءة
+          </p>
+          <img
+            class="article-hero"
+            src="../images/articles/ai_hand.jpg"
+            alt="يد آلية ويد بشرية متقابلتان، ترمزان إلى التعاون بين الإنسان والذكاء الاصطناعي"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            onerror="this.remove()"
+          />
+        </header>
+
+        <p class="article-lead">
+          ما نعدّه تجربة عابرة، مثل إغماض العينين أو محاولة الكتابة دون استخدام
+          اليدين، هو واقع يومي لملايين الأشخاص ذوي الهمم. وقد يحوّل قراءة كتاب،
+          أو استخدام الهاتف، أو ركوب الحافلة، إلى سلسلة من العوائق. لذلك يمكن
+          توجيه تقنيات الذكاء الاصطناعي لتقليل هذه العوائق وتعزيز الاستقلالية،
+          لا لتغيير الشخص أو تعريفه بإعاقته.
+        </p>
+
+        <aside class="key-points" aria-labelledby="kp-title">
+          <h2 id="kp-title">الفكرة باختصار</h2>
+          <ul>
+            <li>
+              تحوّل الرؤية الحاسوبية الصور والنصوص المرئية إلى معلومات قابلة
+              للوصول.
+            </li>
+            <li>
+              تدعم تقنيات الكلام التواصل والكتابة دون الاعتماد على وسيلة واحدة.
+            </li>
+            <li>
+              تتيح الواجهات البديلة تحكمًا يناسب قدرات المستخدم واحتياجاته.
+            </li>
+            <li>
+              تتطلب الفائدة الحقيقية تصميمًا شاملًا ومراعاة الخصوصية والتحيز
+              والتكلفة.
+            </li>
+          </ul>
+        </aside>
+
+        <nav class="toc" aria-labelledby="toc-title">
+          <h2 id="toc-title">محتويات المقال</h2>
+          <ol>
+            <li><a href="#barriers">أبرز عوائق الوصول</a></li>
+            <li><a href="#visual-access">الرؤية والنصوص</a></li>
+            <li><a href="#speech-access">الكلام والتواصل</a></li>
+            <li><a href="#motor-access">الواجهات البديلة</a></li>
+            <li><a href="#learning-access">التعليم المخصص</a></li>
+            <li><a href="#mobility-access">التنقل والمدن الذكية</a></li>
+            <li><a href="#access-risks">المخاطر والتحديات</a></li>
+            <li><a href="#access-conclusion">الخلاصة</a></li>
+            <li><a href="#access-references">المراجع</a></li>
+          </ol>
+        </nav>
+
+        <section class="access-section" id="barriers">
+          <span class="access-kicker">01 / نقطة البداية</span>
+          <h2>أبرز عوائق الوصول</h2>
+          <p>
+            تختلف التحديات باختلاف الإعاقة البصرية أو السمعية أو الحركية أو
+            الإدراكية، كما تتداخل في الحياة اليومية. ومن أبرزها:
+          </p>
+          <div class="access-grid access-grid-five">
+            <article class="access-card">
+              <span class="access-index">01</span>
+              <h3>الوصول إلى المعلومات</h3>
+              <p>
+                قد لا تكون الصور والرسوم والنصوص المرئية قابلة للقراءة بقارئات
+                الشاشة، وقد يفتقر المحتوى الصوتي إلى النص أو الترجمة.
+              </p>
+            </article>
+            <article class="access-card">
+              <span class="access-index">02</span>
+              <h3>التفاعل الرقمي</h3>
+              <p>
+                تفترض واجهات كثيرة استخدام اليدين والعينين معًا، أو تعرض أزرارًا
+                ورموزًا غير موصوفة.
+              </p>
+            </article>
+            <article class="access-card">
+              <span class="access-index">03</span>
+              <h3>التنقل والاستقلالية</h3>
+              <p>
+                قد تصبح قراءة اللوحات والإشارات، ومعرفة الاتجاهات والعوائق،
+                تحديات معقدة.
+              </p>
+            </article>
+            <article class="access-card">
+              <span class="access-index">04</span>
+              <h3>التعليم والعمل</h3>
+              <p>
+                تحد البيئات الرقمية غير المهيأة من المشاركة في المحاضرات
+                والاجتماعات والأنظمة الإلكترونية.
+              </p>
+            </article>
+            <article class="access-card">
+              <span class="access-index">05</span>
+              <h3>الحواجز الاجتماعية</h3>
+              <p>
+                قد تزيد العزلة والاعتمادية وصعوبة التعبير عن الاحتياجات من أثر
+                العوائق اليومية.
+              </p>
+            </article>
+          </div>
+          <p class="access-callout">
+            الذكاء الاصطناعي طبقة تمكينية يمكنها تقليل أثر العوائق، لا إزالة
+            الإعاقة ذاتها.
+          </p>
+        </section>
+
+        <section class="access-section" id="visual-access">
+          <span class="access-kicker">02 / الرؤية والمعلومات</span>
+          <h2>التعرف على الصور والنصوص</h2>
+          <p>
+            تساعد أنظمة الرؤية الحاسوبية على تحويل محتوى بصري إلى وصف أو نص يمكن
+            قراءته صوتيًا أو تكبيره. وتظهر الفكرة في التعرف على النصوص والأشياء
+            والمشاهد المحيطة<sup
+              ><a class="citation" href="#access-ref-1">[1]</a></sup
+            >.
+          </p>
+          <figure class="access-figure">
+            <img
+              src="../images/articles/AI%20Vision%20Labels%20a%20Red%20Car.png"
+              alt="هاتف يلتقط مشهد شارع ويعرّف سيارة حمراء في الصورة"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              يمكن للرؤية الحاسوبية وصف عناصر في البيئة المحيطة وتحويلها إلى
+              معلومات مسموعة أو نصية.
+            </figcaption>
+          </figure>
+          <div class="access-feature-row">
+            <article class="access-feature">
+              <h3>تحويل الصور إلى نص (OCR)</h3>
+              <p>
+                تصوير صفحة أو لوحة شارع وتحويل النص الظاهر إلى نص رقمي قابل
+                للقراءة الصوتية أو التكبير.
+              </p>
+            </article>
+            <article class="access-feature">
+              <h3>التعرف على الأشياء والمشاهد</h3>
+              <p>
+                وصف ما تلتقطه الكاميرا، مثل شخص قرب باب أو إشارة توقف، للمساعدة
+                على فهم البيئة.
+              </p>
+            </article>
+            <article class="access-feature">
+              <h3>وصف الصور على الويب</h3>
+              <p>
+                اقتراح نص بديل يساعد قارئ الشاشة على نقل محتوى الصورة، مع أهمية
+                مراجعة الوصف للتأكد من دقته.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="access-section" id="speech-access">
+          <span class="access-kicker">03 / الصوت والتواصل</span>
+          <h2>التعرّف على الكلام وتحويله</h2>
+          <p>
+            تفتح تقنيات معالجة اللغة والتعرف على الكلام وتحويل النص إلى صوت
+            طرقًا بديلة للتواصل، سواء للكتابة دون لوحة مفاتيح أو لمتابعة حديث في
+            محاضرة أو اجتماع أو برنامج مرئي<sup
+              ><a class="citation" href="#access-ref-2">[2]</a></sup
+            >.
+          </p>
+          <figure class="access-figure access-figure-inline">
+            <img
+              src="../images/articles/article-5.jpg"
+              alt="شخص بيد صناعية يكتب على حاسوب محمول ويمسك هاتفًا بيده الأخرى"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>
+              يمكن أن تتكامل وسائل الإدخال والإخراج لتناسب طريقة تواصل كل
+              مستخدم.
+            </figcaption>
+          </figure>
+          <div class="access-feature-row">
+            <article class="access-feature">
+              <h3>الإملاء الصوتي</h3>
+              <p>
+                يُملي الشخص النصوص لإرسال بريد أو كتابة بحث أو استخدام برامج
+                العمل.
+              </p>
+            </article>
+            <article class="access-feature">
+              <h3>الكلام إلى نص</h3>
+              <p>
+                يعرض الحديث في المحاضرات والاجتماعات كنص مباشر يمكن قراءته
+                وأرشفته والبحث فيه.
+              </p>
+            </article>
+            <article class="access-feature">
+              <h3>النص إلى كلام</h3>
+              <p>
+                تحوّل واجهة كتابة أو اختيار كلمات إلى صوت مفهوم لمن لا يستطيع
+                الكلام.
+              </p>
+            </article>
+          </div>
+          <p class="access-callout">
+            الهدف هو دعم التواصل في الاتجاهين: فهم ما يقوله الآخرون والتعبير عن
+            الذات بوضوح.
+          </p>
+        </section>
+
+        <section class="access-section" id="motor-access">
+          <span class="access-kicker">04 / التفاعل والتحكم</span>
+          <h2>واجهات بديلة للأشخاص ذوي الإعاقة الحركية</h2>
+          <p>
+            يمكن للذكاء الاصطناعي أن يجعل الأجهزة والبيئات الرقمية أكثر مرونة،
+            عبر وسائل تحكم لا تعتمد على لوحة المفاتيح أو الفأرة وحدهما.
+          </p>
+          <div class="access-grid">
+            <article class="access-card">
+              <span class="access-index">A</span>
+              <h3>حركة العين أو الرأس</h3>
+              <p>
+                تتابع الأنظمة حركة العين أو الرأس وتحولها إلى مؤشر لاختيار
+                العناصر وكتابة النصوص.
+              </p>
+            </article>
+            <article class="access-card">
+              <span class="access-index">B</span>
+              <h3>التعرف على الإيماءات</h3>
+              <p>تستجيب الواجهة لحركات بسيطة، مثل إمالة الرأس أو تحريك إصبع.</p>
+            </article>
+            <article class="access-card">
+              <span class="access-index">C</span>
+              <h3>التحكم الصوتي المركب</h3>
+              <p>
+                تنفذ أوامر متعددة الخطوات، مثل فتح البريد والبحث عن رسالة
+                محددة<sup><a class="citation" href="#access-ref-3">[3]</a></sup
+                >.
+              </p>
+            </article>
+            <article class="access-card">
+              <span class="access-index">D</span>
+              <h3>الأطراف الصناعية الذكية</h3>
+              <p>
+                تتعلم خوارزميات التعلّم الآلي من نمط الحركة لتكييف الاستجابة مع
+                المستخدم بمرور الوقت.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="access-section" id="learning-access">
+          <span class="access-kicker">05 / التعلّم</span>
+          <h2>تعليم ذكي يراعي احتياجات المتعلم</h2>
+          <p>
+            يمكن للتجارب التعليمية المخصصة أن تراعي نوع الإعاقة ووتيرة التعلم،
+            بشرط أن تكون الأدوات قابلة للوصول ومناسبة للسياق التعليمي.
+          </p>
+          <div class="access-learning">
+            <article class="access-learning-card">
+              <span>01</span>
+              <h3>لذوي الإعاقة البصرية</h3>
+              <p>
+                مواد قابلة للقراءة الصوتية، واختبارات شفهية، ومحتوى مُعدّ وفق
+                معايير الوصول.
+              </p>
+            </article>
+            <article class="access-learning-card">
+              <span>02</span>
+              <h3>لذوي الإعاقة السمعية</h3>
+              <p>
+                ترجمة نصية فورية، ومواد مكتوبة، ومحاضرات يمكن تلخيصها وإعادة
+                صياغتها.
+              </p>
+            </article>
+            <article class="access-learning-card">
+              <span>03</span>
+              <h3>لصعوبات التعلم والإعاقات الإدراكية</h3>
+              <p>
+                شروحات بديلة وأمثلة ووسائل عرض مختلفة، مع متابعة التقدم لدعم
+                المعلم والمتعلم.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="access-section" id="mobility-access">
+          <span class="access-kicker">06 / التنقل والمدينة</span>
+          <h2>مساعدة التنقل والاندماج في المدن الذكية</h2>
+          <p>
+            يمكن دمج بيانات المواقع والرؤية الحاسوبية والبيانات الحضرية لتقديم
+            خدمات تنقل أكثر ملاءمة، مع مراعاة الخصوصية وسلامة المستخدم.
+          </p>
+          <ol class="access-route">
+            <li>
+              <b>إرشاد صوتي</b
+              ><span
+                >تطبيقات توضح الاتجاهات وإشارات المرور والعوائق ونقاط الاهتمام
+                القريبة.</span
+              >
+            </li>
+            <li>
+              <b>بيئة تستجيب</b
+              ><span
+                >أنظمة حضرية تتكيف مع احتياجات مستخدمي الكراسي المتحركة أو ذوي
+                الإعاقة البصرية.</span
+              >
+            </li>
+            <li>
+              <b>مساعدة في الأماكن العامة</b
+              ><span
+                >روبوتات ترشد الزوار في المطارات والمستشفيات وتقدم معلومات صوتية
+                أو نصية.</span
+              >
+            </li>
+          </ol>
+        </section>
+
+        <section class="access-section" id="access-risks">
+          <span class="access-kicker">07 / الاستخدام المسؤول</span>
+          <h2>المخاطر التي ينبغي الانتباه لها</h2>
+          <div class="access-risks">
+            <article class="access-risk">
+              <h3>الاعتمادية المفرطة</h3>
+              <p>
+                الاعتماد الكامل قد يقلل ممارسة مهارات بديلة، ويزيد التعرض للخطر
+                عند تعطل النظام.
+              </p>
+            </article>
+            <article class="access-risk">
+              <h3>الخصوصية والبيانات الحساسة</h3>
+              <p>
+                قد تجمع الأدوات بيانات صحية أو صوتية أو حركية؛ لذا يجب تحديد
+                الوصول والحماية بوضوح.
+              </p>
+            </article>
+            <article class="access-risk">
+              <h3>التحيز والتهميش الرقمي</h3>
+              <p>
+                قد لا تعمل النماذج جيدًا إذا لم تشمل بياناتها تنوع اللهجات وطرق
+                التعبير والحالات.
+              </p>
+            </article>
+            <article class="access-risk">
+              <h3>الكلفة وإتاحة التقنية</h3>
+              <p>
+                قد تحرم الكلفة أو الحاجة إلى اتصال وأجهزة حديثة فئات من
+                الاستفادة.
+              </p>
+            </article>
+            <article class="access-risk access-risk-wide">
+              <h3>المعايير والرقابة</h3>
+              <p>
+                ينبغي اختبار الحلول مع الأشخاص ذوي الهمم والتحقق من سلامتها
+                وقابلية استخدامها قبل اعتمادها.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="access-section access-conclusion"
+          id="access-conclusion"
+        >
+          <span class="access-kicker">08 / الخلاصة</span>
+          <h2>تقنية تمكّن الإنسان</h2>
+          <p>
+            تمتد تطبيقات الذكاء الاصطناعي من قراءة النصوص ووصف الصور إلى التواصل
+            والتحكم والتعلم والتنقل. وتتحقق فائدتها عندما تُصمم مع الأشخاص ذوي
+            الهمم، وتدعم استقلاليتهم، وتحمي خصوصيتهم، وتظل بديلًا مساعدًا لا
+            شرطًا وحيدًا للمشاركة.
+          </p>
+        </section>
+      </article>
+      <section class="evidence" id="access-references">
+        <h2>
+          <span class="ar-only">المراجع</span
+          ><span class="en-only">References</span>
+        </h2>
+        <ol class="refs" dir="ltr" lang="en">
+          <li id="access-ref-1">
+            Mohiuddin, K., Das, A. K., &amp; Obaid, H. B. (2017, August 21).
+            <i>Image recognition by deep learning</i> [Project report].
+            Department of Computer Science &amp; Engineering, BRAC University.
+          </li>
+          <li id="access-ref-2">
+            Vinnarasu, A., &amp; Jose, D. V. (2019). Speech to text conversion
+            and summarization for effective understanding and documentation.
+            <i
+              >International Journal of Electrical and Computer Engineering,
+              9</i
+            >(5), 3642–3648.
+            <a href="https://doi.org/10.11591/ijece.v9i5.pp3642-3648"
+              >https://doi.org/10.11591/ijece.v9i5.pp3642-3648</a
+            >. License: CC BY-NC 4.0.
+          </li>
+          <li id="access-ref-3">
+            Elazazy, A., El-kammar, R. A., Fawzy, A. M., &amp; Abd Elkader, H.
+            M. (2025, January). A survey on advancements in voice control
+            systems enhancing human-computer interaction through speech
+            recognition and AI. <i>Engineering Research Journal (Shoubra)</i>.
+            <a href="https://doi.org/10.21608/erjsh.2025.334371.1373"
+              >https://doi.org/10.21608/erjsh.2025.334371.1373</a
+            >.
+          </li>
+        </ol>
+      </section>
+      <section class="related">
+        <h2>مقالات ذات صلة</h2>
+        <div class="related-grid">
+          <a class="related-card" href="ux-web-design.html"
+            ><span>تصميم وتجربة المستخدم</span
+            ><strong
+              >لماذا تفشل المواقع الجميلة بدون تجربة المستخدم..؟</strong
+            ></a
+          ><a class="related-card" href="ai-agents.html"
+            ><span>الذكاء الاصطناعي والتقنية</span
+            ><strong
+              >وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي</strong
+            ></a
+          >
+        </div>
+        <p>
+          <a class="btn btn-secondary" href="../writing.html#articles"
+            >كل المقالات</a
+          >
+        </p>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <script
+      src="../js/include.js"
+      data-root="../"
+      data-scripts="js/article-i18n.js?v=7"
+    ></script>
+  </body>
+</html>
