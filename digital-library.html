@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="المكتبة الرقمية: منصة مستقلة لتصفح وإدارة الكتب عبر الإنترنت."
+    />
+    <title data-title-ar="المكتبة الرقمية | Rawan Abu Sittah">
+      Digital Library | Rawan Abu Sittah
+    </title>
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/projects/digital-library.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/projects/images/2.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta property="og:title" content="Digital Library | Rawan Abu Sittah" />
+    <meta
+      property="og:description"
+      content="المكتبة الرقمية: منصة مستقلة لتصفح وإدارة الكتب عبر الإنترنت."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/projects/digital-library.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/projects/images/2.jpg"
+    />
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link rel="stylesheet" href="../css/main.css?v=20261015-2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div id="site-header"></div>
+
+    <main class="article-page bn-page" id="main">
+      <p class="breadcrumb">
+        <a href="websites.html"
+          ><span class="ar-only">المشاريع</span
+          ><span class="en-only">Projects</span></a
+        >
+        › <span class="ar-only">المكتبة الرقمية</span
+        ><span class="en-only">Digital Library</span>
+      </p>
+      <h1>
+        <span class="ar-only">المكتبة الرقمية</span
+        ><span class="en-only">Digital Library</span>
+      </h1>
+      <p class="article-meta">
+        <span class="ar-only">منصة ويب لإدارة وتصفح الكتب</span
+        ><span class="en-only"
+          >A web platform for browsing and managing books</span
+        >
+      </p>
+      <figure class="bn-shot bn-reveal">
+        <button class="bn-shot-btn" type="button" aria-haspopup="dialog">
+          <span class="bn-bar" aria-hidden="true"><i></i><i></i><i></i></span
+          ><img
+            class="article-hero"
+            src="images/2.jpg"
+            alt="Digital Library interface"
+            data-i18n-alt="pj.alt.dl"
+            fetchpriority="high"
+            decoding="async"
+          /><span class="bn-zoom" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.5" y2="16.5" />
+              <line x1="11" y1="8" x2="11" y2="14" />
+              <line x1="8" y1="11" x2="14" y2="11" /></svg
+          ></span>
+        </button>
+        <figcaption>
+          <span class="ar-only">واجهة المكتبة الرقمية، اضغط للتكبير</span
+          ><span class="en-only"
+            >Digital Library interface, click to enlarge</span
+          >
+        </figcaption>
+      </figure>
+      <div class="page-links">
+        <a
+          class="btn btn-primary"
+          href="https://rawanabusittah.github.io/library/"
+          target="_blank"
+          rel="noopener"
+          ><span class="ar-only">تجربة الموقع</span
+          ><span class="en-only">Live demo</span></a
+        ><a
+          class="btn btn-secondary"
+          href="https://github.com/rawanabusittah/library"
+          target="_blank"
+          rel="noopener"
+          ><span class="ar-only">مستودع GitHub</span
+          ><span class="en-only">GitHub repository</span></a
+        ><a class="btn btn-secondary" href="websites.html"
+          ><span class="ar-only">العودة إلى المشاريع</span
+          ><span class="en-only">Back to projects</span></a
+        >
+      </div>
+      <ul class="bn-facts bn-reveal">
+        <li>
+          <b dir="ltr">PHP · MySQL</b
+          ><span class="ar-only">خلفية وقاعدة بيانات</span
+          ><span class="en-only">Back end and database</span>
+        </li>
+        <li>
+          <b
+            ><span class="ar-only">مستقلة</span
+            ><span class="en-only">Standalone</span></b
+          ><span class="ar-only">منفصلة عن مشروع بانيبال</span
+          ><span class="en-only">Separate from Banipal</span>
+        </li>
+        <li>
+          <b
+            ><span class="ar-only">تصنيف</span
+            ><span class="en-only">Categories</span></b
+          ><span class="ar-only">للعثور على الكتب بسرعة</span
+          ><span class="en-only">Find books quickly</span>
+        </li>
+        <li>
+          <b
+            ><span class="ar-only">متجاوبة</span
+            ><span class="en-only">Responsive</span></b
+          ><span class="ar-only">حاسوب وهاتف</span
+          ><span class="en-only">Desktop and mobile</span>
+        </li>
+      </ul>
+      <h2 class="bn-h">
+        <span class="ar-only">الفكرة والهدف</span
+        ><span class="en-only">Concept and goal</span>
+      </h2>
+      <p class="bn-lead">
+        <span class="ar-only"
+          >منصة مكتبة رقمية مستقلة تساعد القارئ على الوصول إلى الكتب وتنظيمها
+          ضمن تجربة تصفح واضحة وسهلة.</span
+        ><span class="en-only"
+          >A separate digital library platform that helps readers discover and
+          organize books through a clear browsing experience.</span
+        >
+      </p>
+      <h2 class="bn-h">
+        <span class="ar-only">الميزات الرئيسية</span
+        ><span class="en-only">Key features</span>
+      </h2>
+      <div class="bn-features">
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.5" y2="16.5" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">تصفح منظم</span
+            ><span class="en-only">Organized browsing</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >عرض الكتب ضمن واجهة منظمة وسهلة الاستكشاف.</span
+            ><span class="en-only"
+              >Books shown in an organized, easy-to-explore interface.</span
+            >
+          </p>
+          <span class="bn-tag"
+            ><span class="ar-only">تصفح</span
+            ><span class="en-only">Browse</span></span
+          >
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"
+              /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">إدارة وتصنيف</span
+            ><span class="en-only">Management and categories</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >إدارة محتوى الكتب وتصنيفها للعثور عليها بسرعة.</span
+            ><span class="en-only"
+              >Book content management and categorization for quick
+              discovery.</span
+            >
+          </p>
+          <span class="bn-tag">PHP · MySQL</span>
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="6" y="2" width="12" height="20" rx="2" />
+              <line x1="12" y1="18" x2="12.01" y2="18" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">تصميم متجاوب</span
+            ><span class="en-only">Responsive design</span>
+          </h3>
+          <p>
+            <span class="ar-only">واجهة تناسب الحاسوب والهاتف.</span
+            ><span class="en-only"
+              >An interface that suits desktop and mobile.</span
+            >
+          </p>
+          <span class="bn-tag"
+            ><span class="ar-only">حاسوب · هاتف</span
+            ><span class="en-only">Desktop · Mobile</span></span
+          >
+        </article>
+      </div>
+      <h2 class="bn-h">
+        <span class="ar-only">البنية التقنية</span
+        ><span class="en-only">Technical stack</span>
+      </h2>
+      <ul class="bn-stack">
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" /></svg></span
+            ><b
+              ><span class="ar-only">الواجهة الأمامية</span
+              ><span class="en-only">Front end</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">HTML5</span><span style="--c: 1">CSS3</span
+            ><span style="--c: 2">JavaScript</span>
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="8" rx="2" />
+                <rect x="2" y="13" width="20" height="8" rx="2" />
+                <line x1="6" y1="7" x2="6.01" y2="7" />
+                <line x1="6" y1="17" x2="6.01" y2="17" /></svg></span
+            ><b
+              ><span class="ar-only">الواجهة الخلفية</span
+              ><span class="en-only">Back end</span></b
+            >
+          </div>
+          <div class="bn-chips"><span style="--c: 0">PHP</span></div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5" />
+                <path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3" /></svg></span
+            ><b
+              ><span class="ar-only">قاعدة البيانات</span
+              ><span class="en-only">Database</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">MySQL</span
+            ><span style="--c: 1"
+              ><span class="ar-only">الكتب</span
+              ><span class="en-only">Books</span></span
+            ><span style="--c: 2"
+              ><span class="ar-only">التصنيفات</span
+              ><span class="en-only">Categories</span></span
+            >
+          </div>
+        </li>
+      </ul>
+      <h2 class="bn-h">
+        <span class="ar-only">النتيجة</span><span class="en-only">Outcome</span>
+      </h2>
+      <ul class="bn-results-list">
+        <li>
+          <span class="ar-only"
+            >أساس عملي لمكتبة إلكترونية منفصلة عن مشروع بانيبال، مع التركيز على
+            التنظيم وسهولة الوصول إلى المحتوى.</span
+          ><span class="en-only"
+            >A practical foundation for a digital library, separate from
+            Banipal, focused on organization and accessible content
+            discovery.</span
+          >
+        </li>
+      </ul>
+      <p style="margin-top: 2.5rem">
+        <a class="btn btn-secondary" href="websites.html"
+          ><span class="ar-only">← كل المشاريع</span
+          ><span class="en-only">← All projects</span></a
+        >
+      </p>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="../js/include.js" data-root="../"></script>
+  </body>
+</html>

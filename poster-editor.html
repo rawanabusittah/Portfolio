@@ -1,0 +1,1026 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Case study: a bilingual web platform with unified academic poster templates for eight university faculties, a dashboard and a public projects gallery, with PDF/PPTX export."
+    />
+    <title data-title-ar="محرر الملصقات الأكاديمية | Rawan Abu Sittah">
+      Academic Poster Editor | Rawan Abu Sittah
+    </title>
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/projects/poster-editor.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/projects/images/poster-editor/hero.webp"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:title"
+      content="Academic Poster Editor | Rawan Abu Sittah"
+    />
+    <meta
+      property="og:description"
+      content="Case study: a bilingual web platform with unified academic poster templates for eight university faculties, a dashboard and a public projects gallery, with PDF/PPTX export."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/projects/poster-editor.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/projects/images/poster-editor/hero.webp"
+    />
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link rel="stylesheet" href="../css/main.css?v=20261015-2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div id="site-header"></div>
+
+    <main class="article-page bn-page" id="main">
+      <p class="breadcrumb">
+        <a href="websites.html"
+          ><span class="ar-only">المشاريع</span
+          ><span class="en-only">Web Applications</span></a
+        >
+        › <span class="ar-only">منصة جامعية</span
+        ><span class="en-only">University platform</span>
+      </p>
+      <h1>
+        <span class="ar-only" lang="ar" dir="rtl"
+          >محرر الملصقات الأكاديمية: منصة واحدة لثماني كليات</span
+        ><span class="en-only"
+          >Academic Poster Editor: One Platform for Eight Faculties</span
+        >
+      </h1>
+      <p class="article-meta">
+        <span class="ar-only">الجامعة العربية الدولية (AIU) · 2026</span
+        ><span class="en-only">Arab International University (AIU) · 2026</span>
+      </p>
+      <figure class="bn-shot bn-reveal">
+        <button class="bn-shot-btn" type="button" aria-haspopup="dialog">
+          <span class="bn-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+          <img
+            class="article-hero"
+            src="images/poster-editor/hero.webp"
+            alt="Academic Digital Platform home page"
+            data-i18n-alt="pe.alt.hero"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <span class="bn-zoom" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <line x1="21" y1="21" x2="16.5" y2="16.5" />
+              <line x1="11" y1="8" x2="11" y2="14" />
+              <line x1="8" y1="11" x2="14" y2="11" /></svg
+          ></span>
+        </button>
+        <figcaption>
+          <span class="ar-only">الصفحة الرئيسية للمنصة، اضغط للتكبير</span
+          ><span class="en-only">Platform home page, click to enlarge</span>
+        </figcaption>
+      </figure>
+
+      <div class="bn-note bn-reveal" role="note">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+        </svg>
+        <p>
+          <span class="ar-only"
+            ><strong>ملاحظة:</strong> المنصة مملوكة للجامعة العربية الدولية،
+            لذلك لا يمكن مشاركة شيفرتها المصدرية، ولا أنشر رابطها الحي. تعرض هذه
+            الصفحة التصميم ودوري في بنائها.</span
+          ><span class="en-only"
+            ><strong>Note:</strong> the platform is owned by Arab International
+            University, so its source code cannot be shared and I don't link to
+            the live site. This page documents the design and my role.</span
+          >
+        </p>
+      </div>
+
+      <ul class="bn-facts bn-reveal">
+        <li>
+          <b
+            ><span class="ar-only">8 كليات</span
+            ><span class="en-only">8 faculties</span></b
+          ><span class="ar-only">قالب لكل كلية</span
+          ><span class="en-only">A template each</span>
+        </li>
+        <li>
+          <b dir="ltr">AR · EN</b
+          ><span class="ar-only">واجهة وملصق ثنائيا اللغة</span
+          ><span class="en-only">Bilingual UI and poster</span>
+        </li>
+        <li>
+          <b dir="ltr">PDF · PPTX</b><span class="ar-only">تصدير الملصقات</span
+          ><span class="en-only">Poster export</span>
+        </li>
+        <li>
+          <b>Full-Stack</b><span class="ar-only">بنيتُها كاملةً</span
+          ><span class="en-only">I built all of it</span>
+        </li>
+      </ul>
+
+      <h2 class="bn-h">
+        <span class="ar-only">المشكلة</span
+        ><span class="en-only">The problem</span>
+      </h2>
+      <p class="bn-lead">
+        <span class="ar-only"
+          >لم تكن للكليات قوالب موحّدة، فجاءت ملصقات الطلاب غير منظّمة وبمظاهر
+          مختلفة. احتاجت الجامعة إلى هوية بصرية واحدة تحترم اختلاف أقسام الملصق
+          من كلية إلى أخرى.</span
+        ><span class="en-only"
+          >The faculties had no unified templates, so student posters were
+          inconsistent and disorganised. The university needed one visual
+          identity that still respects how poster sections differ from faculty
+          to faculty.</span
+        >
+      </p>
+
+      <h2 class="bn-h">
+        <span class="ar-only">دوري في المشروع</span
+        ><span class="en-only">My role</span>
+      </h2>
+      <p class="bn-lead">
+        <span class="ar-only"
+          >بنيتُ المنصة كاملةً: الواجهات، ونظام الحسابات، والتخزين في قاعدة
+          بيانات SQL، والتصدير بصيغتي PDF وPPTX.</span
+        ><span class="en-only"
+          >I built the whole platform: the interfaces, the account system, SQL
+          storage, and PDF and PPTX export.</span
+        >
+      </p>
+
+      <h2 class="bn-h">
+        <span class="ar-only">ما بنيتُه</span
+        ><span class="en-only">What I built</span>
+      </h2>
+      <div class="bn-features">
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="7" height="7" rx="1" />
+              <rect x="14" y="3" width="7" height="7" rx="1" />
+              <rect x="3" y="14" width="7" height="7" rx="1" />
+              <rect x="14" y="14" width="7" height="7" rx="1" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">ثلاث خدمات في صفحة واحدة</span
+            ><span class="en-only">Three services, one home page</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >الملصقات الأكاديمية، ولوحة التحكم، ومعرض المشاريع، مع تبديل فوري
+              بين العربية والإنجليزية.</span
+            ><span class="en-only"
+              >Academic posters, a dashboard and a projects gallery, with an
+              instant Arabic/English switch.</span
+            >
+          </p>
+          <span class="bn-tag"
+            ><span class="ar-only">واجهة</span
+            ><span class="en-only">Interface</span></span
+          >
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <line x1="3" y1="9" x2="21" y2="9" />
+              <line x1="9" y1="21" x2="9" y2="9" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">قالب لكل كلية</span
+            ><span class="en-only">A template per faculty</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >لكل كلية لونها المعتمد وأقسامها الخاصة، مثل أدوات برمجية وفئات
+              مستهدفة في الهندسة المعلوماتية، وخطة مشروع التخرج في الحقوق.</span
+            ><span class="en-only"
+              >Each faculty has its approved colour and its own sections, such
+              as software tools and target groups for ICT Engineering, or a
+              graduation-project plan for Law.</span
+            >
+          </p>
+          <span class="bn-tag"
+            ><span class="ar-only">8 قوالب</span
+            ><span class="en-only">8 templates</span></span
+          >
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">حسابات للطلاب والمشرفين</span
+            ><span class="en-only">Accounts for students and supervisors</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >إنشاء حساب بالاسم والرقم الجامعي من واجهة كل كلية، وتسجيل دخول
+              للطلاب وللمشرفين على المشاريع. أما زائر المعرض فيتصفحه دون تسجيل
+              دخول.</span
+            ><span class="en-only"
+              >Sign-up with name and student ID from each faculty’s page, and
+              login for students and project supervisors. Visitors browse the
+              gallery without logging in.</span
+            >
+          </p>
+          <span class="bn-tag">PHP · SQL</span>
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="4 7 4 4 20 4 20 7" />
+              <line x1="9" y1="20" x2="15" y2="20" />
+              <line x1="12" y1="4" x2="12" y2="20" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">تحرير غني لكل قسم</span
+            ><span class="en-only">Rich editing per section</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >محرر نصوص بالخط والحجم والغامق والمائل واللون والمحاذاة والقوائم،
+              مع إدراج أشكال ومخططات بيانية (أعمدة، دائري، خطي وغيرها) ومخططات
+              ذكية وصور.</span
+            ><span class="en-only"
+              >A text editor with font, size, bold, italic, colour, alignment
+              and lists, plus shapes, charts (bar, pie, line and more),
+              SmartArt-style graphics and images.</span
+            >
+          </p>
+          <span class="bn-tag">JavaScript</span>
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">معرض المشاريع وتعليق المشرف</span
+            ><span class="en-only"
+              >Projects gallery and supervisor feedback</span
+            >
+          </h3>
+          <p>
+            <span class="ar-only"
+              >يحفظ الطالب مشروعه في المعرض ليضع المشرف تعليقه عليه، ويُعرض
+              المشروع للزوار بصيغة غير قابلة للتعديل.</span
+            ><span class="en-only"
+              >Students save their project to the gallery so the supervisor can
+              leave feedback, and visitors see it in a read-only form.</span
+            >
+          </p>
+          <span class="bn-tag"
+            ><span class="ar-only">عرض عام</span
+            ><span class="en-only">Public view</span></span
+          >
+        </article>
+        <article class="bn-feature bn-reveal">
+          <span class="bn-ico" aria-hidden="true"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" /></svg
+          ></span>
+          <h3>
+            <span class="ar-only">لغة وتصدير</span
+            ><span class="en-only">Language and export</span>
+          </h3>
+          <p>
+            <span class="ar-only"
+              >لغة الملصق قابلة للتبديل بين العربية والإنجليزية مع ترجمة آلية
+              للمحتوى، وتكبير وتصغير، وتحميل PDF أو PPTX.</span
+            ><span class="en-only"
+              >Poster language switchable between Arabic and English with
+              automatic content translation, zoom, and PDF or PPTX
+              download.</span
+            >
+          </p>
+          <span class="bn-tag">PDF · PPTX</span>
+        </article>
+      </div>
+
+      <h2 class="bn-h">
+        <span class="ar-only">البنية التقنية</span
+        ><span class="en-only">Technical stack</span>
+      </h2>
+      <ul class="bn-stack">
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" /></svg></span
+            ><b
+              ><span class="ar-only">الواجهة الأمامية</span
+              ><span class="en-only">Front end</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">HTML</span><span style="--c: 1">CSS</span
+            ><span style="--c: 2">JavaScript</span>
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="3" width="20" height="8" rx="2" />
+                <rect x="2" y="13" width="20" height="8" rx="2" />
+                <line x1="6" y1="7" x2="6.01" y2="7" />
+                <line x1="6" y1="17" x2="6.01" y2="17" /></svg></span
+            ><b
+              ><span class="ar-only">الواجهة الخلفية</span
+              ><span class="en-only">Back end</span></b
+            >
+          </div>
+          <div class="bn-chips"><span style="--c: 0">PHP</span></div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5" />
+                <path d="M3 12c0 1.7 4 3 9 3s9-1.3 9-3" /></svg></span
+            ><b
+              ><span class="ar-only">قاعدة البيانات</span
+              ><span class="en-only">Database</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">SQL</span
+            ><span style="--c: 1"
+              ><span class="ar-only">حسابات</span
+              ><span class="en-only">Accounts</span></span
+            ><span style="--c: 2"
+              ><span class="ar-only">مشاريع محفوظة</span
+              ><span class="en-only">Saved projects</span></span
+            >
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" /></svg></span
+            ><b
+              ><span class="ar-only">التصدير</span
+              ><span class="en-only">Export</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0">PDF</span><span style="--c: 1">PPTX</span>
+          </div>
+        </li>
+        <li class="bn-layer bn-reveal">
+          <div class="bn-layer-head">
+            <span class="bn-ico" aria-hidden="true"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                /></svg></span
+            ><b
+              ><span class="ar-only">اللغات</span
+              ><span class="en-only">Languages</span></b
+            >
+          </div>
+          <div class="bn-chips">
+            <span style="--c: 0"
+              ><span class="ar-only">العربية (RTL)</span
+              ><span class="en-only">Arabic (RTL)</span></span
+            ><span style="--c: 1">English</span
+            ><span style="--c: 2"
+              ><span class="ar-only">ترجمة آلية</span
+              ><span class="en-only">Auto translation</span></span
+            >
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="bn-h">
+        <span class="ar-only">رحلة المستخدم</span
+        ><span class="en-only">User journey</span>
+      </h2>
+      <div class="bn-flow bn-reveal">
+        <svg
+          class="bn-ring"
+          viewBox="0 0 320 320"
+          role="img"
+          aria-label="Five-step journey from sign-in to export"
+        >
+          <circle class="ring-line" cx="160" cy="160" r="110"></circle>
+          <g class="ring-arrow">
+            <path
+              transform="translate(224.7 71) rotate(126)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(264.6 193.8) rotate(198)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(160 270) rotate(270)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(55.4 193.8) rotate(342)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+            <path
+              transform="translate(95.3 71) rotate(54)"
+              d="M-7 7 L0 -7 L7 7 z"
+            ></path>
+          </g>
+          <g class="ring-n" data-i="0">
+            <circle class="ring-node" cx="160" cy="50" r="24"></circle>
+            <text x="160" y="50">1</text>
+          </g>
+          <g class="ring-n" data-i="1">
+            <circle class="ring-node" cx="264.6" cy="126" r="24"></circle>
+            <text x="264.6" y="126">2</text>
+          </g>
+          <g class="ring-n" data-i="2">
+            <circle class="ring-node" cx="224.7" cy="249" r="24"></circle>
+            <text x="224.7" y="249">3</text>
+          </g>
+          <g class="ring-n" data-i="3">
+            <circle class="ring-node" cx="95.3" cy="249" r="24"></circle>
+            <text x="95.3" y="249">4</text>
+          </g>
+          <g class="ring-n" data-i="4">
+            <circle class="ring-node" cx="55.4" cy="126" r="24"></circle>
+            <text x="55.4" y="126">5</text>
+          </g>
+          <text class="ring-center" x="160" y="160">PDF</text>
+        </svg>
+        <div>
+          <ol class="bn-steps">
+            <li>
+              <span class="ar-only"
+                ><b>الحساب:</b> إنشاء حساب أو تسجيل الدخول بالرقم الجامعي.</span
+              ><span class="en-only"
+                ><b>Account:</b> sign up or log in with the student ID.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>القالب:</b> اختيار قالب الكلية بلونها وأقسامها.</span
+              ><span class="en-only"
+                ><b>Template:</b> pick the faculty template with its colour and
+                sections.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>التحرير:</b> كتابة النص وإدراج الأشكال والمخططات
+                والصور.</span
+              ><span class="en-only"
+                ><b>Edit:</b> write text and insert shapes, charts and
+                images.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>الحفظ:</b> «حفظ في المشاريع» لتخزين الملصق في لوحة التحكم
+                ونشره في معرض المشاريع، حيث يعلّق المشرف.</span
+              ><span class="en-only"
+                ><b>Save:</b> “Save to projects” stores the poster in the
+                dashboard and the projects gallery, where the supervisor
+                comments.</span
+              >
+            </li>
+            <li>
+              <span class="ar-only"
+                ><b>التصدير:</b> تحميل الملصق بصيغة PDF أو PPTX.</span
+              ><span class="en-only"
+                ><b>Export:</b> download the poster as PDF or PPTX.</span
+              >
+            </li>
+          </ol>
+          <div class="bn-outputs">
+            <p class="bn-out">
+              <small
+                ><span class="ar-only">هوية الجامعة</span
+                ><span class="en-only">University identity</span></small
+              ><span class="ar-only">ألوان الكليات المعتمدة في كل قالب.</span
+              ><span class="en-only"
+                >Approved faculty colours in every template.</span
+              >
+            </p>
+            <p class="bn-out">
+              <small
+                ><span class="ar-only">ملصق ثنائي اللغة</span
+                ><span class="en-only">Bilingual poster</span></small
+              ><span class="ar-only"
+                >تبديل العربية والإنجليزية مع ترجمة آلية.</span
+              ><span class="en-only"
+                >Arabic/English switch with automatic translation.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="bn-h">
+        <span class="ar-only">التحديات</span
+        ><span class="en-only">Challenges</span>
+      </h2>
+      <ul class="bn-results-list">
+        <li>
+          <span class="ar-only"
+            >ثماني كليات بأقسام وألوان وقوالب مختلفة: لكل كلية قالب مستقل
+            بإعداداتها وألوانها المعتمدة من هوية الجامعة.</span
+          ><span class="en-only"
+            >Eight faculties with different sections, colours and layouts: each
+            faculty got its own template and configuration, using the colours
+            approved in the university identity.</span
+          >
+        </li>
+        <li>
+          <span class="ar-only"
+            >ملاءمة الملصقات لمشاريع الهندسة المعمارية والفنون التي تعتمد على
+            الصور: أضفتُ قسم معرض صور (حتى 5 صور بمسافات محددة) وأقسام صور
+            كثيرة، ونسبة تكبير افتراضية 300% لملصق الهندسة المعمارية.</span
+          ><span class="en-only"
+            >Fitting posters to architecture and arts projects, which rely on
+            images: I added an image-gallery section (up to 5 images with set
+            spacing), many image slots, and a 300% default zoom for the
+            architecture poster.</span
+          >
+        </li>
+        <li>
+          <span class="ar-only"
+            >دعم العربية (RTL) والإنجليزية في الواجهة والملصق معًا، مع تصدير
+            PPTX وPDF.</span
+          ><span class="en-only"
+            >Supporting Arabic (RTL) and English in both the interface and the
+            poster, together with PPTX and PDF export.</span
+          >
+        </li>
+      </ul>
+
+      <h2 class="bn-h">
+        <span class="ar-only">لقطات من المنصة</span
+        ><span class="en-only">Screens</span>
+      </h2>
+      <section
+        class="hs-gallery bn-reveal"
+        aria-roledescription="carousel"
+        aria-label="Academic Poster Editor screenshots"
+      >
+        <div
+          class="hs-stage"
+          tabindex="0"
+          role="group"
+          aria-label="Academic Poster Editor screenshots"
+        >
+          <div class="hs-slides">
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/services.png"
+                alt="Home page: three services"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">الصفحة الرئيسية: ثلاث خدمات</span
+                  ><span class="en-only"
+                    >Home page: three services</span
+                  ></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >الملصقات الأكاديمية، ولوحة التحكم، ومعرض المشاريع.</span
+                  ><span class="en-only"
+                    >Academic posters, dashboard and projects gallery.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/faculties-ar-1.png"
+                alt="Faculty cards: Architecture, Pharmacy, Dentistry"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only"
+                    >بطاقات الكليات: العمارة والصيدلة وطب الأسنان</span
+                  ><span class="en-only"
+                    >Faculty cards: Architecture, Pharmacy, Dentistry</span
+                  ></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >لكل كلية لونها وأيقونتها وزر «فتح المحرر».</span
+                  ><span class="en-only"
+                    >Each faculty has its own colour, icon and an Open Editor
+                    button.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/faculties-ar-2.png"
+                alt="Faculty cards: Civil, ICT, Business"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only"
+                    >بطاقات الكليات: المدنية والمعلوماتية والأعمال</span
+                  ><span class="en-only"
+                    >Faculty cards: Civil, ICT, Business</span
+                  ></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >ثماني كليات، لكل منها قالبها الخاص.</span
+                  ><span class="en-only"
+                    >Eight faculties, each with its own template.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/faculties-ar-3.png"
+                alt="Faculty cards: Law, Fine Arts"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">بطاقات الكليات: الحقوق والفنون</span
+                  ><span class="en-only"
+                    >Faculty cards: Law, Fine Arts</span
+                  ></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >تُختار لغة الملصق من بطاقة الكلية نفسها.</span
+                  ><span class="en-only"
+                    >The language of each poster is chosen per faculty
+                    card.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/faculties-en.png"
+                alt="Faculty cards in English"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">بطاقات الكليات بالإنجليزية</span
+                  ><span class="en-only">Faculty cards in English</span></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >الصفحة نفسها بعد تبديل لغة الواجهة.</span
+                  ><span class="en-only"
+                    >The same page after switching the interface language.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/signup.png"
+                alt="Creating an account"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">إنشاء حساب</span
+                  ><span class="en-only">Creating an account</span></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >الاسم والرقم الجامعي واسم المستخدم والبريد، بألوان
+                    الكلية.</span
+                  ><span class="en-only"
+                    >Name, student ID, username and email, in the faculty’s
+                    colours.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/login.png"
+                alt="Login"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">تسجيل الدخول</span
+                  ><span class="en-only">Login</span></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >تبويبان منفصلان: تسجيل الدخول للمستخدمين ولوحة
+                    المدير.</span
+                  ><span class="en-only"
+                    >Separate login for students and for the admin
+                    dashboard.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/edit-ar.png"
+                alt="Editing a section (Arabic)"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">تحرير قسم (بالعربية)</span
+                  ><span class="en-only"
+                    >Editing a section (Arabic)</span
+                  ></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >يفتح لكل قسم من الملصق محرر نصوص غني.</span
+                  ><span class="en-only"
+                    >A rich text editor opens for each poster section.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/edit-en.png"
+                alt="Editing a section (English)"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">تحرير قسم (بالإنجليزية)</span
+                  ><span class="en-only"
+                    >Editing a section (English)</span
+                  ></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >المحرر نفسه في الواجهة الإنجليزية.</span
+                  ><span class="en-only"
+                    >The same editor in the English interface.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+            <figure class="hs-slide">
+              <img
+                src="images/poster-editor/smartart.png"
+                alt="Choosing a SmartArt graphic"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>
+                <strong
+                  ><span class="ar-only">اختيار مخطط ذكي</span
+                  ><span class="en-only"
+                    >Choosing a SmartArt graphic</span
+                  ></strong
+                >
+                <span class="hs-d"
+                  ><span class="ar-only"
+                    >قائمة وعملية ودورة وتسلسل هرمي وهرم وغيرها.</span
+                  ><span class="en-only"
+                    >List, process, cycle, hierarchy, pyramid and more.</span
+                  ></span
+                >
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="hs-info" aria-live="polite">
+          <span class="hs-title"></span><span class="hs-desc"></span>
+        </div>
+        <div class="hs-controls">
+          <button
+            type="button"
+            class="hs-btn hs-prev"
+            aria-label="Previous screenshot"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <div class="hs-mid">
+            <span class="hs-count" aria-hidden="true"></span>
+            <button type="button" class="hs-zoom">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <line x1="21" y1="21" x2="16.5" y2="16.5" />
+                <line x1="11" y1="8" x2="11" y2="14" />
+                <line x1="8" y1="11" x2="14" y2="11" />
+              </svg>
+              <span class="ar-only">تكبير</span
+              ><span class="en-only">Enlarge</span>
+            </button>
+          </div>
+          <button
+            type="button"
+            class="hs-btn hs-next"
+            aria-label="Next screenshot"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+        <ul class="hs-thumbs"></ul>
+        <p class="hs-hint">
+          <span class="ar-only"
+            >اسحب الصورة أو استخدم الأسهم، واضغط على الصورة المركزية
+            لتكبيرها.</span
+          ><span class="en-only"
+            >Drag or use the arrows, and click the centered image to enlarge
+            it.</span
+          >
+        </p>
+      </section>
+
+      <p style="margin-top: 2.5rem">
+        <a class="btn btn-secondary" href="../index.html#featured-work"
+          ><span class="ar-only">← العودة إلى الرئيسية</span
+          ><span class="en-only">← Back to home</span></a
+        >
+      </p>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="../js/include.js" data-root="../"></script>
+  </body>
+</html>

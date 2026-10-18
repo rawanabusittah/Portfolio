@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projects by Rawan Abu Sittah: web applications and an accessible e-library."
+    />
+    <title data-title-ar="المشاريع | Rawan Abu Sittah - Portfolio">
+      Projects | Rawan Abu Sittah - Portfolio
+    </title>
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/projects/websites.html"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://rawanabusittah.github.io/images/my.jpg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:title"
+      content="Projects | Rawan Abu Sittah - Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Projects by Rawan Abu Sittah: web applications and an accessible e-library."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/projects/websites.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/images/my.jpg"
+    />
+    <link rel="icon" type="image/png" href="../images/programming.png" />
+    <meta name="theme-color" content="#04a557" />
+    <link rel="stylesheet" href="../css/main.css?v=20261017-8" />
+    <link rel="stylesheet" href="../css/websites.css?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div id="site-header"></div>
+
+    <main id="main">
+      <section class="page-content wp-page">
+        <div class="container wp-wrap">
+          <header class="wp-head" data-aos="fade-up">
+            <h1 class="section-title" data-i18n="projects.t">My Projects</h1>
+            <p class="section-subtitle" data-i18n="projects.s">
+              Web applications and data analyses I designed and built, combining
+              clean design with modern technologies.
+            </p>
+          </header>
+
+          <!-- Filters (shown by the script below; without JS every project is visible) -->
+          <div
+            class="wp-filters"
+            id="wpFilters"
+            role="group"
+            aria-label="Filter projects"
+            hidden
+          >
+            <button
+              type="button"
+              class="wp-filter"
+              data-f="all"
+              aria-pressed="true"
+            >
+              <span class="ar-only">الكل</span><span class="en-only">All</span>
+              <span class="n"></span>
+            </button>
+            <button
+              type="button"
+              class="wp-filter"
+              data-f="fullstack"
+              aria-pressed="false"
+            >
+              <span>Full-Stack</span><span class="n"></span>
+            </button>
+            <button
+              type="button"
+              class="wp-filter"
+              data-f="frontend"
+              aria-pressed="false"
+            >
+              <span>Front-End</span><span class="n"></span>
+            </button>
+            <button
+              type="button"
+              class="wp-filter"
+              data-f="ai"
+              aria-pressed="false"
+            >
+              <span class="ar-only">ذكاء اصطناعي</span
+              ><span class="en-only">AI &amp; Vision</span>
+              <span class="n"></span>
+            </button>
+          </div>
+
+          <div class="wp-grid" id="wpGrid">
+            <!-- 1. Featured: Academic Poster Editor -->
+            <article
+              class="wp-card wp-card--feature"
+              data-cats="fullstack"
+              data-aos="fade-up"
+            >
+              <a
+                class="wp-media"
+                href="poster-editor.html"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <span class="wp-flag">
+                  <span class="ar-only">المشروع الأبرز</span
+                  ><span class="en-only">Featured</span>
+                </span>
+                <img
+                  src="images/poster-editor/hero.webp"
+                  alt="Academic Poster Editor home page"
+                  width="1200"
+                  height="750"
+                  loading="lazy"
+                />
+                <span class="wp-badge" data-i18n="ov.pe"
+                  >Arab International University · 2026</span
+                >
+              </a>
+              <div class="wp-body">
+                <span class="wp-type">
+                  <span class="ar-only">تطوير شامل · منصة جامعية</span
+                  ><span class="en-only">Full-stack · University platform</span>
+                </span>
+                <h2 data-i18n="t.pe">Academic Poster Editor</h2>
+                <dl class="wp-info">
+                  <div>
+                    <dt data-i18n="pj.goal">Goal:</dt>
+                    <dd data-i18n="wb.pe.goal">
+                      unified poster templates for eight faculties, with a
+                      gallery that showcases graduation projects.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="pj.built">What I built:</dt>
+                    <dd data-i18n="wb.pe.built">
+                      a complete bilingual platform with three services:
+                      academic posters (a template per faculty, PDF/PPTX
+                      export), a dashboard for students and supervisors, and a
+                      public projects gallery with supervisor feedback.
+                    </dd>
+                  </div>
+                </dl>
+                <div class="wp-foot">
+                  <div class="project-tags">
+                    <span class="tag">PHP</span
+                    ><span class="tag">JavaScript</span
+                    ><span class="tag">SQL</span
+                    ><span class="tag">PPTX / PDF</span>
+                  </div>
+                  <a
+                    href="poster-editor.html"
+                    class="wp-link"
+                    data-i18n="pj.link"
+                    >Project details →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Banipal -->
+            <article
+              class="wp-card"
+              data-cats="ai fullstack"
+              data-aos="fade-up"
+            >
+              <a
+                class="wp-media"
+                href="banipal.html"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  src="images/banipal.webp"
+                  alt="Banipal home page"
+                  width="2000"
+                  height="850"
+                  loading="lazy"
+                />
+                <span class="wp-badge" data-i18n="ov.grad"
+                  >Graduation project · Damascus University</span
+                >
+              </a>
+              <div class="wp-body">
+                <span class="wp-type">
+                  <span class="ar-only">مشروع تخرج · ذكاء اصطناعي</span
+                  ><span class="en-only">Graduation project · AI</span>
+                </span>
+                <h2 data-i18n="t.bn">
+                  Banipal: Accessible E-Library (Graduation Project)
+                </h2>
+                <dl class="wp-info">
+                  <div>
+                    <dt data-i18n="pj.goal">Goal:</dt>
+                    <dd data-i18n="wb.bn.goal">
+                      make reading possible without using the hands.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="pj.role">My role (team of three):</dt>
+                    <dd data-i18n="wb.bn.role">
+                      the AI side, book summarization with DistilBART (BART),
+                      and testing the head-and-eye control module. The system as
+                      a whole is an e-library of about 1,000 books with a voice
+                      assistant and a PHP/MySQL back end, built by our team.
+                    </dd>
+                  </div>
+                </dl>
+                <div class="wp-foot">
+                  <div class="project-tags">
+                    <span class="tag">Python</span
+                    ><span class="tag">OpenCV</span><span class="tag">Dlib</span
+                    ><span class="tag">NLP / BART</span
+                    ><span class="tag">PHP</span><span class="tag">MySQL</span>
+                  </div>
+                  <a href="banipal.html" class="wp-link" data-i18n="pj.link"
+                    >Project details →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Hasibati -->
+            <article class="wp-card" data-cats="frontend" data-aos="fade-up">
+              <a
+                class="wp-media"
+                href="hasibati.html"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  src="images/hasibati.webp"
+                  alt="Hasibati home page"
+                  width="1200"
+                  height="750"
+                  loading="lazy"
+                />
+                <span class="wp-badge" data-i18n="ov.has"
+                  >Vue 3 · PWA · Arabic-first</span
+                >
+              </a>
+              <div class="wp-body">
+                <span class="wp-type">
+                  <span class="ar-only">واجهة أمامية · PWA</span
+                  ><span class="en-only">Front-end · PWA</span>
+                </span>
+                <h2 data-i18n="t.has">Hasibati</h2>
+                <dl class="wp-info">
+                  <div>
+                    <dt data-i18n="pj.goal">Goal:</dt>
+                    <dd data-i18n="wb.has.goal">
+                      one bilingual site for calculation, number systems and
+                      geometry.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="pj.built">What I built:</dt>
+                    <dd data-i18n="wb.has.built">
+                      a bilingual (Arabic/English) Vue.js site with a scientific
+                      calculator that shows an example for each operation, a
+                      number-system converter (binary, octal, decimal,
+                      hexadecimal) and a geometry calculator that shows the
+                      steps. Everything works without signing in; users who sign
+                      in can save and archive their operations.
+                    </dd>
+                  </div>
+                </dl>
+                <div class="wp-foot">
+                  <div class="project-tags">
+                    <span class="tag">Vue.js</span><span class="tag">HTML5</span
+                    ><span class="tag">CSS3</span
+                    ><span class="tag">JavaScript</span>
+                  </div>
+                  <a href="hasibati.html" class="wp-link" data-i18n="pj.link"
+                    >Project details →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Digital Library -->
+            <article class="wp-card" data-cats="fullstack" data-aos="fade-up">
+              <a
+                class="wp-media"
+                href="digital-library.html"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img
+                  src="images/digital-library.webp"
+                  alt="Digital Library"
+                  width="1200"
+                  height="750"
+                  loading="lazy"
+                />
+                <span class="wp-badge" data-i18n="ov.lib"
+                  >Online library platform</span
+                >
+              </a>
+              <div class="wp-body">
+                <span class="wp-type">
+                  <span class="ar-only">تطوير شامل · PHP/MySQL</span
+                  ><span class="en-only">Full-stack · PHP/MySQL</span>
+                </span>
+                <h2 data-i18n="t.dl">Digital Library</h2>
+                <dl class="wp-info">
+                  <div>
+                    <dt data-i18n="pj.goal">Goal:</dt>
+                    <dd data-i18n="wb.dl.goal">
+                      provide a clear online space for discovering digital
+                      books.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="pj.built">What I built:</dt>
+                    <dd data-i18n="wb.dl.built">
+                      a standalone library platform for organized book browsing
+                      and management, separate from the Banipal graduation
+                      project.
+                    </dd>
+                  </div>
+                </dl>
+                <div class="wp-foot">
+                  <div class="project-tags">
+                    <span class="tag">HTML5</span><span class="tag">CSS3</span
+                    ><span class="tag">JavaScript</span
+                    ><span class="tag">PHP</span><span class="tag">MySQL</span>
+                  </div>
+                  <a
+                    href="digital-library.html"
+                    class="wp-link"
+                    data-i18n="pj.link"
+                    >Project details →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. CV Builder -->
+            <article class="wp-card" data-cats="frontend" data-aos="fade-up">
+              <a
+                class="wp-media"
+                href="cv-master.html"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img src="images/3.jpg" alt="CV Builder" loading="lazy" />
+                <span class="wp-badge" data-i18n="ov.resp"
+                  >Responsive website design</span
+                >
+              </a>
+              <div class="wp-body">
+                <span class="wp-type">
+                  <span class="ar-only">واجهة أمامية · أداة ويب</span
+                  ><span class="en-only">Front-end · Web tool</span>
+                </span>
+                <h2 data-i18n="t.cv">CV Builder Website</h2>
+                <dl class="wp-info">
+                  <div>
+                    <dt data-i18n="pj.goal">Goal:</dt>
+                    <dd data-i18n="wb.cv.goal">
+                      make writing and formatting a professional resume quick.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="pj.built">What I built:</dt>
+                    <dd data-i18n="wb.cv.built">
+                      a web app where users enter their details, customize a
+                      template and generate a finished CV in a few clicks.
+                    </dd>
+                  </div>
+                </dl>
+                <div class="wp-foot">
+                  <div class="project-tags">
+                    <span class="tag">HTML5</span><span class="tag">CSS3</span
+                    ><span class="tag">JavaScript</span>
+                  </div>
+                  <a href="cv-master.html" class="wp-link" data-i18n="pj.link"
+                    >Project details →</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Plan Your Day -->
+            <article class="wp-card" data-cats="frontend" data-aos="fade-up">
+              <a
+                class="wp-media"
+                href="plan-your-day.html"
+                tabindex="-1"
+                aria-hidden="true"
+              >
+                <img src="images/4.jpg" alt="Plan your day" loading="lazy" />
+                <span class="wp-badge" data-i18n="ov.resp"
+                  >Responsive website design</span
+                >
+              </a>
+              <div class="wp-body">
+                <span class="wp-type">
+                  <span class="ar-only">واجهة أمامية · تنظيم الوقت</span
+                  ><span class="en-only">Front-end · Productivity</span>
+                </span>
+                <h2 data-i18n="t.plan">Plan Your Day</h2>
+                <dl class="wp-info">
+                  <div>
+                    <dt data-i18n="pj.goal">Goal:</dt>
+                    <dd data-i18n="wb.plan.goal">
+                      help people organize their time and reach their goals.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt data-i18n="pj.built">What I built:</dt>
+                    <dd data-i18n="wb.plan.built">
+                      a platform with 20 ready-to-use plans across different
+                      fields, with customizable templates and simple tools.
+                    </dd>
+                  </div>
+                </dl>
+                <div class="wp-foot">
+                  <div class="project-tags">
+                    <span class="tag">HTML5</span><span class="tag">CSS3</span
+                    ><span class="tag">JavaScript</span>
+                  </div>
+                  <a
+                    href="plan-your-day.html"
+                    class="wp-link"
+                    data-i18n="pj.link"
+                    >Project details →</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p class="wp-empty" id="wpEmpty" hidden>
+            <span class="ar-only">لا توجد مشاريع في هذا التصنيف بعد.</span
+            ><span class="en-only">No projects in this category yet.</span>
+          </p>
+
+          <p class="wp-more">
+            <a class="btn btn-secondary" href="../index.html#contact">
+              <span class="ar-only">هل لديك مشروع؟ تواصل معي</span
+              ><span class="en-only">Have a project in mind? Get in touch</span>
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="../js/include.js" data-root="../"></script>
+    <script>
+      // Project filter: counts, toggling and keeping the featured card first.
+      (() => {
+        const bar = document.getElementById("wpFilters");
+        const cards = [...document.querySelectorAll("#wpGrid .wp-card")];
+        const empty = document.getElementById("wpEmpty");
+        if (!bar || !cards.length) return;
+        const btns = [...bar.querySelectorAll(".wp-filter")];
+        const has = (c, f) =>
+          f === "all" || c.dataset.cats.split(" ").includes(f);
+        btns.forEach((b) => {
+          b.querySelector(".n").textContent = cards.filter((c) =>
+            has(c, b.dataset.f),
+          ).length;
+        });
+        const show = (f) => {
+          let n = 0;
+          cards.forEach((c) => {
+            const on = has(c, f);
+            c.hidden = !on;
+            if (on) n++;
+          });
+          btns.forEach((b) =>
+            b.setAttribute("aria-pressed", String(b.dataset.f === f)),
+          );
+          empty.hidden = n > 0;
+          try {
+            history.replaceState(
+              null,
+              "",
+              f === "all" ? location.pathname : "#" + f,
+            );
+          } catch (e) {}
+        };
+        btns.forEach((b) =>
+          b.addEventListener("click", () => show(b.dataset.f)),
+        );
+        bar.hidden = false;
+        const start = location.hash.slice(1);
+        if (btns.some((b) => b.dataset.f === start)) show(start);
+      })();
+    </script>
+  </body>
+</html>

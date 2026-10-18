@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      try {
+        var l =
+          localStorage.getItem("lang") ||
+          ((navigator.language || "").startsWith("ar") ? "ar" : "en");
+        document.documentElement.lang = l;
+        document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+      } catch (e) {}
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Articles and books by Rawan Abu Sittah on technology, AI, reading, data analysis, and academic and professional life."
+    />
+    <title data-title-ar="كتاباتي | Rawan Abu Sittah - Portfolio">
+      Writing | Rawan Abu Sittah - Portfolio
+    </title>
+    <link
+      rel="canonical"
+      href="https://rawanabusittah.github.io/writing.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rawan Abu Sittah" />
+    <meta
+      property="og:title"
+      content="Writing | Rawan Abu Sittah - Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Articles and books by Rawan Abu Sittah on technology, AI, reading, data analysis, and academic and professional life."
+    />
+    <meta
+      property="og:url"
+      content="https://rawanabusittah.github.io/writing.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rawanabusittah.github.io/images/my.jpg"
+    />
+    <link rel="stylesheet" href="css/main.css?v=20261017-8" />
+    <link rel="stylesheet" href="css/writing.css?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <noscript
+      ><style>
+        .tabs {
+          display: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <div class="preloader" id="preloader"><div class="loader"></div></div>
+    <div id="site-header"></div>
+
+    <main id="main">
+      <section class="page-content writing-page wr-page">
+        <div class="container wr-wrap">
+          <header class="wr-head">
+            <h1
+              class="section-title"
+              id="writingTitle"
+              data-aos="fade-up"
+              data-i18n="wr.t"
+            >
+              My Writing
+            </h1>
+            <p
+              class="section-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-i18n="wr.s"
+            >
+              Articles and books I write and publish myself
+            </p>
+          </header>
+
+          <div class="tabs" role="tablist" aria-labelledby="writingTitle">
+            <button
+              type="button"
+              role="tab"
+              id="tab-articles"
+              data-tab="articles"
+              aria-controls="panel-articles"
+              aria-selected="true"
+            >
+              <span data-i18n="tab.art">Articles</span
+              ><span class="tab-count">5</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-books"
+              data-tab="books"
+              aria-controls="panel-books"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <span data-i18n="tab.book">Books</span
+              ><span class="tab-count">2</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              id="tab-presentations"
+              data-tab="presentations"
+              aria-controls="panel-presentations"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <span data-i18n="tab.pres">Presentations</span
+              ><span class="tab-count">4</span>
+            </button>
+          </div>
+
+          <!-- ============ Articles ============ -->
+          <div
+            role="tabpanel"
+            id="panel-articles"
+            aria-labelledby="tab-articles"
+          >
+            <div class="articles-grid" id="articlesGrid">
+              <a class="article-card" href="articles/ux-web-design.html">
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/articles/ux-web-design.webp"
+                    alt="يد تلمس شاشة هاتف تعرض واجهة تطبيق عليها كلمتا UX وUI ومخطط بياني"
+                    width="1563"
+                    height="1006"
+                  />
+                  <span class="article-category"
+                    ><span class="ar-only">تصميم وتجربة المستخدم</span
+                    ><span class="en-only">Design &amp; UX</span></span
+                  >
+                </div>
+                <div class="wr-caption">
+                  <h3 class="article-title">
+                    لماذا تفشل المواقع الجميلة بدون تجربة المستخدم..؟
+                  </h3>
+                  <p class="article-title-en">
+                    Why Beautiful Websites Fail Without UX
+                  </p>
+                  <div class="wr-meta">
+                    <span
+                      ><span class="ar-only">10 دقائق قراءة</span
+                      ><span class="en-only">10 min read</span></span
+                    >
+                    <b
+                      ><span class="ar-only">اقرأ المقال ←</span
+                      ><span class="en-only">Read article →</span></b
+                    >
+                  </div>
+                </div>
+              </a>
+              <a class="article-card" href="articles/ai-agents.html">
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/articles/article-3.png"
+                    alt="روبوت ودود على واجهة شفافة بعنوان AI Agents"
+                  />
+                  <span class="article-category" data-i18n="cat.ai"
+                    >AI &amp; Technology</span
+                  >
+                </div>
+                <div class="wr-caption">
+                  <h3 class="article-title">
+                    وكلاء الذكاء الاصطناعي: من الخيال إلى الواقع العلمي
+                  </h3>
+                  <p class="article-title-en">
+                    AI Agents: From Science Fiction to Scientific Reality
+                  </p>
+                  <div class="wr-meta">
+                    <span
+                      ><span class="ar-only">7 دقائق قراءة</span
+                      ><span class="en-only">7 min read</span></span
+                    >
+                    <b
+                      ><span class="ar-only">اقرأ المقال ←</span
+                      ><span class="en-only">Read article →</span></b
+                    >
+                  </div>
+                </div>
+              </a>
+              <a
+                class="article-card"
+                href="articles/will-ai-replace-human-jobs.html"
+              >
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/articles/article-2.png"
+                    alt="فقاعتا محادثة مضيئتان تحمل إحداهما كلمة AI فوق شاشة تعرض شيفرة برمجية"
+                  />
+                  <span class="article-category" data-i18n="cat.ai"
+                    >AI &amp; Technology</span
+                  >
+                </div>
+                <div class="wr-caption">
+                  <h3 class="article-title">
+                    هل يلغي الذكاء الاصطناعي الوظائف؟ نعمة أم نقمة؟
+                  </h3>
+                  <p class="article-title-en">
+                    Will AI Replace Human Jobs? Blessing or Curse?
+                  </p>
+                  <div class="wr-meta">
+                    <span
+                      ><span class="ar-only">5 دقائق قراءة</span
+                      ><span class="en-only">5 min read</span></span
+                    >
+                    <b
+                      ><span class="ar-only">اقرأ المقال ←</span
+                      ><span class="en-only">Read article →</span></b
+                    >
+                  </div>
+                </div>
+              </a>
+              <a class="article-card" href="articles/data-analysis-basics.html">
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/articles/data-analysis-basics.webp"
+                    alt="شخصان يعملان على حاسوبين محمولين وأمامهما أوراق تحمل رسومًا بيانية"
+                    width="1600"
+                    height="1068"
+                  />
+                  <span class="article-category"
+                    ><span class="ar-only">تحليل البيانات</span
+                    ><span class="en-only">Data Analysis</span></span
+                  >
+                </div>
+                <div class="wr-caption">
+                  <h3 class="article-title">
+                    تحليل البيانات للمبتدئين: الأنواع وجمع البيانات وتنظيفها
+                  </h3>
+                  <p class="article-title-en">
+                    Data Analysis Basics: Types, Data Collection and Data
+                    Cleaning
+                  </p>
+                  <div class="wr-meta">
+                    <span
+                      ><span class="ar-only">6 دقائق قراءة</span
+                      ><span class="en-only">6 min read</span></span
+                    >
+                    <b
+                      ><span class="ar-only">اقرأ المقال ←</span
+                      ><span class="en-only">Read article →</span></b
+                    >
+                  </div>
+                </div>
+              </a>
+              <a
+                class="article-card"
+                href="articles/ai-for-people-with-disabilities.html"
+              >
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/articles/ai_hand.jpg"
+                    alt="يد آلية ويد بشرية تمتدان إحداهما نحو الأخرى"
+                  />
+                  <span class="article-category"
+                    ><span class="ar-only"
+                      >الذكاء الاصطناعي وإمكانية الوصول</span
+                    ><span class="en-only">AI &amp; Accessibility</span></span
+                  >
+                </div>
+                <div class="wr-caption">
+                  <h3 class="article-title">
+                    تقنيات الذكاء الاصطناعي للأشخاص ذوي الهمم
+                  </h3>
+                  <p class="article-title-en">
+                    AI Technologies for People with Disabilities
+                  </p>
+                  <div class="wr-meta">
+                    <span
+                      ><span class="ar-only">8 دقائق قراءة</span
+                      ><span class="en-only">8 min read</span></span
+                    >
+                    <b
+                      ><span class="ar-only">اقرأ المقال ←</span
+                      ><span class="en-only">Read article →</span></b
+                    >
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- ============ Books ============ -->
+          <div role="tabpanel" id="panel-books" aria-labelledby="tab-books">
+            <div class="books-catalog">
+              <article class="book-showcase" data-aos="fade-up">
+                <a
+                  class="book-showcase-cover"
+                  href="books/hawajis.html"
+                  aria-label="Dark Thoughts Toward the Light"
+                >
+                  <img
+                    src="books/images/hawajis.jpg"
+                    alt="Dark Thoughts Toward the Light book cover"
+                    data-i18n-alt="book.hawajisCover"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="book-showcase-content">
+                  <div class="wr-book-top">
+                    <span class="data-eyebrow"
+                      ><span class="ar-only">سيرة ذاتية · 2026</span
+                      ><span class="en-only">AUTOBIOGRAPHY · 2026</span></span
+                    >
+                    <span class="wr-pill wr-pill--free"
+                      ><span class="ar-only">تحميل مجاني</span
+                      ><span class="en-only">Free download</span></span
+                    >
+                  </div>
+                  <h3>
+                    <span class="ar-only">هواجس مظلمة نحو النور</span
+                    ><span class="en-only">Dark Thoughts Toward the Light</span>
+                  </h3>
+                  <p>
+                    <span class="ar-only"
+                      >سرد شخصي من أربعة فصول عن الدراسة والجامعة وما بعد
+                      التخرج، وعن تحويل الألم إلى دافع للاستمرار.</span
+                    ><span class="en-only"
+                      >A personal four-part narrative about school, university,
+                      life after graduation, and turning pain into
+                      persistence.</span
+                    >
+                  </p>
+                  <div class="project-tags">
+                    <span class="tag"
+                      ><span class="ar-only">العربية</span
+                      ><span class="en-only">Arabic</span></span
+                    ><span class="tag"
+                      ><span class="ar-only">سيرة ذاتية</span
+                      ><span class="en-only">Autobiography</span></span
+                    ><span class="tag"
+                      ><span class="ar-only">97 صفحة</span
+                      ><span class="en-only">97 pages</span></span
+                    >
+                  </div>
+                  <div class="book-showcase-actions">
+                    <a class="btn btn-primary" href="books/hawajis.html"
+                      ><span class="ar-only">تفاصيل الكتاب</span
+                      ><span class="en-only">Book details</span></a
+                    >
+                    <a
+                      class="btn btn-secondary"
+                      href="books/hawajis.pdf"
+                      download
+                      ><span class="ar-only">تحميل PDF</span
+                      ><span class="en-only">Download PDF</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article
+                class="book-showcase"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <a
+                  class="book-showcase-cover"
+                  href="books/excel.html"
+                  aria-label="Excel Guide"
+                >
+                  <img
+                    src="books/images/excel.png"
+                    alt="Excel Guide book cover"
+                    data-i18n-alt="book.excelCover"
+                    loading="lazy"
+                  />
+                </a>
+                <div class="book-showcase-content">
+                  <div class="wr-book-top">
+                    <span class="data-eyebrow"
+                      ><span class="ar-only">دليل تعليمي · 2026</span
+                      ><span class="en-only"
+                        >EDUCATIONAL GUIDE · 2026</span
+                      ></span
+                    >
+                    <span class="wr-pill wr-pill--paid"
+                      ><span class="ar-only">كتاب مدفوع</span
+                      ><span class="en-only">Paid book</span></span
+                    >
+                  </div>
+                  <h3>
+                    <span class="ar-only">شرح الإكسل</span
+                    ><span class="en-only">Excel Guide</span>
+                  </h3>
+                  <p>
+                    <span class="ar-only"
+                      >دليل عملي للتعرف على أساسيات Microsoft Excel وتنظيم
+                      البيانات واستخدام الجداول والصيغ بطريقة واضحة.</span
+                    ><span class="en-only"
+                      >A practical guide to Microsoft Excel basics, data
+                      organization, tables, and formulas in a clear
+                      format.</span
+                    >
+                  </p>
+                  <div class="project-tags">
+                    <span class="tag"
+                      ><span class="ar-only">العربية</span
+                      ><span class="en-only">Arabic</span></span
+                    ><span class="tag"
+                      ><span class="ar-only">تعليمي</span
+                      ><span class="en-only">Educational</span></span
+                    ><span class="tag">Excel</span>
+                  </div>
+                  <div class="book-showcase-actions">
+                    <a class="btn btn-primary" href="books/excel.html"
+                      ><span class="ar-only">تفاصيل الكتاب</span
+                      ><span class="en-only">Book details</span></a
+                    >
+                    <a class="btn btn-secondary" href="books/excel.html#buy"
+                      ><span class="ar-only">اطلب الكتاب</span
+                      ><span class="en-only">Get the book</span></a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- ============ Presentations ============ -->
+          <div
+            role="tabpanel"
+            id="panel-presentations"
+            aria-labelledby="tab-presentations"
+            hidden
+          >
+            <div class="articles-grid" id="presentationsGrid">
+              <a
+                class="article-card presentation-card"
+                href="presentations/chemistry.pptx"
+                download
+              >
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/presentations/chemistry.webp"
+                    alt=""
+                  />
+                  <span class="article-category" data-i18n="cat.chem"
+                    >Chemistry</span
+                  >
+                  <span class="article-format">PPTX</span>
+                </div>
+                <div class="pres-caption">
+                  <h3 class="article-title">عرض تقديمي في الكيمياء</h3>
+                  <p class="article-title-en">Chemistry presentation</p>
+                  <span class="pres-dl"
+                    ><span class="ar-only">تحميل العرض ←</span
+                    ><span class="en-only">Download slides →</span></span
+                  >
+                </div>
+              </a>
+              <a
+                class="article-card presentation-card"
+                href="presentations/chatbot.ppsx"
+                download
+              >
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/presentations/chatbot.png"
+                    alt=""
+                  />
+                  <span class="article-category" data-i18n="cat.ai2"
+                    >Artificial Intelligence</span
+                  >
+                  <span class="article-format">PPSX</span>
+                </div>
+                <div class="pres-caption">
+                  <h3 class="article-title">
+                    روبوتات المحادثة بالذكاء الاصطناعي
+                  </h3>
+                  <p class="article-title-en">AI Chatbots</p>
+                  <span class="pres-dl"
+                    ><span class="ar-only">تحميل العرض ←</span
+                    ><span class="en-only">Download slides →</span></span
+                  >
+                </div>
+              </a>
+              <a
+                class="article-card presentation-card"
+                href="presentations/computer_skills.ppsx"
+                download
+              >
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/presentations/computer_skills.png"
+                    alt=""
+                  />
+                  <span class="article-category" data-i18n="cat.comp"
+                    >Computer Skills</span
+                  >
+                  <span class="article-format">PPSX</span>
+                </div>
+                <div class="pres-caption">
+                  <h3 class="article-title">مهارات الحاسوب</h3>
+                  <p class="article-title-en">Computer Skills</p>
+                  <span class="pres-dl"
+                    ><span class="ar-only">تحميل العرض ←</span
+                    ><span class="en-only">Download slides →</span></span
+                  >
+                </div>
+              </a>
+              <a
+                class="article-card presentation-card"
+                href="presentations/ai-brain.ppsx"
+                download
+              >
+                <div class="article-media">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src="images/presentations/ai-brain.jpg"
+                    alt=""
+                  />
+                  <span class="article-category" data-i18n="cat.ai2"
+                    >Artificial Intelligence</span
+                  >
+                  <span class="article-format">PPSX</span>
+                </div>
+                <div class="pres-caption">
+                  <h3 class="article-title">مقدمة في الذكاء الاصطناعي</h3>
+                  <p class="article-title-en">
+                    Introduction to Artificial Intelligence
+                  </p>
+                  <span class="pres-dl"
+                    ><span class="ar-only">تحميل العرض ←</span
+                    ><span class="en-only">Download slides →</span></span
+                  >
+                </div>
+              </a>
+            </div>
+            <p class="section-subtitle pres-empty" hidden>
+              <span class="ar-only">ستُضاف العروض التقديمية هنا قريبًا.</span
+              ><span class="en-only"
+                >Presentations will be added here soon.</span
+              >
+            </p>
+          </div>
+
+          <p class="wr-more">
+            <a class="btn btn-secondary" href="index.html#contact">
+              <span class="ar-only">هل لديك فكرة أو ملاحظة؟ تواصل معي</span
+              ><span class="en-only"
+                >Have a thought or a request? Get in touch</span
+              >
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="js/include.js" data-root=""></script>
+  </body>
+</html>
